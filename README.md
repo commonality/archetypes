@@ -2,7 +2,7 @@
 
 # `archetypes`
 
-[![License][license-image]][license-url] [![FOSSA Status][fossa-image]][fossa-url] [![NPM version][npm-image]][npm-url] <br>[![NSP Status][nsp-img]][nsp-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] <br>[![Build Status][badge-travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Codacy quality][codacy-image]][codacy-url]
+[![License][license-image]][license-url] [![FOSSA Status][badge-fossa-image]][fossa-url] [![NPM version][npm-image]][npm-url] <br>[![NSP Status][badge-nsp-image]][nsp-url] [![Dependency Status][badge-coveralls-image]][daviddm-url] [![devDependencies Status][badge-coveralls-image]][daviddm-dev-url] <br>[![Build Status][badge-travis-image]][travis-url] [![Coverage percentage][badge-coveralls-image]][coveralls-url] [![Codacy quality][badge-codacy-image]][codacy-url]
 
 > ![Quote][quote-left-img] A business archetype is a primordial thing that occurs consistently and universally in business domainMs and business software systems.
 >
@@ -142,7 +142,7 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 3.3. OpenAPI 2.0 Specs
 
-[![Party's Swagger validity][swagger-validity-party-image]][swagger-validity-party-url]
+[![Party's Swagger validity][badge-swagger-validity-party-image]][swagger-validity-party-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml)
@@ -196,7 +196,7 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 ### 4.2. OpenAPI 2.0 specifications
 
-[![Quantity's Swagger validity][swagger-validity-quantity-image]][swagger-validity-quantity-url]
+[![Quantity's Swagger validity][badge-swagger-validity-quantity-image]][swagger-validity-quantity-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.yaml)
@@ -249,7 +249,7 @@ api.getBaseUnitByName(name, callback)
 <!--
 ### 5.1. OpenAPI 2.0 specifications
 
-[![Quantity's Swagger validity][swagger-validity-money-image]][swagger-validity-money-url]
+[![Quantity's Swagger validity][badge-swagger-validity-money-image]][swagger-validity-money-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/money/money.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.swagger.yaml)
@@ -284,7 +284,7 @@ api.getBaseUnitByName(name, callback)
 <!--
 ### 6.1. OpenAPI 2.0 specifications
 
-[![Quantity's Swagger validity][swagger-validity-quantity-image]][swagger-validity-quantity-url]
+[![Quantity's Swagger validity][badge-swagger-validity-quantity-image]][swagger-validity-quantity-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.yaml)
@@ -319,7 +319,7 @@ api.getBaseUnitByName(name, callback)
 <!--
 ### 7.1. OpenAPI 2.0 specifications
 
-[![Rule's Swagger validity][swagger-validity-rules-image]][swagger-validity-rules-url]
+[![Rule's Swagger validity][badge-swagger-validity-rules-image]][swagger-validity-rules-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.yaml)
@@ -354,7 +354,7 @@ api.getBaseUnitByName(name, callback)
 <!--
 ### 8.1. OpenAPI 2.0 specifications
 
-[![Customer relationship management (CRM) Swagger validity][swagger-validity-crm-image]][swagger-validity-crm-url]
+[![Customer relationship management (CRM) Swagger validity][badge-swagger-validity-crm-image]][swagger-validity-crm-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.yaml)
@@ -389,7 +389,7 @@ api.getBaseUnitByName(name, callback)
 <!--
 ### 9.1. OpenAPI 2.0 specifications
 
-[![Product's Swagger validity][swagger-validity-product-image]][swagger-validity-product-url]
+[![Product's Swagger validity][badge-swagger-validity-product-image]][swagger-validity-product-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.yaml)
@@ -424,7 +424,7 @@ api.getBaseUnitByName(name, callback)
 <!--
 ### 10.1. OpenAPI 2.0 specifications
 
-[![Inventory's Swagger validity][swagger-validity-inventory-image]][swagger-validity-inventory-url]
+[![Inventory's Swagger validity][badge-swagger-validity-inventory-image]][swagger-validity-inventory-url]
 
 * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.json)
 * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.yaml)
@@ -596,12 +596,12 @@ Contributions are community-driven stories with a beginning, a middle, and an en
 
 [![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/gregswindle)
 
-You can review all __third-party dependencies' licenses__ on [FOSSA][fossa-image-large].
+You can review all __third-party dependencies' licenses__ on [FOSSA][badge-fossa-large-image].
 
-![FOSSA Status][fossa-image-large]
+![FOSSA Status][badge-fossa-large-image]
 
 ---
-[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url] [![Readme Score][readme-score-img]][readme-score-url]
+[![Greenkeeper badge][badge-greenkeeper-image]][greenkeeper-url] [![Readme Score][badge-readme-score-image]][readme-score-url]
 
 Graphic art by [icons8][icons8-license-url].
 
@@ -609,30 +609,34 @@ Graphic art by [icons8][icons8-license-url].
 [api-sdk-doc-party-parties-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#parties-api
 [api-sdk-doc-party-people-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#people-api
 [api-sdk-doc-party-preferences-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#preferences-api
+[badge-codacy-image]: https://api.codacy.com/project/badge/Grade/de7b30825ac649de8b7255e4303fb069
+[badge-coveralls-image]: https://coveralls.io/repos/gregswindle/archetypes/badge.svg
+[badge-coveralls-image]: https://david-dm.org/gregswindle/archetypes.svg?theme=shields.io
+[badge-coveralls-image]: https://david-dm.org/gregswindle/archetypes/dev-status.svg
+[badge-fossa-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=shield
+[badge-fossa-large-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=large
+[badge-greenkeeper-image]: https://badges.greenkeeper.io/gregswindle/archetypes.svg
+[badge-nsp-image]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff/badge
 [badge-prs-welcome-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [badge-prs-welcome-url]: http://makeapullrequest.com
+[badge-readme-score-image]: http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/gregswindle/archetypes
 [badge-standardjs-image]: https://cdn.rawgit.com/feross/standard/master/badge.svg
+[badge-swagger-validity-party-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/party/party.swagger.json.svg
+[badge-swagger-validity-quantity-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json.svg
 [badge-travis-image]: https://travis-ci.org/gregswindle/archetypes.svg?branch=master
 [business-archetypes-logo-image]: ./docs/img/logo-commonalaxy.png
 [changelog-url]: ./CHANGELOG.md
 [cla-url]: https://www.clahub.com/agreements/gregswindle/archetypes
-[codacy-image]: https://api.codacy.com/project/badge/Grade/f3ea5502651544f5bc8123f585b129fd
-[codacy-url]: https://www.codacy.com/app/greg_7/archetypes?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gregswindle/archetypes&amp;utm_campaign=Badge_Grade
+[codacy-url]: https://www.codacy.com/app/commonality/archetypes?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=commonality/archetypes&amp;utm_campaign=Badge_Grade
 [code-of-conduct-url]: ./.github/CODE_OF_CONDUCT.md
 [complexity-report-url]: ./docs/COMPLEXITY.md
 [contributing-url]: ./.github/CONTRIBUTING.md
-[coveralls-image]: https://coveralls.io/repos/gregswindle/archetypes/badge.svg
 [coveralls-url]: https://coveralls.io/r/gregswindle/archetypes
-[daviddm-dev-image]: https://david-dm.org/gregswindle/archetypes/dev-status.svg
 [daviddm-dev-url]: https://david-dm.org/gregswindle/archetypes?type=dev
-[daviddm-image]: https://david-dm.org/gregswindle/archetypes.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/gregswindle/archetypes
-[fossa-image-large]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=large
-[fossa-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=shield
 [fossa-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes?ref=badge_shield
 [gh-standardjs-url]: https://github.com/feross/standard
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
-[greenkeeper-image]: https://badges.greenkeeper.io/gregswindle/archetypes.svg
 [greenkeeper-url]: https://greenkeeper.io/
 [icon-eslint-image]: ./docs/img/tech-stack/icon-eslint-50.jpeg
 [icon-jest-image]: ./docs/img/tech-stack/icon-jest-50.jpeg
@@ -652,9 +656,8 @@ Graphic art by [icons8][icons8-license-url].
 [mda-book-url]: https://www.amazon.com/Enterprise-Patterns-MDA-Building-Archetype/dp/032111230X
 [npm-image]: https://badge.fury.io/js/archetypes.svg
 [npm-url]: https://npmjs.org/package/archetypes
-[nsp-img]: https://nodesecurity.io/orgs/gregswindle/projects/76114431-dc7e-455f-bdd0-54c02ec03ffe/badge
 [nsp-sign-up-url]: https://nodesecurity.io/signup
-[nsp-url]: https://nodesecurity.io/orgs/gregswindle/projects/76114431-dc7e-455f-bdd0-54c02ec03ffe
+[nsp-url]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff
 [offsite-standardjs-url]: https://standardjs.com/
 [party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
 [party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml
@@ -662,7 +665,6 @@ Graphic art by [icons8][icons8-license-url].
 [product-development-guidelines-url]: ./.github/PRODUCT_DEVELOPEMENT_GUIDELINES.md
 [quote-left-img]: ./docs/img/icons8/quote-left-25.png
 [rb-api-url]: ./docs/api/archetypes/v1/party/ruby/README.md
-[readme-score-img]: http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/gregswindle/archetypes
 [readme-score-url]: http://clayallsopp.github.io/readme-score?url=https://github.com/gregswindle/archetypes
 [rest-api-image]: ./docs/img/icons8/icon-rest-api.png
 [sonarcloud-url]: https://sonarcloud.io
@@ -673,9 +675,7 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-codegen-url]: https://github.com/swagger-api/swagger-codegen
 [swagger-io-url]: http://swagger.io
 [swagger-markdown-url]: https://github.com/syroegkin/swagger-markdown
-[swagger-validity-party-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/party/party.swagger.json.svg
 [swagger-validity-party-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[swagger-validity-quantity-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json.svg
 [swagger-validity-quantity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json
 [swagger-validity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
 [travis-url]: https://travis-ci.org/gregswindle/archetypes
