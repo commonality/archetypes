@@ -2,7 +2,7 @@
 
 # `archetypes`
 
-[![License][license-image]][license-url] [![FOSSA Status][fossa-image]][fossa-url] [![NPM version][npm-image]][npm-url] <br>[![NSP Status][nsp-img]][nsp-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] <br>[![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Codacy quality][codacy-image]][codacy-url]
+[![License][license-image]][license-url] [![FOSSA Status][fossa-image]][fossa-url] [![NPM version][npm-image]][npm-url] <br>[![NSP Status][nsp-img]][nsp-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] <br>[![Build Status][badge-travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Codacy quality][codacy-image]][codacy-url]
 
 > ![Quote][quote-left-img] A business archetype is a primordial thing that occurs consistently and universally in business domainMs and business software systems.
 >
@@ -17,7 +17,7 @@
   * [1.2. Generating servers and clients](#12-generating-servers-and-clients)
     + [1.2.1. `swagger-api/swagger-codegen`](#121-swagger-apiswagger-codegen)
     + [1.2.2. Swagger Editor](#122-swagger-editor)
-- [2. Usage](#2-usage)
+- [2. Usage and API reference](#2-usage-and-api-reference)
   * [2.1. `curl`](#21-curl)
   * [2.2. Swagger-UI](#22-swagger-ui)
 - [3. `Party` :package:](#3-party-package)
@@ -45,13 +45,21 @@
   * [Roadmap](#roadmap-5)
 - [11. `Order`](#11-order)
   * [Roadmap](#roadmap-6)
-- [12. Quality gates, reports, and documentation](#12-quality-gates-reports-and-documentation)
-  * [12.1. Swagger validation and badge](#121-swagger-validation-and-badge)
-  * [12.2. Linting](#122-linting)
-  * [12.3. Test execution and code coverage](#123-test-execution-and-code-coverage)
-- [13. Semantic version and CHANGELOG](#13-semantic-version-and-changelog)
-- [14. Contributing](#14-contributing)
-- [15. Licenses](#15-licenses)
+- [12. Development](#12-development)
+  * [12.1. Built With](#121-built-with)
+  * [12.2. Prerequisites](#122-prerequisites)
+  * [12.3. Set up a development environment](#123-set-up-a-development-environment)
+- [13. DevSecOps](#13-devsecops)
+  * [13.1. Builds](#131-builds)
+  * [13.2. Test and quality gates](#132-test-and-quality-gates)
+    + [13.2.1. Swagger validation](#1321-swagger-validation)
+    + [13.2.2. Linting](#1322-linting)
+    + [13.3.3. Spec (unit test) execution and code coverage](#1333-spec-unit-test-execution-and-code-coverage)
+  * [13.3.4. Deploy/Publish](#1334-deploypublish)
+- [14. Style guide](#14-style-guide)
+- [15. Semantic version and CHANGELOG](#15-semantic-version-and-changelog)
+- [16. Contributing to `commonality/archetypes`](#16-contributing-to-commonalityarchetypes)
+- [17. Licenses](#17-licenses)
 
 <!-- tocstop -->
 
@@ -91,7 +99,7 @@ Follow the [Installation][swagger-codegen-installation-url] and [Getting Startin
 1. Select "Generate Server" or "Generate Client" and choose an option.
 1. If successful, you will prompted to download the ZIPped source code.
 
-## 2. Usage
+## 2. Usage and API reference
 
 ### 2.1. `curl`
 
@@ -448,40 +456,62 @@ api.getBaseUnitByName(name, callback)
 
 [![icon-road-milestone-image] MVP7: Inventory](https://github.com/gregswindle/archetypes/milestone/7)
 
-<!--
-### 11.1. OpenAPI 2.0 specifications
+## 12. Development
+> [![PRs Welcome][badge-prs-welcome-image]][badge-prs-welcome-url] We welcome contributors and pull requests!
+>
+> Interested in development contributions? Great! Check out our guidelines for [Contributing to `product-name`][contributing-url] for details.
 
-[![Quantity's Swagger validity][swagger-validity-order-image]][swagger-validity-order-url]
+### 12.1. Built With
+> :eyes: I'm looking for a tool like [`markdown-magic-dependency-table`](https://www.npmjs.com/package/markdown-magic-dependency-table) to auto-generate a table of dependencies from `package.json's` data, but nothing works, yet.
 
-* [`JSON`](http://api.swindle.net/archetypes/v1/schemas/order/order.swagger.json)
-* [`YAML`](http://api.swindle.net/archetypes/v1/schemas/order/order.swagger.yaml)
+### 12.2. Prerequisites
 
-### 11.2. API documentation
+[offsite-nodejs-url]: https://nodejs.org/
+[offsite-markdown-toc-url]: https://github.com/jonschlinkert/markdown-toc
 
-* [`JavaScript`](./docs/api/archetypes/v1/order/js/README.md)
-* [`Ruby`](./docs/api/archetypes/v1/order/README.md)
+ 1. [__`Node.js`__][offsite-nodejs-url]: `archetypes` product development and delivery requires `Node.js` and its package manager, `npm`.
+ 2. [__`markdown-toc`__][offsite-markdown-toc-url] is recommended, but not required, as long as the REAME's table of contents work and accurately reflects header changes.
 
 
-### 11.3. Usage example
+### 12.3. Set up a development environment
 
-**Retrieve an `` by identifier** with JavaScript:
+Here's a brief intro about what a developer must do in order to start developing the project further:
 
-```js
-
+```shell
+$ git clone https://github.com/commonality/archetypes.git
+$ cd archetypes/
+$ npm install
 ```
-[icon-jest-image]: ./docs/img/tech-stack/icon-jest-50.png
-[icon-nodejs-image]: ./docs/img/tech-stack/icon-nodejs-50.png
-[icon-npm-image]: ./docs/img/tech-stack/icon-npm-50.png
-[icon-swagger-image]: ./docs/img/tech-stack/icon-swagger-50.png
-[icon-yeoman-image]: ./docs/img/tech-stack/icon-yeoman-50.png
--->
 
-## 12. Quality gates, reports, and documentation
-![Swagger][icon-swagger-image] ![ESLint][icon-eslint-image] ![Standard JS][icon-standardjs-image] ![Jest][icon-jest-image]
+<!-- ### Configuration
+
+Here you should write what are all of the configurations a user can enter when using the project. -->
+
+<!-- ### Data persistence
+
+Explain what database/datastore (and version) is used (if any). Provide
+
+ * Download links,
+ * Datastore design and schemas, relations etc... -->
+
+## 13. DevSecOps
+
+`archetypes` triggers Travis CI builds to execute the `ESLint`, the `Jest` test runner, and `Node Security Platform (NSP)` analysis. Code coverage reports are then sent to Coveralls and SonarCloud.
+
+### 13.1. Builds
+
+[![Travis CI][icon-travis-image] `archetypes` uses Travis CI][travis-url] for continuous integration.
+
+For details, please review the [`.travis.yml` build file](./.travis.yml).
+
+### 13.2. Test and quality gates
+
 This repository enforces Swagger quality; Javascript quality; and Javascript unit tests and code coverage.
 
-### 12.1. Swagger validation and badge
-> ![Swagger][icon-swagger-image]  `archetypes` validates Swagger docs with [`swagger-cli`][swagger-cli-url].
+#### 13.2.1. Swagger validation
+> ![Swagger][icon-swagger-image]
+>
+> `archetypes` validates Swagger docs with [`swagger-cli`][swagger-cli-url].
 
 [`swagger-cli`][swagger-cli-url] validation runs before every test execution:
 
@@ -501,10 +531,10 @@ $ npm run swagger:lint
 
 [`swagger-api/validator-badge`](https://github.com/swagger-api/validator-badge)s display whether there are syntactic issues with you Swagger/OpenAPI 2.0 document.
 
-### 12.2. Linting
-> ![ESLint][icon-eslint-image] ![Standard JS][icon-standardjs-image] `archetypes` lints source code; checks for vulnerabilities; assesses dependency drift; and executes quality gates with `BitHound`, `eslint`, `nsp`, and `SonarQube`/`sonarcloud`.
+#### 13.2.2. Linting
+> ![ESLint][icon-eslint-image]
 >
-> The results are displayed real-time with README badges.
+>  `archetypes` lints with `ESLint` and displays real-time results with README badges.
 
 ```bash
 # Code quality analysis runs before every test execution:
@@ -520,10 +550,10 @@ $ npm run eslint:stylish
 $ npm run eslint:html
 ```
 
-### 12.3. Test execution and code coverage
-> ![Jest][icon-jest-image] `archetypes` uses `jest` for BDD spec execution and code coverage analysis.
+#### 13.3.3. Spec (unit test) execution and code coverage
+> ![Jest][icon-jest-image]
 >
-> The results are displayed real-time with README badges.
+> `archetypes` uses `jest` for BDD spec execution and code coverage analysis. The results are displayed real-time with README badges.
 
 Generate detailed code coverage reports at `coverage/lcov-report/index.html` and `lcov.info` and `clover.xml` files  (which you can send to CI test coverage services like  Coveralls and  [OneSonarQube][one-sonar-url] or [SonarCloud][sonarcloud-url]):
 
@@ -531,21 +561,38 @@ Generate detailed code coverage reports at `coverage/lcov-report/index.html` and
 $ npm test
 ```
 
-## 13. Semantic version and CHANGELOG
 
-The latest version of `archetypes` is `vtrue`. View the [CHANGELOG][changelog-url] for details.
+### 13.3.4. Deploy/Publish
 
-## 14. Contributing
+Give instructions on how to build and release a new version.
+In case there's some step you have to take that publishes this project to a
+server, this is the right time to state it.
 
-![Alt text](https://camo.githubusercontent.com/f96261621753dacf526590825b84f87ccb1db0e6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e7376673f7374796c653d666c6174 "Pull Request") We welcome contributors and pull requests!
+```shell
+packagemanager deploy your-project -s server.com -u username -p password
+```
+
+And again you'd need to tell what the previous code actually does.
+
+## 14. Style guide
+
+[![JavaScript Style Guide][badge-standardjs-image]][offsite-standardjs-url]
+
+[`archetypes` uses the JavaScript Standard Style][offsite-standardjs-url] .
+
+## 15. Semantic version and CHANGELOG
+
+The latest version of `archetypes` is `0.0.0`. View the [CHANGELOG][changelog-url] for details.
+
+## 16. Contributing to `commonality/archetypes`
+>  [![PRs Welcome][badge-prs-welcome-image]][badge-prs-welcome-url] We welcome contributors and pull requests!
 
 Contributions are community-driven stories with a beginning, a middle, and an end, all told through issues, comments, and pull requests. If you're interested in collaborating, please review the:
 
 * [Code of Conduct][code-of-conduct-url]
 * [Contributing][contributing-url] to `archetypes`
-* [Product development guidelines][product-development-guidelines-url]
 
-## 15. Licenses
+## 17. Licenses
 
 [![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/gregswindle)
 
@@ -558,11 +605,14 @@ You can review all __third-party dependencies' licenses__ on [FOSSA][fossa-image
 
 Graphic art by [icons8][icons8-license-url].
 
-
 [api-sdk-doc-party-organizations-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#organizations-api
 [api-sdk-doc-party-parties-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#parties-api
 [api-sdk-doc-party-people-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#people-api
 [api-sdk-doc-party-preferences-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#preferences-api
+[badge-prs-welcome-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[badge-prs-welcome-url]: http://makeapullrequest.com
+[badge-standardjs-image]: https://cdn.rawgit.com/feross/standard/master/badge.svg
+[badge-travis-image]: https://travis-ci.org/gregswindle/archetypes.svg?branch=master
 [business-archetypes-logo-image]: ./docs/img/logo-commonalaxy.png
 [changelog-url]: ./CHANGELOG.md
 [cla-url]: https://www.clahub.com/agreements/gregswindle/archetypes
@@ -580,9 +630,19 @@ Graphic art by [icons8][icons8-license-url].
 [fossa-image-large]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=large
 [fossa-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=shield
 [fossa-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes?ref=badge_shield
+[gh-standardjs-url]: https://github.com/feross/standard
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
 [greenkeeper-image]: https://badges.greenkeeper.io/gregswindle/archetypes.svg
 [greenkeeper-url]: https://greenkeeper.io/
+[icon-eslint-image]: ./docs/img/tech-stack/icon-eslint-50.jpeg
+[icon-jest-image]: ./docs/img/tech-stack/icon-jest-50.jpeg
+[icon-nodejs-image]: ./docs/img/tech-stack/icon-nodejs-50.png
+[icon-npm-image]: ./docs/img/tech-stack/icon-npm-50.png
+[icon-road-milestone-image]: ./docs/img/icons8/img-goal-filled-50.png
+[icon-standardjs-image]: ./docs/img/tech-stack/icon-standardjs-50.png
+[icon-swagger-image]: ./docs/img/tech-stack/icon-swagger-50.png
+[icon-travis-image]: ./docs/img/icons8/travis-ci-50.png
+[icon-yeoman-image]: ./docs/img/tech-stack/icon-yeoman-50.png
 [icons8-license-url]: https://icons8.com/license/
 [issues-new-url]: https://github.com/gregswindle/archetypes/issues/new
 [issues-url]: https://github.com/gregswindle/archetypes/issues
@@ -595,6 +655,7 @@ Graphic art by [icons8][icons8-license-url].
 [nsp-img]: https://nodesecurity.io/orgs/gregswindle/projects/76114431-dc7e-455f-bdd0-54c02ec03ffe/badge
 [nsp-sign-up-url]: https://nodesecurity.io/signup
 [nsp-url]: https://nodesecurity.io/orgs/gregswindle/projects/76114431-dc7e-455f-bdd0-54c02ec03ffe
+[offsite-standardjs-url]: https://standardjs.com/
 [party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
 [party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml
 [pr-url]: /gregswindle/archetypes/pulls
@@ -617,13 +678,4 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-validity-quantity-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json.svg
 [swagger-validity-quantity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json
 [swagger-validity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[travis-image]: https://travis-ci.org/gregswindle/archetypes.svg?branch=master
 [travis-url]: https://travis-ci.org/gregswindle/archetypes
-[icon-eslint-image]: ./docs/img/tech-stack/icon-eslint-50.jpeg
-[icon-jest-image]: ./docs/img/tech-stack/icon-jest-50.jpeg
-[icon-nodejs-image]: ./docs/img/tech-stack/icon-nodejs-50.png
-[icon-npm-image]: ./docs/img/tech-stack/icon-npm-50.png
-[icon-standardjs-image]: ./docs/img/tech-stack/icon-standardjs-50.png
-[icon-swagger-image]: ./docs/img/tech-stack/icon-swagger-50.png
-[icon-yeoman-image]: ./docs/img/tech-stack/icon-yeoman-50.png
-[icon-road-milestone-image]: ./docs/img/icons8/img-goal-filled-50.png

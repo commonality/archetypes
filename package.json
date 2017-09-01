@@ -38,6 +38,7 @@
     "eslint-plugin-xss": "0.1.8",
     "jest": "20.0.4",
     "jest-cli": "20.0.4",
+    "markdown-magic": "0.1.18",
     "markdown-toc": "1.1.0",
     "nsp": "2.7.0",
     "standard-version": "4.2.0",
@@ -71,6 +72,7 @@
   "main": "generators/index.js",
   "repository": "commonality/generator-community",
   "scripts": {
+    "md-table": "cat package.json | md-table",
     "prepublish": "nsp check",
     "pretest": "eslint . --fix",
     "test": "jest --config=jest.config.json"
