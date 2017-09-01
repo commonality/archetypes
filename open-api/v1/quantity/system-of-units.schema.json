@@ -1,0 +1,24 @@
+{
+  "title":"SystemOfUnits",
+  "description":"Represents a set of related Units defined by a standard such as SI.",
+  "maxProperties":2,
+  "minProperties":1,
+  "properties":{
+    "nameOfStandardizationBody":{
+      "default":"null",
+      "description":"The name of the body responsible for the system.",
+      "title":"SystemOfUnits.nameOfStandardizationBody Schema",
+      "type":"string"
+    },
+    "nameOfSystem":{
+      "default":"",
+      "description":"Represents a set of related Units defined by a standard such as SI.",
+      "title":"SystemOfUnits.nameOfSystem Schema",
+      "type":"string"
+    }
+  },
+  "required":[
+    "nameOfSystem"
+  ],
+  "type":"object"
+}

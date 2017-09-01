@@ -1,0 +1,78 @@
+{
+  "name": "generator-community",
+  "description": "Generate a README, CODE_OF_CONDUCT, CONTRIBUTING, and LICENSE file according to recommended community standards.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Greg Swindle",
+    "email": "greg@swindle.net",
+    "url": "https://github.com/commonality"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "escomplex": "^2.0.0-alpha",
+    "generator-standard-readme": "1.0.3",
+    "lodash": "^4.17.4",
+    "standard-readme-spec": "1.1.3",
+    "update-notifier": "^2.2.0",
+    "yeoman-generator": "^1.1.1",
+    "yosay": "2.0.1"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.3",
+    "babel-preset-env": "1.6.0",
+    "babelify": "7.3.0",
+    "commitplease": "2.7.10",
+    "coveralls": "^2.13.1",
+    "eslint": "4.5.0",
+    "eslint-config-xo-space": "0.16.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jest": "20.0.3",
+    "eslint-plugin-jsdoc": "3.1.2",
+    "eslint-plugin-no-unsafe-innerhtml": "1.0.16",
+    "eslint-plugin-no-unsanitized": "2.0.1",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-scanjs-rules": "0.2.1",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-standard": "3.0.1",
+    "eslint-plugin-xss": "0.1.8",
+    "jest": "20.0.4",
+    "jest-cli": "20.0.4",
+    "markdown-toc": "1.1.0",
+    "nsp": "2.7.0",
+    "standard-version": "4.2.0",
+    "yeoman-assert": "3.0.0",
+    "yeoman-test": "1.7.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "files": [
+    "generators"
+  ],
+  "homepage": "https://github.com/commonality/generator-community",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [
+    "code of conduct",
+    "community",
+    "contributing",
+    "license",
+    "readme",
+    "repository",
+    "yeoman-generator"
+  ],
+  "license": "Apache-2.0",
+  "main": "generators/index.js",
+  "repository": "commonality/generator-community",
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest --config=jest.config.json"
+  }
+}

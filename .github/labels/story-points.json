@@ -1,0 +1,46 @@
+[
+  {
+    "name":"Points: 0",
+    "color":"#eaeaea"
+  },
+  {
+    "name":"Points: 0.5",
+    "color":"#eaeaea"
+  },
+  {
+    "name":"Points: 1",
+    "color":"#eaeaea"
+  },
+  {
+    "name":"Points: 2",
+    "color":"#eaeaea"
+  },
+  {
+    "name":"Points: 3",
+    "color":"#eaeaea"
+  },
+  {
+    "name":"Points: 5",
+    "color":"#eaeaea"
+  },
+  {
+    "name":"Points: 8",
+    "color":"#fff0f0"
+  },
+  {
+    "name":"Points: 13",
+    "color":"#f9d0c4"
+  },
+  {
+    "name":"Points: 20",
+    "color":"#e99695"
+  },
+  {
+    "name":"Points: 40",
+    "color":"#d93f0b"
+  },
+  {
+    "name":"Points: 100",
+    "color":"#b60205"
+  }
+]
