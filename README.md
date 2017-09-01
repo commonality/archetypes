@@ -112,7 +112,7 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Party`](/docs/api/archetypes/v1/party/js/README.md) archetype represents an identifiable, addressable entity that may have a legal status and that normally has autonomous control over (at least some of) its actions.
+> ![Quote][quote-left-img] The [`Party`](./docs/api/archetypes/v1/party/js/README.md) archetype represents an identifiable, addressable entity that may have a legal status and that normally has autonomous control over (at least some of) its actions.
 >
 > Arlow, J., & Neustadt, I. (2006). Party archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 122). Boston: Addison-Wesley.
 
@@ -178,7 +178,7 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Quantity`](/docs/api/archetypes/v1/quantity/js/README.md) archetype represents an amount of something measured according to some standard of measurement.
+> ![Quote][quote-left-img] The [`Quantity`](./docs/api/archetypes/v1/quantity/js/README.md) archetype represents an amount of something measured according to some standard of measurement.
 >
 > Arlow, J., & Neustadt, I. (2006). Quantity archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 400). Boston: Addison-Wesley.
 
@@ -230,7 +230,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Money`](/docs/api/archetypes/v1/money/js/README.md) archetype represents an amount of a specific `Currency` that is `acceptedIn` one or more `Locales`.
+> ![Quote][quote-left-img] The [`Money`](./docs/api/archetypes/v1/money/js/README.md) archetype represents an amount of a specific `Currency` that is `acceptedIn` one or more `Locales`.
 >
 > Arlow, J., & Neustadt, I. (2006). Money archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 413). Boston: Addison-Wesley.
 
@@ -248,8 +248,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 5.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/money/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/party/money/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/money/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/party/money/README.md)
 
 
 ### 5.3. Usage example
@@ -265,7 +265,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`PartyRelationship`](/docs/api/archetypes/v1/party-relationship/js/README.md) captures the fact that there is a semantic relationship between two `Parties` in which each `Party` plays a specific role.
+> ![Quote][quote-left-img] The [`PartyRelationship`](./docs/api/archetypes/v1/party-relationship/js/README.md) captures the fact that there is a semantic relationship between two `Parties` in which each `Party` plays a specific role.
 >
 > Arlow, J., & Neustadt, I. (2006). Archetype glossary. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 160). Boston: Addison-Wesley.
 
@@ -283,8 +283,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 6.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/party-relationship/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/party/party-relationship/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/party-relationship/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/party/party-relationship/README.md)
 
 
 ### 6.3. Usage example
@@ -300,7 +300,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Rule`](/docs/api/archetypes/v1/rule/js/README.md) archetype represents a constraint on the operation of the software systems of the business&mdash;its semantics are defined by a sequence of `RuleElements`.
+> ![Quote][quote-left-img] The [`Rule`](./docs/api/archetypes/v1/rule/js/README.md) archetype represents a constraint on the operation of the software systems of the business&mdash;its semantics are defined by a sequence of `RuleElements`.
 >
 > Arlow, J., & Neustadt, I. (2006). Archetype glossary. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 449). Boston: Addison-Wesley.
 
@@ -318,8 +318,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 7.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/rules/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/rules/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/rules/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/rules/README.md)
 
 
 ### 7.3. Usage example
@@ -335,7 +335,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] [Customer relationship management (CRM)](/docs/api/archetypes/v1/crm/README.md) is about actively managing the relationships between your business and your customers, in order to understand and increase customer value, motivation, and loyalty.
+> ![Quote][quote-left-img] [Customer relationship management (CRM)](./docs/api/archetypes/v1/crm/README.md) is about actively managing the relationships between your business and your customers, in order to understand and increase customer value, motivation, and loyalty.
 >
 > Arlow, J., & Neustadt, I. (2006). Customer relationship management archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 187). Boston: Addison-Wesley.
 
@@ -353,8 +353,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 8.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/crm/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/crm/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/crm/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/crm/README.md)
 
 
 ### 8.3. Usage example
@@ -370,7 +370,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Product`](/docs/api/archetypes/v1/product/js/README.md) archetype pattern represents a generalized model for products.
+> ![Quote][quote-left-img] The [`Product`](./docs/api/archetypes/v1/product/js/README.md) archetype pattern represents a generalized model for products.
 >
 > Arlow, J., & Neustadt, I. (2006). Product archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 207). Boston: Addison-Wesley.
 
@@ -388,8 +388,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 9.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/product/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/product/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/product/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/product/README.md)
 
 
 ### 9.3. Usage example
@@ -405,7 +405,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Inventory`](/docs/api/archetypes/v1/inventory/js/README.md) archetype represents a collection of `InventoryEntries` held in stock by a business.
+> ![Quote][quote-left-img] The [`Inventory`](./docs/api/archetypes/v1/inventory/js/README.md) archetype represents a collection of `InventoryEntries` held in stock by a business.
 >
 > Arlow, J., & Neustadt, I. (2006). Inventory archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 271). Boston: Addison-Wesley.
 
@@ -423,8 +423,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 10.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/inventory/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/inventory/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/inventory/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/inventory/README.md)
 
 
 ### 10.3. Usage example
@@ -440,7 +440,7 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Order`](/docs/api/archetypes/v1/order/js/README.md) archetype represents a request by a buyer for a seller to supply some goods or services.
+> ![Quote][quote-left-img] The [`Order`](./docs/api/archetypes/v1/order/js/README.md) archetype represents a request by a buyer for a seller to supply some goods or services.
 >
 > Arlow, J., & Neustadt, I. (2006). Inventory archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 271). Boston: Addison-Wesley.
 
@@ -458,8 +458,8 @@ api.getBaseUnitByName(name, callback)
 
 ### 11.2. API documentation
 
-* [`JavaScript`](/docs/api/archetypes/v1/order/js/README.md)
-* [`Ruby`](/docs/api/archetypes/v1/order/README.md)
+* [`JavaScript`](./docs/api/archetypes/v1/order/js/README.md)
+* [`Ruby`](./docs/api/archetypes/v1/order/README.md)
 
 
 ### 11.3. Usage example
@@ -568,9 +568,9 @@ Graphic art by [icons8][icons8-license-url].
 [cla-url]: https://www.clahub.com/agreements/gregswindle/archetypes
 [codacy-image]: https://api.codacy.com/project/badge/Grade/f3ea5502651544f5bc8123f585b129fd
 [codacy-url]: https://www.codacy.com/app/greg_7/archetypes?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gregswindle/archetypes&amp;utm_campaign=Badge_Grade
-[code-of-conduct-url]: ./CODE_OF_CONDUCT.md
+[code-of-conduct-url]: ./.github/CODE_OF_CONDUCT.md
 [complexity-report-url]: ./docs/COMPLEXITY.md
-[contributing-url]: ./CONTRIBUTING.md
+[contributing-url]: ./.github/CONTRIBUTING.md
 [coveralls-image]: https://coveralls.io/repos/gregswindle/archetypes/badge.svg
 [coveralls-url]: https://coveralls.io/r/gregswindle/archetypes
 [daviddm-dev-image]: https://david-dm.org/gregswindle/archetypes/dev-status.svg
@@ -580,13 +580,13 @@ Graphic art by [icons8][icons8-license-url].
 [fossa-image-large]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=large
 [fossa-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=shield
 [fossa-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes?ref=badge_shield
-[go-api-url]: /docs/api/archetypes/v1/party/golang/README.md
+[go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
 [greenkeeper-image]: https://badges.greenkeeper.io/gregswindle/archetypes.svg
 [greenkeeper-url]: https://greenkeeper.io/
 [icons8-license-url]: https://icons8.com/license/
 [issues-new-url]: https://github.com/gregswindle/archetypes/issues/new
 [issues-url]: https://github.com/gregswindle/archetypes/issues
-[js-api-url]: /docs/api/archetypes/v1/party/js/README.md
+[js-api-url]: ./docs/api/archetypes/v1/party/js/README.md
 [license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat
 [license-url]: LICENSE
 [mda-book-url]: https://www.amazon.com/Enterprise-Patterns-MDA-Building-Archetype/dp/032111230X
@@ -598,9 +598,9 @@ Graphic art by [icons8][icons8-license-url].
 [party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
 [party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml
 [pr-url]: /gregswindle/archetypes/pulls
-[product-development-guidelines-url]: ./PRODUCT_DEVELOPEMENT_GUIDELINES.md
+[product-development-guidelines-url]: ./.github/PRODUCT_DEVELOPEMENT_GUIDELINES.md
 [quote-left-img]: ./docs/img/icons8/quote-left-25.png
-[rb-api-url]: /docs/api/archetypes/v1/party/ruby/README.md
+[rb-api-url]: ./docs/api/archetypes/v1/party/ruby/README.md
 [readme-score-img]: http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/gregswindle/archetypes
 [readme-score-url]: http://clayallsopp.github.io/readme-score?url=https://github.com/gregswindle/archetypes
 [rest-api-image]: ./docs/img/icons8/icon-rest-api.png
