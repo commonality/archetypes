@@ -1,0 +1,36 @@
+{
+    "properties": {
+        "level": {
+            "default": "ERROR",
+            "description": "The severity of the event.",
+            "pattern": "^(ALL|DEBUG|ERROR|FATAL|INFO|OFF|TRACE|WARN)",
+            "title": "LoggingEvent.level schema",
+            "type": "string"
+        },
+        "logger": {
+            "default": "[logger]",
+            "description": "The name of the logger that captured the event.",
+            "title": "LoggingEvent.logger schema",
+            "type": "string"
+        },
+        "message": {
+            "default": "",
+            "description": "A description of the event.",
+            "title": "LoggingEvent.message schema",
+            "type": "string"
+        },
+        "timestamp": {
+            "description": "The number of milliseconds elapsed from 1970-01-01 until logging event was created.",
+            "minimum": 21600000,
+            "title": "LoggingEvent.timestamp schema",
+            "type": "integer"
+        }
+    },
+    "required": [
+        "timestamp",
+        "logger",
+        "message",
+        "level"
+    ],
+    "type": "object"
+}

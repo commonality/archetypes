@@ -1,0 +1,13 @@
+[{
+    "name": "ESLint: Formatter",
+    "color": "#8080F2"
+  },
+  {
+    "name": "ESLint: Processor",
+    "color": "#8080F2"
+  },
+  {
+    "name": "ESLint: Rule",
+    "color": "#4B32C3"
+  }
+]

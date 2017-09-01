@@ -1,0 +1,99 @@
+# .htaccess is a configuration file for use on web servers running the Apache
+# Web Server software. When a .htaccess file is placed in a directory which is
+# in turn 'loaded via the Apache Web Server', then the .htaccess file is
+# detected and executed by the Apache Web Server software. These .htaccess
+# files can be used to alter the configuration of the Apache Web Server
+# software to enable/disable additional functionality and features that the
+# Apache Web Server software has to offer. These facilities include basic
+# redirect functionality, for instance if a 404 file not found error occurs, or
+# for more advanced functions such as content password protection or image hot
+# link prevention.
+
+### CHARSET AND LANGUAGE HEADERS ###
+Options +ExecCGI -Indexes
+DirectoryIndex index.json
+DefaultLanguage en-US
+AddDefaultCharset UTF-8
+SetEnv TZ Etc/UTC
+# ServerSignature Off
+
+# AddEncoding allows you to have certain browsers uncompress information on the
+# fly. Note: Not all browsers support this.
+AddEncoding x-compress .Z
+AddEncoding x-gzip .gz .tgz
+
+# DefaultType: the default MIME type the server will use for a document.
+DefaultType application/json
+
+# CORS
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+
+### DENY REQUEST METHOD TYPES ###
+RewriteCond %{REQUEST_METHOD} ^(BASELINE_CONTROL|CHECKIN|CHECKOUT|CONNECT|COPY|DELETE|INVALID|LABEL|LOCK|MERGE|MKACTIVITY|MKCOL|MKWORKSPACE|MOVE|PATCH|POST|PROPFIND|PROPPATCH|PUT|REPORT|TRACE|UNCHECKOUT|UNLOCK|UPDATE|VERSION_CONTROL) [NC]
+RewriteRule .* - [F,L,R=405]
+
+#### Custom JSON error SSIs ####
+AddType application/json .sjson
+AddHandler server-parsed .sjson
+
+# 400 Bad Request
+ErrorDocument 400 /400.sjson
+# 401 Unauthorized
+ErrorDocument 401 /401.sjson
+# 403 Forbidden
+ErrorDocument 403 /403.sjson
+# 404 Not Found
+ErrorDocument 404 /404.sjson
+# 405 Method Not Allowed
+ErrorDocument 405 /405.sjson
+# 500 Server Error
+ErrorDocument 500 /500.sjson
+
+#### Performance Optimizations ####
+# Expires header
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType text/html "access plus 3 days"
+    ExpiresByType text/xml "access plus 1 seconds"
+    ExpiresByType text/plain "access plus 1 seconds"
+    ExpiresByType application/xml "access plus 1 seconds"
+    ExpiresByType application/rss+xml "access plus 1 seconds"
+    ExpiresByType application/json "access plus 1 seconds"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-javascript "access plus 1 week"
+    ExpiresByType image/x-ico "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 month"
+  <IfModule mod_headers.c>
+       Header unset ETag
+       Header unset Pragma
+       Header unset Last-Modified
+       Header append Cache-Control "public, no-transform, must-revalidate"
+       Header set Last-modified "Tue, 1 Oct 2014 10:10:10 GMT"
+  </IfModule>
+</IfModule>
+
+### PASSWORD PROTECT SINGLE FILE
+<Files login.php>
+  AuthName "Prompt"
+  AuthType Basic
+  AuthUserFile /web/askapache.com/.htpasswd
+  Require valid-user
+</Files>
+
+### Password Protect multiple files
+<FilesMatch "^(private|phpinfo).*$">
+  AuthName "Development"
+  AuthUserFile /.htpasswd
+  AuthType basic
+  Require valid-user
+</FilesMatch>
