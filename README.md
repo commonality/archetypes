@@ -244,7 +244,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP2: Money](https://github.com/gregswindle/archetypes/milestone/2)
+[![icon-road-milestone-image] MVP2: Money](https://github.com/commonality/archetypes/milestone/2)
 
 <!--
 ### 5.1. OpenAPI 2.0 specifications
@@ -279,7 +279,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP3: PartyRelationships and Rules](https://github.com/gregswindle/archetypes/milestone/3)
+[![icon-road-milestone-image] MVP3: PartyRelationships and Rules](https://github.com/commonality/archetypes/milestone/3)
 
 <!--
 ### 6.1. OpenAPI 2.0 specifications
@@ -314,7 +314,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP3: PartyRelationships and Rules](https://github.com/gregswindle/archetypes/milestone/3)
+[![icon-road-milestone-image] MVP3: PartyRelationships and Rules](https://github.com/commonality/archetypes/milestone/3)
 
 <!--
 ### 7.1. OpenAPI 2.0 specifications
@@ -349,7 +349,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP4: Customer relationship management (CRM)](https://github.com/gregswindle/archetypes/milestone/4)
+[![icon-road-milestone-image] MVP4: Customer relationship management (CRM)](https://github.com/commonality/archetypes/milestone/4)
 
 <!--
 ### 8.1. OpenAPI 2.0 specifications
@@ -384,7 +384,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP5: Product](https://github.com/gregswindle/archetypes/milestone/5)
+[![icon-road-milestone-image] MVP5: Product](https://github.com/commonality/archetypes/milestone/5)
 
 <!--
 ### 9.1. OpenAPI 2.0 specifications
@@ -419,7 +419,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP6: Inventory](https://github.com/gregswindle/archetypes/milestone/6)
+[![icon-road-milestone-image] MVP6: Inventory](https://github.com/commonality/archetypes/milestone/6)
 
 <!--
 ### 10.1. OpenAPI 2.0 specifications
@@ -454,7 +454,7 @@ api.getBaseUnitByName(name, callback)
 
 ### Roadmap
 
-[![icon-road-milestone-image] MVP7: Inventory](https://github.com/gregswindle/archetypes/milestone/7)
+[![icon-road-milestone-image] MVP7: Inventory](https://github.com/commonality/archetypes/milestone/7)
 
 ## 12. Development
 > [![PRs Welcome][badge-prs-welcome-image]][badge-prs-welcome-url] We welcome contributors and pull requests!
@@ -594,7 +594,7 @@ Contributions are community-driven stories with a beginning, a middle, and an en
 
 ## 17. Licenses
 
-[![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/gregswindle)
+[![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/commonality)
 
 You can review all __third-party dependencies' licenses__ on [FOSSA][badge-fossa-large-image].
 
@@ -605,35 +605,35 @@ You can review all __third-party dependencies' licenses__ on [FOSSA][badge-fossa
 
 Graphic art by [icons8][icons8-license-url].
 
-[api-sdk-doc-party-organizations-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#organizations-api
-[api-sdk-doc-party-parties-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#parties-api
-[api-sdk-doc-party-people-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#people-api
-[api-sdk-doc-party-preferences-url]: https://github.com/gregswindle/archetypes/wiki/SDK:-Party-API#preferences-api
+[api-sdk-doc-party-organizations-url]: https://github.com/commonality/archetypes/wiki/SDK:-Party-API#organizations-api
+[api-sdk-doc-party-parties-url]: https://github.com/commonality/archetypes/wiki/SDK:-Party-API#parties-api
+[api-sdk-doc-party-people-url]: https://github.com/commonality/archetypes/wiki/SDK:-Party-API#people-api
+[api-sdk-doc-party-preferences-url]: https://github.com/commonality/archetypes/wiki/SDK:-Party-API#preferences-api
 [badge-codacy-image]: https://api.codacy.com/project/badge/Grade/de7b30825ac649de8b7255e4303fb069
-[badge-coveralls-image]: https://coveralls.io/repos/gregswindle/archetypes/badge.svg
-[badge-coveralls-image]: https://david-dm.org/gregswindle/archetypes.svg?theme=shields.io
-[badge-coveralls-image]: https://david-dm.org/gregswindle/archetypes/dev-status.svg
+[badge-coveralls-image]: https://coveralls.io/repos/commonality/archetypes/badge.svg
+[badge-coveralls-image]: https://david-dm.org/commonality/archetypes.svg?theme=shields.io
+[badge-coveralls-image]: https://david-dm.org/commonality/archetypes/dev-status.svg
 [badge-fossa-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=shield
 [badge-fossa-large-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes.svg?type=large
-[badge-greenkeeper-image]: https://badges.greenkeeper.io/gregswindle/archetypes.svg
+[badge-greenkeeper-image]: https://badges.greenkeeper.io/commonality/archetypes.svg
 [badge-nsp-image]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff/badge
 [badge-prs-welcome-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [badge-prs-welcome-url]: http://makeapullrequest.com
-[badge-readme-score-image]: http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/gregswindle/archetypes
+[badge-readme-score-image]: http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/commonality/archetypes
 [badge-standardjs-image]: https://cdn.rawgit.com/feross/standard/master/badge.svg
 [badge-swagger-validity-party-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/party/party.swagger.json.svg
 [badge-swagger-validity-quantity-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json.svg
-[badge-travis-image]: https://travis-ci.org/gregswindle/archetypes.svg?branch=master
+[badge-travis-image]: https://travis-ci.org/commonality/archetypes.svg?branch=master
 [business-archetypes-logo-image]: ./docs/img/logo-commonalaxy.png
 [changelog-url]: ./CHANGELOG.md
-[cla-url]: https://www.clahub.com/agreements/gregswindle/archetypes
+[cla-url]: https://www.clahub.com/agreements/commonality/archetypes
 [codacy-url]: https://www.codacy.com/app/commonality/archetypes?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=commonality/archetypes&amp;utm_campaign=Badge_Grade
 [code-of-conduct-url]: ./.github/CODE_OF_CONDUCT.md
 [complexity-report-url]: ./docs/COMPLEXITY.md
 [contributing-url]: ./.github/CONTRIBUTING.md
-[coveralls-url]: https://coveralls.io/r/gregswindle/archetypes
-[daviddm-dev-url]: https://david-dm.org/gregswindle/archetypes?type=dev
-[daviddm-url]: https://david-dm.org/gregswindle/archetypes
+[coveralls-url]: https://coveralls.io/r/commonality/archetypes
+[daviddm-dev-url]: https://david-dm.org/commonality/archetypes?type=dev
+[daviddm-url]: https://david-dm.org/commonality/archetypes
 [fossa-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgregswindle%2Farchetypes?ref=badge_shield
 [gh-standardjs-url]: https://github.com/feross/standard
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
@@ -648,8 +648,8 @@ Graphic art by [icons8][icons8-license-url].
 [icon-travis-image]: ./docs/img/icons8/travis-ci-50.png
 [icon-yeoman-image]: ./docs/img/tech-stack/icon-yeoman-50.png
 [icons8-license-url]: https://icons8.com/license/
-[issues-new-url]: https://github.com/gregswindle/archetypes/issues/new
-[issues-url]: https://github.com/gregswindle/archetypes/issues
+[issues-new-url]: https://github.com/commonality/archetypes/issues/new
+[issues-url]: https://github.com/commonality/archetypes/issues
 [js-api-url]: ./docs/api/archetypes/v1/party/js/README.md
 [license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat
 [license-url]: LICENSE
@@ -661,11 +661,11 @@ Graphic art by [icons8][icons8-license-url].
 [offsite-standardjs-url]: https://standardjs.com/
 [party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
 [party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml
-[pr-url]: /gregswindle/archetypes/pulls
+[pr-url]: /commonality/archetypes/pulls
 [product-development-guidelines-url]: ./.github/PRODUCT_DEVELOPEMENT_GUIDELINES.md
 [quote-left-img]: ./docs/img/icons8/quote-left-25.png
 [rb-api-url]: ./docs/api/archetypes/v1/party/ruby/README.md
-[readme-score-url]: http://clayallsopp.github.io/readme-score?url=https://github.com/gregswindle/archetypes
+[readme-score-url]: http://clayallsopp.github.io/readme-score?url=https://github.com/commonality/archetypes
 [rest-api-image]: ./docs/img/icons8/icon-rest-api.png
 [sonarcloud-url]: https://sonarcloud.io
 [swagger-api-docs-url]: ./docs/SWAGGER.md
@@ -678,4 +678,4 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-validity-party-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
 [swagger-validity-quantity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json
 [swagger-validity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[travis-url]: https://travis-ci.org/gregswindle/archetypes
+[travis-url]: https://travis-ci.org/commonality/archetypes
