@@ -23,7 +23,7 @@
     "babelify": "7.3.0",
     "commitplease": "2.7.10",
     "coveralls": "^2.13.1",
-    "eslint": "4.5.0",
+    "eslint": "4.6.0",
     "eslint-config-xo-space": "0.16.0",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-jest": "20.0.3",
