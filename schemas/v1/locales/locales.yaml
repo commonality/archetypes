@@ -66,13 +66,13 @@ info:
     text field and select the "Explore" button for additional APIs.
 
     1. `Locale`:
-    http://api.swindle.net/archetypes/v1/schemas/locales/locales.swagger.yaml
+    http://api.swindle.net/archetypes/v1/schemas/locales/locales.yaml
 
     2. `Party`:
-    http://api.swindle.net/archetypes/v1/schemas/parties/parties.swagger.yaml
+    http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
 
     3. `Quantity`:
-    http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.swagger.yaml
+    http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
 
 
     ---
@@ -438,12 +438,12 @@ paths:
 definitions:
   Locale:
     $ref: >-
-      http://api.swindle.net/archetypes/v1/schemas/locales/locale.swagger.yaml
+      http://api.swindle.net/archetypes/v1/schemas/locales/locale.yaml
   IsoCountryCode:
     allOf:
       - $ref: '#/definitions/Locale'
       - $ref: >-
-          http://api.swindle.net/archetypes/v1/schemas/locales/iso-country-code.swagger.yaml
+          http://api.swindle.net/archetypes/v1/schemas/locales/iso-country-code.yaml
       - description: >-
           IsoCountryCode extends Locale to provide a country defined in ISO
           3166.

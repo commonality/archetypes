@@ -3,7 +3,7 @@
 
 ## Status
 
-Please see [MVP35: Product](https://github.com/gregswindle/open-api-archetypes/milestone/5) for Sprint/milestone details.
+Please see [MVP35: Product](https://github.com/commonality/archetypes/milestone/5) for Sprint/milestone details.
 
 ---
 

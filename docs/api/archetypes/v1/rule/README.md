@@ -3,7 +3,7 @@
 
 ## Status
 
-Please see [MVP3: PartyRelationships and Rules](https://github.com/gregswindle/open-api-archetypes/milestone/3) for Sprint/milestone details.
+Please see [MVP3: PartyRelationships and Rules](https://github.com/commonality/archetypes/milestone/3) for Sprint/milestone details.
 
 ---
 
