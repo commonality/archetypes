@@ -48,7 +48,7 @@
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-standard": "3.0.1",
     "eslint-plugin-xss": "0.1.8",
-    "jest": "20.0.4",
+    "jest": "21.0.0",
     "jest-cli": "20.0.4",
     "markdown-magic": "0.1.18",
     "markdown-magic-dependency-table": "1.2.2",
