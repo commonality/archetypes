@@ -220,7 +220,7 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) -->
 ```
-schemas/v1/quantities/
+quantities/
 ├── metric.yaml
 ├── quantities.yaml
 ├── quantity.yaml
@@ -568,7 +568,6 @@ The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (as
 | `lint:sonar` | `node_modules/sonar-scanner/bin/sonar-scanner` |
 | `lint:swagger:all` | `npm run lint:swagger:parties` |
 | `lint:swagger:parties` | `swagger validate schemas/v1/parties/parties.yaml --debug` |
-| `prepare` | `npm run security` |
 | `prepublishOnly` | `npm run docs` |
 | `preversion` | `npm run docs` |
 | `release` | `standard-version` |
@@ -762,9 +761,9 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |
-| --- | --- |
-| 8 | [gregswindle](https://github.com/gregswindle) |
+| **Commits** | **Contributor** |  
+| --- | --- |  
+| 11 | [gregswindle](https://github.com/gregswindle) |  
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
