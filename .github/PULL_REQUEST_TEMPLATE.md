@@ -31,7 +31,7 @@ replace this line and the following task completion line._
 | **`Reliability`**     | [![Reliability][sonar-reliability-img]][sonar-reliability-url]     |
 | **`Security`**        | [![Security][sonar-security-img]][sonar-security-url]              |
 
-#### 3. **Test coverage** [![Coverage Status][codecov-image]][codecov-url]
+#### 3. **Test coverage** [![Coverage Status](https://coveralls.io/repos/github/commonality/archetypes/badge.svg?branch=master)](https://coveralls.io/github/commonality/archetypes?branch=master)
 
 - [ ] The source code is 100% covered with passing specs.
 
@@ -39,27 +39,27 @@ replace this line and the following task completion line._
 
 [codecov-image]: https://codecov.io/gh/commonality/archetypes/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/commonality/archetypes
-[coveralls-img]: https://coveralls.io/repos/github/commonality/archetypes/badge.svg
-[coveralls-url]: https://coveralls.io/github/commonality/archetypes
-[sonar-code-smells-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=code_smells
+[coveralls-img]: https://coveralls.io/repos/github/commonality/archetypes/badge.svg?branch=master&style=flat-square
+[coveralls-url]: https://coveralls.io/github/commonality/archetypes?branch=master
+[sonar-code-smells-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=code_smells
 [sonar-code-smells-url]: https://sonarcloud.io/component_measures/metric/code_smells/list?id=commonality:archetypes
-[sonar-cognitive-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=cognitive_complexity
+[sonar-cognitive-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=cognitive_complexity
 [sonar-cognitive-url]: https://sonarcloud.io/component_measures/metric/cognitive_complexity/list?id=commonality:archetypes
-[sonar-complexity-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=function_complexity
+[sonar-complexity-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=function_complexity
 [sonar-complexity-url]: https://sonarcloud.io/component_measures/domain/Complexity?id=commonality:archetypes
-[sonar-coverage-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=coverage
+[sonar-coverage-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=coverage
 [sonar-coverage-url]: https://sonarcloud.io/component_measures/domain/Coverage?id=commonality:archetypes
-[sonar-duplications-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=duplicated_line_density
+[sonar-duplications-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=duplicated_line_density
 [sonar-duplications-url]: https://sonarcloud.io/component_measures/domain/Duplications?id=commonality:archetypes
-[sonar-gate-img]: http://sonarcloud.io/api/badges/gate?key=commonality:archetypes
+[sonar-gate-img]: http://sonarcloud.io/api/badges/gate?key=-commonality:archetypes
 [sonar-gate-url]: http://sonarcloud.io/dashboard/index/commonality:archetypes
-[sonar-issues-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=blocker_violations
+[sonar-issues-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=blocker_violations
 [sonar-issues-url]: https://sonarcloud.io/component_measures/domain/Issues?id=commonality:archetypes
-[sonar-maintainability-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=new_maintainability_rating
+[sonar-maintainability-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=new_maintainability_rating
 [sonar-maintainability-url]: https://sonarcloud.io/component_measures/domain/Maintainability?id=commonality:archetypes
-[sonar-reliability-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=new_reliability_rating
+[sonar-reliability-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=new_reliability_rating
 [sonar-reliability-url]: https://sonarcloud.io/component_measures/domain/Reliability?id=commonality:archetypes
-[sonar-security-img]: http://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=vulnerabilities
+[sonar-security-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=vulnerabilities
 [sonar-security-url]: https://sonarcloud.io/component_measures/domain/Security?id=commonality:archetypes
-[sonar-tech-debt-img]:  https://sonarcloud.io/api/badges/measure?key=commonality:archetypes&metric=sqale_debt_ratio
+[sonar-tech-debt-img]:  https://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=sqale_debt_ratio
 [sonar-tech-debt-url]: https://sonarcloud.io/component_measures/metric/sqale_index/list?id=commonality:archetypes
