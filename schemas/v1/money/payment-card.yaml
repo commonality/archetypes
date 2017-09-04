@@ -1,0 +1,54 @@
+---
+title: PaymentCard
+description: >-
+  Represents a physical token such as a plastic card that authorizes the Party identified on it to charge the cost of goods and services to an account.
+type: object
+allOf:
+  - $ref: >-
+        http://api.swindle.net/archetypes/v1/schemas/date-times/effective-dates.yaml
+  - $ref: >-
+        http://api.swindle.net/archetypes/v1/schemas/money/payment-method.yaml
+  - properties:
+      billingAddress:
+        default: ''
+        description: >-
+          The address to which account statements are sent.
+        title: PaymentCard.billingAddress property
+        type: string
+      cardAssociationName:
+        default: ''
+        description: >-
+          The name of the card association that manages the card networks to which the PaymentCard belongs, e.g., "MasterCard", "Visa".
+        title: PaymentCard.cardAssociationName property
+        type: string
+      cardNumber:
+        default: ''
+        description: >-
+          The number on the PaymentCard.
+        title: PaymentCard.cardNumber property
+        type: string
+      cardVerificationCode:
+        default: ''
+        description: >-
+          A verification code printed on the back of the PaymentCard. At present, this is a three-digit number.
+        minLength: 3
+        title: PaymentMethod.cardVerificationCode property
+        type: string
+      issueNumber:
+        default: ''
+        description: >-
+          A number used by the issuing authority to uniquely identify the issue of the PaymentCard.
+        title: PaymentCard.issueNumber property
+        type: string
+      nameOnCard:
+        default: ''
+        description: >-
+          The name of the Party authorized to use the PaymentCard.
+        title: PaymentCard.nameOnCard property
+        type: string
+    required:
+    - billingAddress
+    - cardAssociationName
+    - cardNumber
+    - nameOnCard
+    - validTo
