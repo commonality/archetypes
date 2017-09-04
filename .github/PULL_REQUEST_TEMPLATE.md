@@ -7,7 +7,11 @@ _Please describe your changes here._
 _Reference issues pertinent to this PR here If there are no issues referenced,
 replace this line and the following task completion line._
 
-- [ ] The acceptance criteria for all associated issues have been completed, tested, and validated.
+- [ ] 1. The acceptance criteria for all associated issues have been completed, tested, and validated.
+- [ ] 2. All specifications pass `swagger validate`.
+- [ ] 3. `swagger-codegen` successfully generates a `javascript-client`.
+- [ ] 4. An `npm-script` for validation exists and runs with `npm run lint`.
+- [ ] 5. `README.md` provides overview sections with links.
 
 ### PR check-list
 
