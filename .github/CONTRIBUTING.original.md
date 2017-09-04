@@ -1,6 +1,6 @@
 [![Generator Community Repo][product-repo-logo-image]][product-repo-url]
 
-# Contributing to `generator-community`
+# Contributing to `archetypes`
 > [![PRs Welcome][makeapullrequest-image]][makeapullrequest-url] Contributions are stories with a beginning, a middle, and an end, all told through issues, comments, commit logs, and pull requests.
 
 ## 1. Table of contents
@@ -265,12 +265,12 @@ test(<scope>): <subject>
 ```
 
 ## 6. Development
-`generator-community` is dedicated to enabling best practices. It is therefore crucial that the generator itself follows strong engineering standards to assure quality and performance.
+`archetypes` is dedicated to enabling best practices. It is therefore crucial that the generator itself follows strong engineering standards to assure quality and performance.
 
 ### 6.1. Code standards
 
 ESLint evaluates Javascript code standards before each test run with the `npm-script pretest`.
-Heres' a [table of `generator-community's` ESLint rules][eslint-rules-table-url] and their enforcement.
+Heres' a [table of `archetypes's` ESLint rules][eslint-rules-table-url] and their enforcement.
 
 ### 6.2. Testing
 
@@ -289,7 +289,7 @@ $ npm test
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars3.githubusercontent.com/u/6599333?v=4" width="100px;"/><br /><sub>rm-cortez</sub>](https://github.com/rm-cortez)<br />[👀](#review-rm-cortez "Reviewed Pull Requests") [📖](https://github.com/@commonality/generator-community/commits?author=rm-cortez "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/1043478?v=4" width="100px;"/><br /><sub>Spencer Hamm</sub>](http://spencerhamm.com)<br />[👀](#review-spentacular "Reviewed Pull Requests") |
+| [<img src="https://avatars3.githubusercontent.com/u/6599333?v=4" width="100px;"/><br /><sub>rm-cortez</sub>](https://github.com/rm-cortez)<br />[👀](#review-rm-cortez "Reviewed Pull Requests") [📖](https://github.com/@commonality/archetypes/commits?author=rm-cortez "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/1043478?v=4" width="100px;"/><br /><sub>Spencer Hamm</sub>](http://spencerhamm.com)<br />[👀](#review-spentacular "Reviewed Pull Requests") |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
@@ -307,9 +307,9 @@ Thank you for contributing, and welcome to the community!
 [coolors-palette-url]: https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533
 [eslint-rules-table-url]: ESLINT_RULES.md
 [git-commit-guidelines-url]: https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
-[issues-new-defect-url]: https://github.com/commonality/generator-community/issues/new?title=fix(scope-of-issue):%20provide%20simple%20summary&labels=Type:%20Defect,Status:%20Review%20Needed,Priority:%20Medium&body=%3C%21--+DEFECTS%3A++Tell+us+what+should+happen+--%3E%0D%0A%23%23+Expected+Behavior%0D%0A%0D%0A%0D%0A%23%23+Current+Behavior+%0D%0A%3C%21---+Tell+us+what+happens+instead+of+the+expected+behavior.+--%3E%0D%0A%0D%0A%23%23+Possible+Solution%0D%0A%3C%21---+Not+obligatory%2C+but+suggest+a+fix%2Freason+for+the+bug%2C%0D%0A++++++++or+ideas+how+to+implement+the+addition+or+change.+--%3E%0D%0A%0D%0A%23%23+Steps+to+Reproduce%0D%0A%3C%21---+Provide+a+link+to+a+live+example%2C+or+an+unambiguous+set+of+steps+to+%0D%0A++++++++reproduce+this+bug.+Include+code+to+reproduce%2C+if+relevant.+--%3E%0D%0A1.+%0D%0A2.+%0D%0A3.+%0D%0A4.+%0D%0A%0D%0A%23%23+Context%0D%0A%3C%21---+How+has+this+issue+affected+you%3F+What+are+you+trying+to+accomplish%3F+--%3E%0D%0A%3C%21---+Providing+context+helps+us+come+up+with+a+solution+that+is+most+useful+in+the+real+world+--%3E%0D%0A%0D%0A%23%23+Your+Environment%0D%0A%3C%21---+Include+as+many+relevant+details+about+the+environment+in+which+this+happened.+--%3E%0D%0A%2A+Version+used%3A%0D%0A%2A+Environment+name+and+version+%28e.g.+Chrome+39%2C+node.js+5.4%29%3A%0D%0A%2A+Operating+System+and+version+%28desktop+or+mobile%29%3A%0D%0A%2A+Link+to+your+project%3A
-[issues-new-url]: https://github.com/commonality/generator-community/issues/new
-[issues-url]: https://github.com/commonality/generator-community/issues
+[issues-new-defect-url]: https://github.com/commonality/archetypes/issues/new?title=fix(scope-of-issue):%20provide%20simple%20summary&labels=Type:%20Defect,Status:%20Review%20Needed,Priority:%20Medium&body=%3C%21--+DEFECTS%3A++Tell+us+what+should+happen+--%3E%0D%0A%23%23+Expected+Behavior%0D%0A%0D%0A%0D%0A%23%23+Current+Behavior+%0D%0A%3C%21---+Tell+us+what+happens+instead+of+the+expected+behavior.+--%3E%0D%0A%0D%0A%23%23+Possible+Solution%0D%0A%3C%21---+Not+obligatory%2C+but+suggest+a+fix%2Freason+for+the+bug%2C%0D%0A++++++++or+ideas+how+to+implement+the+addition+or+change.+--%3E%0D%0A%0D%0A%23%23+Steps+to+Reproduce%0D%0A%3C%21---+Provide+a+link+to+a+live+example%2C+or+an+unambiguous+set+of+steps+to+%0D%0A++++++++reproduce+this+bug.+Include+code+to+reproduce%2C+if+relevant.+--%3E%0D%0A1.+%0D%0A2.+%0D%0A3.+%0D%0A4.+%0D%0A%0D%0A%23%23+Context%0D%0A%3C%21---+How+has+this+issue+affected+you%3F+What+are+you+trying+to+accomplish%3F+--%3E%0D%0A%3C%21---+Providing+context+helps+us+come+up+with+a+solution+that+is+most+useful+in+the+real+world+--%3E%0D%0A%0D%0A%23%23+Your+Environment%0D%0A%3C%21---+Include+as+many+relevant+details+about+the+environment+in+which+this+happened.+--%3E%0D%0A%2A+Version+used%3A%0D%0A%2A+Environment+name+and+version+%28e.g.+Chrome+39%2C+node.js+5.4%29%3A%0D%0A%2A+Operating+System+and+version+%28desktop+or+mobile%29%3A%0D%0A%2A+Link+to+your+project%3A
+[issues-new-url]: https://github.com/commonality/archetypes/issues/new
+[issues-url]: https://github.com/commonality/archetypes/issues
 [label-status-available-url]: ../labels/Status%3A%20Available
 [license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat
 [license-url]: ../LICENSE
@@ -319,7 +319,7 @@ Thank you for contributing, and welcome to the community!
 [new-issue-url]: https://oneconfluence.verizon.com/x/So_PCw
 [php-codesniffer-url]: https://github.com/squizlabs/ESLint
 [pr-course-url]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[pr-url]: https://github.com/commonality/generator-community/pulls
+[pr-url]: https://github.com/commonality/archetypes/pulls
 [product-repo-logo-image]: ../docs/img/logo-commonalaxy.png
-[product-repo-url]: https://github.com/commonality/generator-community
+[product-repo-url]: https://github.com/commonality/archetypes
 [standard-version-url]: https://github.com/conventional-changelog/standard-version

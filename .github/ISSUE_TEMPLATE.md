@@ -37,7 +37,7 @@ In order to {achieve value}.
 ## Your environment (for defects only)
 > Include as many relevant details about the environment in which the defect occured.
 
-* Version of `generator-community`:
+* Version of `archetypes`:
 * Environment name and version (e.g. Chrome 39, node.js 5.4):
 * Operating System and version (desktop or mobile):
 * Link to your project:
@@ -75,7 +75,7 @@ In order to {achieve value}.
 ## 7. Your environment
 > Include as many relevant details about the environment you experienced the defect in.
 
-- 7.1. `generator-community` version used:
+- 7.1. `archetypes` version used:
 - 7.2. Environment name and version (e.g. Chrome 39, node.js 5.4):
 - 7.3. Operating System and version (desktop or mobile):
 - 7.4. Link to your project:

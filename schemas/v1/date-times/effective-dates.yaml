@@ -1,0 +1,22 @@
+title: EffectiveDates
+properties:
+  validFrom:
+    description: >-
+      The date on which some thing become invalid or expired. If validFrom's value is of type String, that value must be a valid ISO 8601 format. If validFrom' a value is of type Number, that value must be a valid Unix datetime stamp. If unknown, set validTo's date to null.
+    minimum: 21600000
+    title: EffectiveDates.validFrom schema
+    type:
+    - string
+    - integer
+    - 'null'
+  validTo:
+    default: ''
+    description: >-
+      The date on which some thing become valid or effective. If validTo's value is of type String, then that value must be a valid ISO 8601 format.  If validTo's value is of type Number, that value must be a valid Unix datetime stamp. If the date is either unknown or valid, set validTo's date to null.
+    minimum: 21600000
+    title: EffectiveDates.validTo
+    type:
+    - string
+    - integer
+    - 'null'
+type: object

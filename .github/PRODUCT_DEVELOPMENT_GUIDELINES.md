@@ -1260,7 +1260,7 @@ Graphic art by [icons8](https://icons8.com/).
 [open-source-guides-url]: https://opensource.guide/
 [pr-url]: https://github.com/commonality/product-name/pulls
 [product-repo-logo-image]: ../docs/img/logo-commonalaxy.png
-[product-repo-url]: https://github.com/commonality/generator-community
+[product-repo-url]: https://github.com/commonality/archetypes
 [reading-15-image]: /docs/img/icons8/reading-15.png
 [readme-score-img]: http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/commonality/product-name
 [readme-score-url]: http://clayallsopp.github.io/readme-score?url=https://github.com/commonality/product-name

@@ -416,3 +416,4 @@ yarn.lock
 
 .assets/scripts/eslint*.*
 docs/img/palette.*
+lib/

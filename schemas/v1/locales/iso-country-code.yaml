@@ -1,0 +1,50 @@
+title: IsoCountryCode
+properties:
+  alphabeticThreeCharCode:
+    default: ''
+    description: The alphabetic three-character code that represents a the country,
+      e.g., “DEU” for Germany.
+    maxLength: 3
+    minLength: 3
+    pattern: "^[A-Z]{3}"
+    title: IsoCountryCode.alphabeticThreeCharCode property
+    type: string
+  description:
+    description: A brief description of the country.
+    title: IsoCountryCode.description property
+    type: string
+  identifier:
+    default: ''
+    description: The alphabetic two-character code that represents a country.
+    maxLength: 2
+    minLength: 2
+    pattern: "^[A-Z]{2}"
+    title: IsoCountryCode.identifier property
+    type: string
+  name:
+    default: ''
+    description: The short name of the country as listed in ISO 3166, inherited from
+      Locale.
+    title: IsoCountryCode.name property
+    type: string
+  numericCode:
+    default: ''
+    description: The numeric three-digit code that represents the country, e.g., “276”
+      for Germany and “008” for Albania. Note that this number may have leading zeros
+      and is therefore represented by a string.
+    maxLength: 3
+    minLength: 3
+    pattern: "^[0-9]{3}"
+    title: IsoCountryCode.numericCode property
+    type: string
+  officialName:
+    description: The official name of the country as listed in ISO 3166, e.g., "Federal
+      Republic of Germany".
+    title: IsoCountryCode.officialName property
+    type: string
+required:
+- name
+- alphabeticThreeCharCode
+- identifier
+- numericCode
+type: object

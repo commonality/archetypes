@@ -1,13 +1,15 @@
 {
-  "name": "generator-community",
+  "name": "archetypes",
   "automock": false,
   "collectCoverage": true,
   "coverageDirectory": "./coverage",
   "coveragePathIgnorePatterns": [
+    "/generate-docs.js",
+    "/lib/",
     "/node_modules/",
     "/__tests__/__fixtures__/",
-    "/__fixtures__/",
-    "/__mocks__/"
+    "/__tests__/__mocks__/",
+    "/__tests__/"
   ],
   "coverageThreshold": {
     "global": {
@@ -18,9 +20,10 @@
     }
   },
   "testPathIgnorePatterns": [
+    "/lib/",
     "/__tests__/__fixtures__/",
-    "/__fixtures__/",
-    "/__mocks__/"
+    "/__tests__/__mocks__/",
+    "/__tests__/"
   ],
   "verbose": true
 }

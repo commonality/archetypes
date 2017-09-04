@@ -1,0 +1,24 @@
+---
+title: Metric
+description: A representation of a standard of measurement.
+properties:
+  definition:
+    default: ''
+    description: The formal definition of the Metric.
+    title: Metric.definition schema
+    type: string
+  name:
+    default: ''
+    description: The name of the metric, e.g., "meters".
+    title: Metric.name schema
+    type: string
+  symbol:
+    default: 'null'
+    description: The standard symbol of the Metric, e.g., "m" for meters. If no symbol
+      exists, set symbol's value to null.
+    title: Metric.symbol schema
+    type: string
+required:
+- symbol
+- name
+type: object
