@@ -6,6 +6,7 @@ const config = {
   transforms: {
     CONTRIBUTORS: require('markdown-magic-github-contributors'),
     DEPENDENCYTABLE: require('markdown-magic-dependency-table'),
+    DIRTREE: require('markdown-magic-directory-tree'),
     SCRIPTS: require('markdown-magic-package-scripts')
   },
   DEBUG: false

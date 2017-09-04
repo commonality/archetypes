@@ -154,7 +154,18 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 3.3. OpenAPI 2.0 Specs
 
-[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml) (as `application/x-yaml`)
+[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml)
+
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) -->
+```shell
+# Party archetype pattern OpenAPI specs
+schemas/v1/parties/
+├── nominative.yaml
+├── parties.yaml
+└── unique-identifier.yaml
+```
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
+
 
 ### 3.4. API and SDK documentation
 
@@ -206,6 +217,18 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 ### 4.2. OpenAPI 2.0 Specs
 
 [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml)
+
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) -->
+```
+schemas/v1/quantities/
+├── metric.yaml
+├── quantities.yaml
+├── quantity.yaml
+├── rounding-strategy.yaml
+├── si-system-of-units.yaml
+└── system-of-units.yaml
+```
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
 ### 4.3. API and SDK documentation
 
@@ -740,9 +763,9 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |  
-| --- | --- |  
-| 8 | [gregswindle](https://github.com/gregswindle) |  
+| **Commits** | **Contributor** |
+| --- | --- |
+| 8 | [gregswindle](https://github.com/gregswindle) |
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
