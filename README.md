@@ -154,10 +154,7 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 3.3. OpenAPI 2.0 Specs
 
-[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url]
-
-* [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json)
-* [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml)
+[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml) (as `application/x-yaml`)
 
 ### 3.4. API and SDK documentation
 
@@ -208,10 +205,7 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 ### 4.2. OpenAPI 2.0 Specs
 
-[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url]
-
-* [`JSON`](http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json)
-* [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.yaml)
+[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml)
 
 ### 4.3. API and SDK documentation
 
@@ -746,15 +740,15 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |
-| --- | --- |
-| 7 | [gregswindle](https://github.com/gregswindle) |
+| **Commits** | **Contributor** |  
+| --- | --- |  
+| 8 | [gregswindle](https://github.com/gregswindle) |  
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
 ## 17. Licenses
 
-[![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/commonality).
+[Apache-2.0][license-url] © [Greg Swindle](https://githbub.com/commonality).
 
 ---
 
@@ -828,8 +822,8 @@ Graphic art by [icons8][icons8-license-url].
 [nsp-badge-image]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff/badge?style=flat-square
 [nsp-sign-up-url]: https://nodesecurity.io/signup
 [nsp-url]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff
-[party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml
+[party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+[party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
 [pr-url]: /commonality/archetypes/pulls
 [product-development-guidelines-url]: ./.github/PRODUCT_DEVELOPEMENT_GUIDELINES.md
 [prs-welcome-badge-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
@@ -858,10 +852,9 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-codegen-url]: https://github.com/swagger-api/swagger-codegen
 [swagger-io-url]: http://swagger.io
 [swagger-markdown-url]: https://github.com/syroegkin/swagger-markdown
-[swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/party/party.swagger.json.svg?style=flat-square
-[swagger-validity-party-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json.svg?style=flat-square
-[swagger-validity-quantity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json
-[swagger-validity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
+[swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/parties/parties.yaml.svg?style=flat-square
+[swagger-validity-party-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+[swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml.svg?style=flat-square
+[swagger-validity-quantity-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
 [travis-badge-image]: https://img.shields.io/travis/commonality/archetypes.svg?branch=master&style=flat-square
 [travis-url]: https://travis-ci.org/commonality/archetypes

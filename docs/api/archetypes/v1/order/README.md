@@ -3,7 +3,7 @@
 
 ## Status
 
-Please see [MVP7: Order](https://github.com/gregswindle/open-api-archetypes/milestone/7) for Sprint/milestone details.
+Please see [MVP7: Order](https://github.com/commonality/archetypes/milestone/7) for Sprint/milestone details.
 
 ---
 

@@ -323,58 +323,6 @@ definitions:
             items:
               $ref: '#/definitions/DerivedUnitTerm'
       - title: DerivedUnit
-  RoundingStrategy:
-    type: number
-    enum: &ref_0
-      - ROUND_UP
-      - ROUND_DOWN
-      - ROUND
-      - ROUND_UP_BY_STEP
-      - ROUND_DOWN_BY_STEP
-      - ROUND_TOWARDS_POSITIVE
-      - ROUND_TOWARDS_NEGATIVE
-    description: >-
-
-      An enum that represents an aspect of a RoundingPolicy that determines the
-      type of rounding to be applied. Allowed values are:
-
-      * **ROUND_UP** - Rounds a number to the specified numberOfDigits, moving
-      its value away from zero.
-
-
-      * **ROUND_DOWN** - Rounds a number to the specified numberOfDigits, moving
-      its value towards zero, thereby truncating the number at the specified
-      precision.
-
-
-      * **ROUND** - Behaves like ROUND_UP if the digit following the specified
-      numberOfDigits is greater than or equal to the specified roundingDigit;
-      otherwise, behaves like ROUND_DOWN. Note that the most common
-      roundingDigit is 5.
-
-
-      * **ROUND_UP_BY_STEP** - Rounds a number up to the nearest multiple of the
-      specified `roundingStep`, moving its value away from zero. This allows
-      numbers to be rounded in specific steps--e.g., if prices are to rounded up
-      to the nearest 25 cents. **Note:** A `numberOfDigits` value is not
-      required with `ROUND_UP_BY_STEP`, since `ROUND_UP_BY_STEP` also dictates
-      the decimal precision.
-
-
-      * **ROUND_DOWN_BY_STEP** - Rounds a number down to the nearest multiple of
-      the specified `roundingStep`, moving its value towards zero. This allows
-      numbers to be rounded in specific steps--e.g., if prices are to rounded up
-      to the nearest 25 cents. **Note:** A `numberOfDigits` value is not
-      required with `ROUND_DOWN_BY_STEP`, since `ROUND_DOWN_BY_STEP` also
-      dictates the decimal precision.
-
-
-      * **ROUND_TOWARDS_POSITIVE** - Behaves like `ROUND_UP` for _positive_
-      numbers and like `ROUND_DOWN` for _negative_ numbers.
-
-
-      * **ROUND_TOWARDS_NEGATIVE** - Behaves like `ROUND_UP` for _negative_
-      numbers and like `ROUND_DOWN` for _positive_ numbers.
   RoundingPolicy:
     description: >-
       Determines the mathematical semantics of the Quantity archetype's round()
@@ -397,7 +345,56 @@ definitions:
         type: number
       roundingStrategy:
         type: number
-        enum: *ref_0
+        enum: &ROUNDINGSTRATEGY
+        - ROUND_UP
+        - ROUND_DOWN
+        - ROUND
+        - ROUND_UP_BY_STEP
+        - ROUND_DOWN_BY_STEP
+        - ROUND_TOWARDS_POSITIVE
+        - ROUND_TOWARDS_NEGATIVE
+        description: >-
+
+          An enum that represents an aspect of a RoundingPolicy that determines the
+          type of rounding to be applied. Allowed values are:
+
+          * **ROUND_UP** - Rounds a number to the specified numberOfDigits, moving
+          its value away from zero.
+
+
+          * **ROUND_DOWN** - Rounds a number to the specified numberOfDigits, moving
+          its value towards zero, thereby truncating the number at the specified
+          precision.
+
+
+          * **ROUND** - Behaves like ROUND_UP if the digit following the specified
+          numberOfDigits is greater than or equal to the specified roundingDigit;
+          otherwise, behaves like ROUND_DOWN. Note that the most common
+          roundingDigit is 5.
+
+
+          * **ROUND_UP_BY_STEP** - Rounds a number up to the nearest multiple of the
+          specified `roundingStep`, moving its value away from zero. This allows
+          numbers to be rounded in specific steps--e.g., if prices are to rounded up
+          to the nearest 25 cents. **Note:** A `numberOfDigits` value is not
+          required with `ROUND_UP_BY_STEP`, since `ROUND_UP_BY_STEP` also dictates
+          the decimal precision.
+
+
+          * **ROUND_DOWN_BY_STEP** - Rounds a number down to the nearest multiple of
+          the specified `roundingStep`, moving its value towards zero. This allows
+          numbers to be rounded in specific steps--e.g., if prices are to rounded up
+          to the nearest 25 cents. **Note:** A `numberOfDigits` value is not
+          required with `ROUND_DOWN_BY_STEP`, since `ROUND_DOWN_BY_STEP` also
+          dictates the decimal precision.
+
+
+          * **ROUND_TOWARDS_POSITIVE** - Behaves like `ROUND_UP` for _positive_
+          numbers and like `ROUND_DOWN` for _negative_ numbers.
+
+
+          * **ROUND_TOWARDS_NEGATIVE** - Behaves like `ROUND_UP` for _negative_
+          numbers and like `ROUND_DOWN` for _positive_ numbers.
   Quantity:
     description: Represents an amount measured in some Metric.
     type: object
