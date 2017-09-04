@@ -39,19 +39,21 @@ These __business `archetypes`__ are expressed as __models__ in open, vendor-neut
   * [4.3. API and SDK documentation](#43-api-and-sdk-documentation)
   * [4.4. Usage example](#44-usage-example)
 - [5. `Money`](#5-money)
-  * [Roadmap](#roadmap)
+  * [5.1. OpenAPI 2.0 Specs](#51-openapi-20-specs)
+  * [5.2. API documentation](#52-api-documentation)
+  * [5.3. Usage example](#53-usage-example)
 - [6. `PartyRelationship`](#6-partyrelationship)
-  * [Roadmap](#roadmap-1)
+  * [Roadmap](#roadmap)
 - [7. `Rule`](#7-rule)
-  * [Roadmap](#roadmap-2)
+  * [Roadmap](#roadmap-1)
 - [8. Customer relationship management (CRM)](#8-customer-relationship-management-crm)
-  * [Roadmap](#roadmap-3)
+  * [Roadmap](#roadmap-2)
 - [9. `Product`](#9-product)
-  * [Roadmap](#roadmap-4)
+  * [Roadmap](#roadmap-3)
 - [10. `Inventory`](#10-inventory)
-  * [Roadmap](#roadmap-5)
+  * [Roadmap](#roadmap-4)
 - [11. `Order`](#11-order)
-  * [Roadmap](#roadmap-6)
+  * [Roadmap](#roadmap-5)
 - [12. Product development and delivery](#12-product-development-and-delivery)
   * [12.1. Built With](#121-built-with)
   * [12.2. Prerequisites](#122-prerequisites)
@@ -232,7 +234,7 @@ quantities/
 
 ### 4.3. API and SDK documentation
 
-[`Node.js (JavaScript) Quantity`](./docs/api/archetypes/v1/quantity/js/README.md) client SDK.
+[`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/quantity/js/README.md) client SDK.
 
 
 ### 4.4. Usage example
@@ -266,36 +268,52 @@ api.getBaseUnitByName(name, callback)
 
 ![REST API][rest-api-image]
 
-> ![Quote][quote-left-img] The [`Money`](./docs/api/archetypes/v1/money/js/README.md) archetype represents an amount of a specific `Currency` that is `acceptedIn` one or more `Locales`.
+> ![Quote][quote-left-img] The [`Money`](./docs/api/archetypes/v1/money/js/README.md) archetype represents an `amount` of a specific `Currency` that is `acceptedIn` one or more `Locales`.
 >
 > Arlow, J., & Neustadt, I. (2006). Money archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 413). Boston: Addison-Wesley.
 
-### Roadmap
 
-[![icon-road-milestone-image] MVP2: Money](https://github.com/commonality/archetypes/milestone/2)
+### 5.1. Standards compliance
 
-<!--
-      ### 5.1. OpenAPI 2.0 Specs
+<table>
+  <thead>
+    <tr><th>Standard</th><th>Contents</th></tr>
+  </thead>
+  <tfoot>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td><a href="http://www.omg.org/spec/CURR/1.0/PDF">OMG Currency Specification v1.0</a></td>
+      <td>A standard to support international currency.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217</a></td>
+      <td>Three- and two-letter currency codes, currency numbers, and currency names.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a></td>
+      <td>Two-letter country codes and country names.</td>
+    </tr>
+  </tbody>
+</table>
 
-      [![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url]
 
-      * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/money/money.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.swagger.yaml)
+### 5.2. OpenAPI 2.0 Specs
 
-      ### 5.2. API documentation
+[![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml)
 
-      * [`JavaScript`](./docs/api/archetypes/v1/money/js/README.md)
-      * [`Ruby`](./docs/api/archetypes/v1/party/money/README.md)
+### 5.3. API documentation
 
+[`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/money/js/README.md)
 
-      ### 5.3. Usage example
+### 5.4. Usage example
 
-      **Retrieve an `` by identifier** with JavaScript:
+**Retrieve an `` by identifier** with JavaScript:
 
-      ```js
+```js
 
-      ```
--->
+```
+
 
 ## 6. `PartyRelationship`
 
@@ -567,7 +585,9 @@ The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (as
 | `lint:js` | `eslint . --fix ` |
 | `lint:sonar` | `node_modules/sonar-scanner/bin/sonar-scanner` |
 | `lint:swagger:all` | `npm run lint:swagger:parties` |
+| `lint:swagger:money` | `swagger validate schemas/v1/money/money.spec.yaml --debug` |
 | `lint:swagger:parties` | `swagger validate schemas/v1/parties/parties.yaml --debug` |
+| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug` |
 | `prepublishOnly` | `npm run docs` |
 | `preversion` | `npm run docs` |
 | `release` | `standard-version` |
@@ -761,9 +781,9 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |  
-| --- | --- |  
-| 11 | [gregswindle](https://github.com/gregswindle) |  
+| **Commits** | **Contributor** |
+| --- | --- |
+| 11 | [gregswindle](https://github.com/gregswindle) |
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
@@ -873,6 +893,8 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-codegen-url]: https://github.com/swagger-api/swagger-codegen
 [swagger-io-url]: http://swagger.io
 [swagger-markdown-url]: https://github.com/syroegkin/swagger-markdown
+[swagger-validity-money-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml.svg?style=flat-square
+[swagger-validity-money-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml
 [swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/parties/parties.yaml.svg?style=flat-square
 [swagger-validity-party-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
 [swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml.svg?style=flat-square
