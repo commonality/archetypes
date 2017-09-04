@@ -25,9 +25,6 @@
     ],
     "scope": "\\S+.*"
   },
-  "engines": {
-    "node": ">= 6.x"
-  },
   "dependencies": {
     "lodash": "^4.17.4",
     "standard-readme-spec": "1.1.3"
@@ -55,6 +52,7 @@
     "jest-cli": "20.0.4",
     "markdown-magic": "0.1.18",
     "markdown-magic-dependency-table": "1.2.2",
+    "markdown-magic-directory-tree": "1.2.1",
     "markdown-magic-github-contributors": "0.0.3",
     "markdown-magic-package-scripts": "1.2.0",
     "markdown-magic-subpackage-list": "1.1.1",
@@ -64,6 +62,9 @@
     "sonar-scanner": "3.0.3",
     "standard-version": "4.2.0",
     "swagger-cli": "1.0.0-beta.2"
+  },
+  "engines": {
+    "node": ">= 6.x"
   },
   "eslintConfig": {
     "extends": "xo-space",

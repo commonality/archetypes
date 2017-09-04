@@ -154,10 +154,18 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 3.3. OpenAPI 2.0 Specs
 
-[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url]
+[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml)
 
-* [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json)
-* [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml)
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) -->
+```shell
+# Party archetype pattern OpenAPI specs
+schemas/v1/parties/
+├── nominative.yaml
+├── parties.yaml
+└── unique-identifier.yaml
+```
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
+
 
 ### 3.4. API and SDK documentation
 
@@ -208,10 +216,19 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 ### 4.2. OpenAPI 2.0 Specs
 
-[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url]
+[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml)
 
-* [`JSON`](http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json)
-* [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.yaml)
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) -->
+```
+schemas/v1/quantities/
+├── metric.yaml
+├── quantities.yaml
+├── quantity.yaml
+├── rounding-strategy.yaml
+├── si-system-of-units.yaml
+└── system-of-units.yaml
+```
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
 ### 4.3. API and SDK documentation
 
@@ -748,17 +765,13 @@ Thanks goes to these wonderful people:
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
 | **Commits** | **Contributor** |
 | --- | --- |
-| 7 | [gregswindle](https://github.com/gregswindle) |
+| 8 | [gregswindle](https://github.com/gregswindle) |
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
 ## 17. Licenses
 
-[![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/commonality).
-
-You can review all __third-party dependencies' licenses__ on [FOSSA][fossa-url].
-
-![FOSSA Status][fossa-large-badge-image]
+[Apache-2.0][license-url] © [Greg Swindle](https://githbub.com/commonality).
 
 ---
 
@@ -800,7 +813,6 @@ Graphic art by [icons8][icons8-license-url].
 [daviddm-dev-url]: https://david-dm.org/commonality/archetypes?type=dev
 [daviddm-url]: https://david-dm.org/commonality/archetypes
 [fossa-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=shield&style=flat-square
-[fossa-large-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_large
 [fossa-url]: (https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_shield
 [gh-standardjs-url]: https://github.com/feross/standard
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
@@ -833,8 +845,8 @@ Graphic art by [icons8][icons8-license-url].
 [nsp-badge-image]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff/badge?style=flat-square
 [nsp-sign-up-url]: https://nodesecurity.io/signup
 [nsp-url]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff
-[party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.yaml
+[party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+[party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
 [pr-url]: /commonality/archetypes/pulls
 [product-development-guidelines-url]: ./.github/PRODUCT_DEVELOPEMENT_GUIDELINES.md
 [prs-welcome-badge-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
@@ -863,10 +875,9 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-codegen-url]: https://github.com/swagger-api/swagger-codegen
 [swagger-io-url]: http://swagger.io
 [swagger-markdown-url]: https://github.com/syroegkin/swagger-markdown
-[swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/party/party.swagger.json.svg?style=flat-square
-[swagger-validity-party-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
-[swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json.svg?style=flat-square
-[swagger-validity-quantity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/quantity/quantity.swagger.json
-[swagger-validity-url]: https://online.swagger.io/validator?url=http://api.swindle.net/archetypes/v1/schemas/party/party.swagger.json
+[swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/parties/parties.yaml.svg?style=flat-square
+[swagger-validity-party-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+[swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml.svg?style=flat-square
+[swagger-validity-quantity-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
 [travis-badge-image]: https://img.shields.io/travis/commonality/archetypes.svg?branch=master&style=flat-square
 [travis-url]: https://travis-ci.org/commonality/archetypes

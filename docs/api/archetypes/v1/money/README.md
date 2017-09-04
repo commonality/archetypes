@@ -3,7 +3,7 @@
 
 ## Status
 
-Please see [MVP2: Money](https://github.com/gregswindle/open-api-archetypes/milestone/2) for Sprint/milestone details.
+Please see [MVP2: Money](https://github.com/commonality/archetypes/milestone/2) for Sprint/milestone details.
 
 ---
 
