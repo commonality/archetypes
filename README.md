@@ -756,10 +756,6 @@ Thanks goes to these wonderful people:
 
 [![License][license-image]][license-url] © [Greg Swindle](https://githbub.com/commonality).
 
-You can review all __third-party dependencies' licenses__ on [FOSSA][fossa-url].
-
-![FOSSA Status][fossa-large-badge-image]
-
 ---
 
 [![Code Style Guide for JavaScript][standardjs-badge-image]][standardjs-url]
@@ -800,7 +796,6 @@ Graphic art by [icons8][icons8-license-url].
 [daviddm-dev-url]: https://david-dm.org/commonality/archetypes?type=dev
 [daviddm-url]: https://david-dm.org/commonality/archetypes
 [fossa-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=shield&style=flat-square
-[fossa-large-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_large
 [fossa-url]: (https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_shield
 [gh-standardjs-url]: https://github.com/feross/standard
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
