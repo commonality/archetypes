@@ -44,7 +44,7 @@ allOf:
             The ratio of the value of the minor unit to the major unit. For example, there are 100 cents to 1 dollar in the US; therefore, the ratio of the minor unit to the major unit is 100/1 = 100. If the currency does not have a minor unit, the attribute should have the value 1.
           title: Currency.ratioOfMinorUnitToMajorUnit property
           type: integer
-      required:
-      - definition
-      - majorUnitSymbol
-      - alphabeticCode
+    - required:
+        - definition
+        - majorUnitSymbol
+        - alphabeticCode

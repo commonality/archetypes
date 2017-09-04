@@ -8,5 +8,5 @@ allOf:
   - properties:
       amount:
         description: The sum of Money.
-      required:
-      - amount
+  - required:
+    - amount

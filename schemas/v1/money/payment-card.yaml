@@ -46,7 +46,7 @@ allOf:
           The name of the Party authorized to use the PaymentCard.
         title: PaymentCard.nameOnCard property
         type: string
-    required:
+  - required:
     - billingAddress
     - cardAssociationName
     - cardNumber
