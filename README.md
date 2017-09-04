@@ -232,8 +232,7 @@ schemas/v1/quantities/
 
 ### 4.3. API and SDK documentation
 
-* [`JavaScript`](./docs/api/archetypes/v1/quantity/js/README.md)
-* [`Ruby`](./docs/api/archetypes/v1/party/quantity/ruby/README.md)
+[`Node.js (JavaScript) Quantity`](./docs/api/archetypes/v1/quantity/js/README.md) client SDK.
 
 
 ### 4.4. Usage example

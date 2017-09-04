@@ -90,7 +90,6 @@
     "lint:swagger:all": "npm run lint:swagger:parties",
     "lint:swagger:parties": "swagger validate schemas/v1/parties/parties.yaml --debug",
     "posttest": "npm run security && npm run docs",
-    "prepare": "npm run security",
     "prepublishOnly": "npm run docs",
     "pretest": "npm run lint",
     "preversion": "npm run docs",
