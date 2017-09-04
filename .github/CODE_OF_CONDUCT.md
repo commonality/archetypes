@@ -77,8 +77,8 @@ Graphic art by [icons8](https://icons8.com/).
 [judge-image]: /docs/img/icons8/judge.png
 [pledge-image]: /docs/img/icons8/pledge-scout-sign.png
 [product-repo-logo-image]: ../docs/img/logo-commonalaxy.png
-[product-repo-url]: https://github.com/commonality/generator-community
+[product-repo-url]: https://github.com/commonality/archetypes
 [scope-image]: /docs/img/icons8/map-marker.png
-[team-email-mailto]: mailto:greg@swindle.net?Subject=%5Bgenerator-community%5D%20Code%20of%20conduct%20concern
-[team-issues-url]: https://github.com/commonality/generator-community/issues/new
+[team-email-mailto]: mailto:greg@swindle.net?Subject=%5Barchetypes%5D%20Code%20of%20conduct%20concern
+[team-issues-url]: https://github.com/commonality/archetypes/issues/new
 [version]: http://contributor-covenant.org/version/1/4/

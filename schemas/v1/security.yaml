@@ -1,0 +1,23 @@
+securityDefinitions:
+  OauthSecurity:
+    description: New Oauth security system. Do not use MediaSecurity or LegacySecurity.
+    type: oauth2
+    flow: accessCode
+    authorizationUrl: 'https://oauth.simple.api/authorization'
+    tokenUrl: 'https://oauth.simple.api/token'
+    scopes:
+      admin: Admin scope
+      user: User scope
+  MediaSecurity:
+    description: Specific media security for backward compatibility. Use OauthSecurity instead.
+    type: apiKey
+    in: query
+    name: media-api-key
+  LegacySecurity:
+    description: Legacy security system for backward compatibility. Use OauthSecurity instead.
+    type: basic
+
+defaultSecurity:
+  - OauthSecurity:
+    - user
+  - LegacySecurity: []

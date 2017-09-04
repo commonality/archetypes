@@ -1,6 +1,6 @@
 [![Generator Community Repo][product-repo-logo-image]][product-repo-url]
 
-# Contributing to `generator-community`
+# Contributing to `archetypes`
 > [![PRs Welcome][makeapullrequest-image]][makeapullrequest-url]
 >
 >Contributions are community conversations with a beginning, a middle, and an end, all told through issues, pull requests, comments, and commit logs.
@@ -18,7 +18,7 @@
 <!-- tocend -->
 
 ## Issues
-> `generator-community` follows an issue-driven product delivery model. Before any work is done, create an Issue, first.
+> `archetypes` follows an issue-driven product delivery model. Before any work is done, create an Issue, first.
 
 ### Labels
 > Categorize issuse by **priority**, **status**, **type**, and **complexity**.

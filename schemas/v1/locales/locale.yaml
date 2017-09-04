@@ -1,0 +1,23 @@
+title: Locale
+maxProperties: 3
+minProperties: 2
+properties:
+  description:
+    default: ''
+    description: A brief description of the Locale.
+    title: Locale.description property
+    type: string
+  identifier:
+    default: ''
+    description: A unique identifier for the Locale.
+    title: Locale.identifier property
+    type: string
+  name:
+    default: ''
+    description: The name of the Locale.
+    title: Locale.name property
+    type: string
+required:
+- identifier
+- name
+type: object

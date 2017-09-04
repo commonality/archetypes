@@ -1,0 +1,19 @@
+categories:
+  party:
+    - name: Party
+      description: 'An identifiable, addressable entity.'
+    - name: Person
+      description: Represents a human being.
+    - name: Preference
+      description: >-
+        A choice of (or liking for) something, often from a set of possible or
+        offered options.
+    - name: Organization
+      description: An administrative and functional structure.
+
+external:
+  description: >-
+    Enterprise patterns and MDA: building better software with archetype
+    patterns and UML
+  url: >-
+    https://www.amazon.com/Enterprise-Patterns-MDA-Building-Archetype/dp/032111230X

@@ -1,6 +1,9 @@
 language: node_js
 node_js:
+  - 8
   - 7
   - 6
-  - 4
-after_script: 'cat ./coverage/lcov.info | coveralls'
+script: npm test
+# after_script:
+#   - 'cat ./coverage/lcov.info | coveralls'
+#   - sonar-scanner -Dproject.settings=sonar-project.properties -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.login=$SONAR_TOKEN -X

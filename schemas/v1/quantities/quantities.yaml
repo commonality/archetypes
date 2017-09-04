@@ -1,0 +1,542 @@
+swagger: '2.0'
+info:
+  description: >-
+
+    <img height="100" width="100"
+    src="/archetypes/v1/img/logo-commonalaxy.png.png" alt="OpenAPI 2.0
+    Business Archetypes">
+
+    The `Quantity` archetype represents an amount of something measured
+    according to some standard of measurement.
+
+    ## Standards compliance
+
+    <table>
+      <thead>
+        <tr><th>Standard</th><th>Contents</th></tr>
+      </thead>
+      <tfoot>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td><a href="http://www.bipm.org/en/measurement-units/">SI</a></td>
+          <td>International System of Units&mdash;Bureau International des Poids et Mesures (BIPM).</td>
+        </tr>
+        <tr>
+          <td><a href="http://cldr.unicode.org/">Unicode CLDR</a></td>
+          <td>Unicode Common Locale Data Repository provides locales-specific patterns for formatting, parsing, spelling aloud, and handling traditional/archiac numbers.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    ---
+
+
+    ## Business archetypes defined
+
+    "A business archetype is a primordial thing that occurs consistently and
+    universally in business domains and business software systems." (Arlow &
+    Neustadt, [_Enterprise patterns and MDA: building better software with
+    archetype patterns and
+    UML_](https://www.amazon.com/Enterprise-Patterns-MDA-Building-Archetype/dp/032111230X),
+    2006, p. 5)
+
+
+    ## Explore other business archetype patterns
+
+    [Open a Swagger-UI](http://api.swindle.net/swagger-ui/#/) instance, then
+    copy and paste the following Swagger specification URLs into the "Explore"
+    text field and select the "Explore" button for additional APIs.
+
+    1. `Locale`:
+    http://api.swindle.net/archetypes/v1/schemas/locales/locales.yaml
+
+    2. `Party`:
+    http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+
+    3. `Quantity`:
+    http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
+
+    ---
+
+    ## About
+  version: 1.0.0
+  title: Quantity
+  contact:
+    name: Greg Swindle
+    url: 'https://github.com/commonality'
+  license:
+    name: Apache License 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: api.swindle.net
+basePath: /archetypes/v1/quantities
+tags:
+  - name: Systems Of Units
+    description: Represents a set of related Units defined by a standard such as SI.
+  - name: SI (International System of Units)
+    description: Standard weights and measures maintained by SI.
+  - name: Labor
+    description: 'Contains a set of labor-related measures, e.g., WorkHour.'
+schemes:
+  - http
+  - https
+externalDocs:
+  description: >-
+    Enterprise patterns and MDA: building better software with archetype
+    patterns and UML
+  url: >-
+    https://www.amazon.com/Enterprise-Patterns-MDA-Building-Archetype/dp/032111230X
+paths:
+  /systems-of-units:
+    get:
+      tags:
+        - Systems Of Units
+      summary: Retrieve all systems of units.
+      description: Retrieve a list of all `SystemOfUnits`.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getSystemsOfUnits
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/SystemOfUnits'
+    post:
+      tags:
+        - Systems Of Units
+      summary: Create an new SystemOfUnits.
+      description: Create an new `SystemOfUnits`.
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/json
+        - application/xml
+      operationId: createSystemOfUnits
+      parameters:
+        - in: body
+          name: body
+          description: The `SystemOfUnits` to be added.
+          required: true
+          schema:
+            $ref: '#/definitions/SystemOfUnits'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/SystemOfUnits'
+  '/systems-of-units/{name-of-system}':
+    get:
+      tags:
+        - Systems Of Units
+      summary: Retrieve a specific system of units by name.
+      description: >-
+        Retrieve a specific `SystemOfUnits` using its `nameOfSystem` property's
+        _case-sensitive_ value.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getSystemOfUnitsByName
+      parameters:
+        - in: path
+          name: name-of-system
+          description: >-
+            The name of the system of units, e.g., "SI" for the International
+            System of Units (SI). <br><br>**Case-sensitivity**:
+            `name-of-system's` value is **case-sensitive**. For example, "SI"
+            will return data, but lower-case "si" will result in an HTTP status
+            code of 404 (`NotFoundError`).
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: >-
+              http://api.swindle.net/archetypes/v1/schemas/quantities/system-of-units.yaml
+  '/systems-of-units/SI/base-units/{name}':
+    get:
+      tags:
+        - SI (International System of Units)
+      summary: Retrieve a metric or unit by its SI name.
+      description: >-
+        Retrieve a specific `SiBaseUnit` using its `name` property's
+        _case-sensitive_ value.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getSiBaseUnitByName
+      parameters:
+        - in: path
+          name: name
+          description: >-
+            The `name` of the `SiBaseUnit`, e.g.,
+            "`metric`".<br><br>**Case-sensitivity**: `name's` value is
+            **case-sensitive**. For example, "`ampere`" will return data, but
+            capitalized "`Meter`" will result in an HTTP status code of 404
+            (`NotFoundError`).
+          required: true
+          type: string
+          enum:
+            - ampere
+            - candela
+            - kelvin
+            - kilogram
+            - meter
+            - mole
+            - second
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/SiBaseUnit'
+  /systems-of-units/labor:
+    post:
+      tags:
+        - Labor
+      summary: Create an new Unit of Labor.
+      description: >-
+        Create an new `Unit` of Labor. <br><br>**Standards for `name`
+        assignments.**<br><br>When creating a new `Unit`, follow these rules for
+        the value of `Unit's` `name` property:<ul><li>**Use lower case**:
+        `name's` value SHOULD be in lower case.<li>**Format with [**kebab
+        case**](https://runkit.com/commonality/59a1c3805d3740001245a72d)**:
+        `name's` value SHOULD be given in [**kebab
+        case**](https://runkit.com/commonality/59a1c3805d3740001245a72d).
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/json
+        - application/xml
+      operationId: createLaborUnit
+      parameters:
+        - in: body
+          name: body
+          description: >-
+            The new `Unit` object to be added.<br><br>**Important**: The `name`
+            of the labor `Unit`, i.e.,
+            "`work-hour`".<ul><li>**Case-sensitivity**: `name's` value is
+            **case-sensitive**. For example, "`work-hour`" will return data, but
+            "Work-Hour" will result in an HTTP status code of 404
+            (`NotFoundError`).<li>**Format**: `name's` value must be given in
+            [**kebab
+            case**](https://runkit.com/commonality/59a1c3805d3740001245a72d).
+            For example, "`work-hour`" will return data, but "work hour" (with
+            whitespace) or "`WorkHour`" (in
+            [`PascalCase`](http://wiki.c2.com/?PascalCase)) will result in an
+            HTTP status code of 404 (`NotFoundError`).
+          required: true
+          schema:
+            $ref: '#/definitions/SystemOfUnits'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/SystemOfUnits'
+  '/systems-of-units/labor/{name}':
+    get:
+      tags:
+        - Labor
+      summary: Retrieve a metric or unit by name.
+      description: >-
+        The `name` of the labor `Unit`, i.e.,
+        "`work-hour`".<ul><li>**Case-sensitivity**: `name's` value is
+        **case-sensitive**. For example, "`work-hour`" will return data, but
+        "Work-Hour" will result in an HTTP status code of 404
+        (`NotFoundError`).<li>**Format**: `name's` value must be given in
+        [**kebab
+        case**](https://runkit.com/commonality/59a1c3805d3740001245a72d). For
+        example, "`work-hour`" will return data, but "work hour" (with
+        whitespace) or "`WorkHour`" (in
+        [`PascalCase`](http://wiki.c2.com/?PascalCase)) will result in an HTTP
+        status code of 404 (`NotFoundError`).
+      produces:
+        - application/json
+        - application/xml
+      operationId: getLaborUnitByName
+      parameters:
+        - in: path
+          name: name
+          description: >-
+            The `name` of the labor `Unit`, i.e.,
+            "`work-hour`".<ul><li>**Case-sensitivity**: `name's` value is
+            **case-sensitive**. For example, "`work-hour`" will return data, but
+            "Work-Hour" will result in an HTTP status code of 404
+            (`NotFoundError`).<li>**Format**: `name's` value must be given in
+            [**kebab
+            case**](https://runkit.com/commonality/59a1c3805d3740001245a72d).
+            For example, "`work-hour`" will return data, but "work hour" (with
+            whitespace) or "`WorkHour`" (in
+            [`PascalCase`](http://wiki.c2.com/?PascalCase)) will result in an
+            HTTP status code of 404 (`NotFoundError`).
+          required: true
+          type: string
+          enum:
+            - work-hour
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Unit'
+definitions:
+  SystemOfUnits:
+    $ref: >-
+      http://api.swindle.net/archetypes/v1/schemas/quantities/system-of-units.yaml
+  Metric:
+    $ref: 'http://api.swindle.net/archetypes/v1/schemas/quantities/metric.yaml'
+  Unit:
+    allOf:
+      - $ref: '#/definitions/Metric'
+      - properties:
+          systemOfUnits:
+            $ref: >-
+              http://api.swindle.net/archetypes/v1/schemas/quantities/system-of-units.yaml
+      - description: Represents a type of `Metric` that is part of a `SystemOfUnits`.
+      - title: Unit
+  DerivedUnitTerm:
+    allOf:
+      - $ref: '#/definitions/Unit'
+      - description: >-
+          Represents part of a DerivedUnit comprising a single Unit and its
+          power.
+      - properties:
+          power:
+            description: >-
+              Describes part of a `DerivedUnit` comprising a single `Unit` and
+              its power.
+            type: integer
+          unit:
+            $ref: '#/definitions/Unit'
+      - title: DerivedUnitTerm
+  DerivedUnit:
+    allOf:
+      - $ref: '#/definitions/Unit'
+      - description: >-
+          Represents a combination of one or more base Units according to a
+          specific equation.
+      - properties:
+          terms:
+            type: array
+            items:
+              $ref: '#/definitions/DerivedUnitTerm'
+      - title: DerivedUnit
+  RoundingStrategy:
+    type: number
+    enum: &ref_0
+      - ROUND_UP
+      - ROUND_DOWN
+      - ROUND
+      - ROUND_UP_BY_STEP
+      - ROUND_DOWN_BY_STEP
+      - ROUND_TOWARDS_POSITIVE
+      - ROUND_TOWARDS_NEGATIVE
+    description: >-
+
+      An enum that represents an aspect of a RoundingPolicy that determines the
+      type of rounding to be applied. Allowed values are:
+
+      * **ROUND_UP** - Rounds a number to the specified numberOfDigits, moving
+      its value away from zero.
+
+
+      * **ROUND_DOWN** - Rounds a number to the specified numberOfDigits, moving
+      its value towards zero, thereby truncating the number at the specified
+      precision.
+
+
+      * **ROUND** - Behaves like ROUND_UP if the digit following the specified
+      numberOfDigits is greater than or equal to the specified roundingDigit;
+      otherwise, behaves like ROUND_DOWN. Note that the most common
+      roundingDigit is 5.
+
+
+      * **ROUND_UP_BY_STEP** - Rounds a number up to the nearest multiple of the
+      specified `roundingStep`, moving its value away from zero. This allows
+      numbers to be rounded in specific steps--e.g., if prices are to rounded up
+      to the nearest 25 cents. **Note:** A `numberOfDigits` value is not
+      required with `ROUND_UP_BY_STEP`, since `ROUND_UP_BY_STEP` also dictates
+      the decimal precision.
+
+
+      * **ROUND_DOWN_BY_STEP** - Rounds a number down to the nearest multiple of
+      the specified `roundingStep`, moving its value towards zero. This allows
+      numbers to be rounded in specific steps--e.g., if prices are to rounded up
+      to the nearest 25 cents. **Note:** A `numberOfDigits` value is not
+      required with `ROUND_DOWN_BY_STEP`, since `ROUND_DOWN_BY_STEP` also
+      dictates the decimal precision.
+
+
+      * **ROUND_TOWARDS_POSITIVE** - Behaves like `ROUND_UP` for _positive_
+      numbers and like `ROUND_DOWN` for _negative_ numbers.
+
+
+      * **ROUND_TOWARDS_NEGATIVE** - Behaves like `ROUND_UP` for _negative_
+      numbers and like `ROUND_DOWN` for _positive_ numbers.
+  RoundingPolicy:
+    description: >-
+      Determines the mathematical semantics of the Quantity archetype's round()
+      operation.
+    type: object
+    properties:
+      numberOfDigits:
+        description: The number of digits before or after the decimal place.
+        type: integer
+      roundingDigit:
+        description: >-
+          A test digit with which a digit within the number being rounded is
+          compared.
+        type: integer
+      roundingStep:
+        description: >-
+          The multiple to which you want to round. E.g., to round a price of
+          $3.1412 to an accuracy of five (5) cents, use a `roundingStep` of
+          `0.05`.
+        type: number
+      roundingStrategy:
+        type: number
+        enum: *ref_0
+  Quantity:
+    description: Represents an amount measured in some Metric.
+    type: object
+    properties:
+      amount:
+        description: 'The total of a thing or things in number, size, value, or extent.'
+        type: number
+        default: 0
+      metric:
+        $ref: '#/definitions/Metric'
+      roundingPolicy:
+        $ref: '#/definitions/RoundingPolicy'
+  WorkHour:
+    allOf:
+      - $ref: '#/definitions/Unit'
+      - properties:
+          systemOfUnits:
+            $ref: '#/definitions/SystemOfUnits'
+      - description: >-
+          Represents an amount of work corresponding to one Person working for
+          one hour.
+  SiSystemOfUnits:
+    $ref: >-
+      http://api.swindle.net/archetypes/v1/schemas/quantities/si-system-of-units.yaml
+  SiBaseUnit:
+    allOf:
+      - $ref: '#/definitions/Unit'
+      - description: >-
+          Represents one of the based units defined in the International System
+          of Units (SI).
+      - properties:
+          systemOfUnits:
+            $ref: '#/definitions/SiSystemOfUnits'
+      - title: SiBaseUnit
+  Meter:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of length.
+      - properties:
+          name:
+            default: meter
+          symbol:
+            default: m
+          definition:
+            default: >-
+              The meter is the length of the path travelled by light in vacuum
+              during a time interval of 1/299792458th of a second.
+      - title: Meter
+  Second:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of time.
+      - properties:
+          name:
+            default: second
+          symbol:
+            default: s
+          definition:
+            default: >-
+              The second is the duration of 9,192,631,770 (9.192631770 x 10⁹)
+              cycles of the radiation produced by the transition between two
+              levels of the cesium 133 atom.
+      - title: Second
+  Ampere:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of electric current.
+      - properties:
+          name:
+            default: ampere
+          symbol:
+            default: A
+          definition:
+            default: >-
+              The ampere is that current which, if maintained in each of two
+              infinitely long parallel wires separated by one meter in free
+              space, would produce a force between the two wires (due to their
+              magnetic fields) of 2 x 10⁻⁷ newtons for each meter of length. The
+              SI unit of electric resistance is the ohm (Ω). 1 Ω = 1 V/A.
+      - title: Ampere
+  Kelvin:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of thermodynamic temperature.
+      - properties:
+          name:
+            default: kelvin
+          symbol:
+            default: K
+          definition:
+            default: >-
+              The Kelvin (K) is the fraction 1/273.16 of the thermodynamic
+              temperature of the triple point of water.
+      - title: Kelvin
+  Mole:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of amount of substance.
+      - properties:
+          name:
+            default: mole
+          symbol:
+            default: mol
+          definition:
+            default: >-
+              The amount of substance of a system that contains as many
+              elementary entities as there are atoms in 0.012 kilogram of carbon
+              12.
+      - title: Mole
+  Candela:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of luminous intensity.
+      - properties:
+          name:
+            default: Candela
+          symbol:
+            default: cd
+          definition:
+            default: >-
+              The luminous intensity, in a given direction, of a source that
+              emits monochromatic radiation of frequency 540 x 1012 hertz (Hz)
+              and that has a radiant intensity in that direction of 1/683 watt
+              per steradian.
+      - title: Candela
+  Kilogram:
+    allOf:
+      - $ref: '#/definitions/SiBaseUnit'
+      - description: A unit of mass.
+      - properties:
+          name:
+            default: kilogram
+          symbol:
+            default: kg
+          definition:
+            default: >-
+              The unit of mass equal to the mass of the international prototype
+              of the kilogram, a platinum-iridium standard that is kept at the
+              International Bureau of Weights and Measures (BIPM). The primary
+              standard of mass for this country is United States Prototype
+              Kilogram 20, which is a platinum-iridium cylinder kept at NIST.
+      - title: Kilogram
