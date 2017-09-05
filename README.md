@@ -57,7 +57,7 @@ These __business `archetypes`__ are expressed as __models__ in open, vendor-neut
   * [Roadmap](#roadmap-5)
 - [12. Product development and delivery](#12-product-development-and-delivery)
   * [12.1. Built With](#121-built-with)
-  * [12.2. Prerequisites](#122-prerequisites)
+  * [12.2. Prerequisite](#122-prerequisite)
   * [12.3. Set up a development environment](#123-set-up-a-development-environment)
   * [12.4. `npm-scripts`](#124-npm-scripts)
 - [13. DevSecOps](#13-devsecops)
@@ -109,8 +109,8 @@ Follow the [Installation][swagger-codegen-installation-url] and [Getting Startin
 #### 1.2.2. Swagger Editor
 
 1. Go to https://editor.swagger.io/.
-1. Copy the `/archetypes/v1/{archetype}/{archetype}.swagger.yaml` specification of interest.
-1. Paste the `*.swagger.json` source into the editor pane.
+1. Copy the `/archetypes/v1/{archetype}/{archetype}.yaml` specification of interest.
+1. Paste the `*.yaml` source into the editor pane.
 1. Select "Generate Server" or "Generate Client" and choose an option.
 1. If successful, you will prompted to download the ZIPped source code.
 
@@ -324,10 +324,26 @@ money/
 
 ### 5.4. Usage example
 
-**Retrieve an `` by identifier** with JavaScript:
+**Retrieve a `Currency` by its ISO 4217 alphabetic code** with JavaScript:
 
 ```js
+const api = new Money.CurrencyApi()
 
+const alphabeticCode = 'USD'
+
+const callback = (error, data, response) => {
+  if (error) {
+    console.error(error)
+  } else {
+    console.log(
+      'API called successfully. Returned data: ' +
+      JSON.stringify(data, null, 2)
+    )
+  }
+  console.log(response)
+}
+
+api.getCurrencyByAlphabeticCode(name, callback)
 ```
 
 
@@ -349,7 +365,7 @@ money/
       [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.yaml) (Content-Type: `application/x-yaml`)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.yaml) (Content-Type: `application/x-yaml`)
 
       ### 6.2. API documentation
 
@@ -384,7 +400,7 @@ money/
       [![Rule's Swagger validity][swagger-validity-rules-badge-image]][swagger-validity-rules-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.yaml) (Content-Type: `application/x-yaml`)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.yaml) (Content-Type: `application/x-yaml`)
 
       ### 7.2. API documentation
 
@@ -419,7 +435,7 @@ money/
       [![Customer relationship management (CRM) Swagger validity][swagger-validity-crm-badge-image]][swagger-validity-crm-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.yaml) (Content-Type: `application/x-yaml`)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.yaml) (Content-Type: `application/x-yaml`)
 
       ### 8.2. API documentation
 
@@ -454,7 +470,7 @@ money/
       [![Product's Swagger validity][swagger-validity-product-badge-image]][swagger-validity-product-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.yaml) (Content-Type: `application/x-yaml`)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.yaml) (Content-Type: `application/x-yaml`)
 
       ### 9.2. API documentation
 
@@ -489,7 +505,7 @@ money/
       [![Inventory's Swagger validity][swagger-validity-inventory-badge-image]][swagger-validity-inventory-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.yaml) (Content-Type: `application/x-yaml`)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.yaml) (Content-Type: `application/x-yaml`)
 
       ### 10.2. API documentation
 
@@ -572,11 +588,9 @@ __*Keep track of `archetypes'` tech-stack with these news and RSS feeds.*__
 > * [![StackShare news feed][stack-share-news-feed-image] __StackShare News Feed:__ Read the latest news about the tools and dependencies `commonality/archetypes`][stack-share-news-feed-url].
 > * [![StackShare RSS feed][stack-share-rss-feed-image] __StackShare RSS Feed:__ Subscribe to news about `archetypes's` tools and dependencies][stack-share-rss-feed-url].
 
-### 12.2. Prerequisites
+### 12.2. Prerequisite
 
- 1. [__`Node.js`__][nodejs-url]: `commonality/archetypes` product development and delivery requires `Node.js` and its package manager, `npm`.
- 2. [__`markdown-toc`__][markdown-toc-url] is recommended, but not required, as long as the REAME's table of contents work and accurately reflects header changes.
-
+[__`Node.js`__][nodejs-url]: `commonality/archetypes` product development and delivery requires `Node.js` (version 6.x or greater) and its package manager, `npm`.
 
 ### 12.3. Set up a development environment
 
@@ -781,14 +795,17 @@ Contributions are community-driven stories with a beginning, a middle, and an en
 
 ### 16.1. Contribution workflows summarized
 
-We use the [feature-branch-workflow][] to accept modifications, where contributors:
+We use the [Git feature-branch-workflow][git-workflow-feature-branch-tutorial-url] to accept modifications, where contributors:
 
 1. Create an issue related to the problem you want to fix (good for traceability and cross-reference)
-2. Fork the repository
-3. Create a branch (optionally with the reference to the issue in the name)
-4. Work it
-5. Commit incrementally with readable and detailed commit messages
-6. Submit a pull-request against the master branch of this repository.
+1. Label the issue as
+    * `Type: Defect` or
+    * `Type: Feature`
+1. Fork the repository
+1. Create a branch (optionally with the reference to the issue in the name)
+1. Work it
+1. Commit incrementally with readable and detailed commit messages
+1. Submit a pull-request against the `master` branch of this repository.
 
 We'll take care of tagging your issue with the appropriated labels and answer within a week (hopefully less!) to the problem you encounter.
 
@@ -849,6 +866,7 @@ Graphic art by [icons8][icons8-license-url].
 [fossa-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=shield&style=flat-square
 [fossa-url]: (https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_shield
 [gh-standardjs-url]: https://github.com/feross/standard
+[git-workflow-feature-branch-tutorial-url]: https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
 [greenkeeper-badge-image]: https://badges.greenkeeper.io/commonality/archetypes.svg?style=flat-square
 [greenkeeper-url]: https://greenkeeper.io/
