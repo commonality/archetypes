@@ -141,19 +141,18 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 3.1. Standards compliance
 
-| Standard | Contents |
-| --- | --- |
-| [OMG Party Management Facility Specification](http://www.omg.org/spec/PARTY/1.0/PDF) | A standard that supports party management. |
-| [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) | Two- and three-letter country codes and country names. |
-| [ISO/IEC 5218:2004](https://www.iso.org/standard/36266.html) | Codes for the representation of human sexes. |
-| [ITU-T Recommendations](http://www.itu.int/rec/T-REC-E.164/en) | Telecommunication numbering plan. |
+| Standard                                                                             | Contents                                               |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| [OMG Party Management Facility Specification](http://www.omg.org/spec/PARTY/1.0/PDF) | A standard that supports party management.             |
+| [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)                          | Two- and three-letter country codes and country names. |
+| [ISO/IEC 5218:2004](https://www.iso.org/standard/36266.html)                         | Codes for the representation of human sexes.           |
+| [ITU-T Recommendations](http://www.itu.int/rec/T-REC-E.164/en)                       | Telecommunication numbering plan.                      |
 
 ### 3.2. Resources
 
-| Proposal | Contents |
-| --- | --- |
+| Proposal                                    | Contents                                                                                            |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | [63 Genders](https://apath.org/63-genders/) | A proposal for describing Gender as a combination of Physical, Personality and Preferential groups. |
-
 
 ### 3.3. OpenAPI 2.0 Specs
 
@@ -172,12 +171,12 @@ schemas/v1/parties/
 
 ### 3.4. API and SDK documentation
 
-| Business archetype | Definition |
-|----|----|
-| [`Organizations`][api-sdk-doc-party-organizations-url] | Administrative and functional structures |
-| [`Parties`][api-sdk-doc-party-parties-url] | Identifiable, addressable entity that may have a legal status and that normally has autonomous control over (at least some of) its actions. |
-| [`People`][api-sdk-doc-party-people-url] | Human beings. |
-| [`Preferences`][api-sdk-doc-party-preferences-url] | Choices of (or liking for) something, often from a set of possible or offered options. |
+| Business archetype                                     | Definition                                                                                                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`Organizations`][api-sdk-doc-party-organizations-url] | Administrative and functional structures                                                                                                    |
+| [`Parties`][api-sdk-doc-party-parties-url]             | Identifiable, addressable entity that may have a legal status and that normally has autonomous control over (at least some of) its actions. |
+| [`People`][api-sdk-doc-party-people-url]               | Human beings.                                                                                                                               |
+| [`Preferences`][api-sdk-doc-party-preferences-url]     | Choices of (or liking for) something, often from a set of possible or offered options.                                                      |
 
 ### 3.5. Usage example
 
@@ -327,9 +326,11 @@ money/
 **Retrieve a `Currency` by its ISO 4217 alphabetic code** with JavaScript:
 
 ```js
+const Money = require('money')
+
 const api = new Money.CurrencyApi()
 
-const alphabeticCode = 'USD'
+const iso4217Code = 'USD'
 
 const callback = (error, data, response) => {
   if (error) {
@@ -343,7 +344,7 @@ const callback = (error, data, response) => {
   console.log(response)
 }
 
-api.getCurrencyByAlphabeticCode(name, callback)
+api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 ```
 
 
@@ -549,39 +550,39 @@ api.getCurrencyByAlphabeticCode(name, callback)
 `archetypes` requires the following [tech-stack][stack-share-news-feed-url] to either run, build, test, or deploy:
 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
-| **Dependency** | **Description** | **Version** | **Type** |
-| -------------- | --------------- | ----------- | -------- |
- | [lodash@^4.17.4](https://lodash.com/) | Lodash modular utilities. | 4.17.4 | production |
- | [standard-readme-spec@1.1.3](https://github.com/RichardLitt/standard-readme) | Readme Standard Style | 1.1.3 | production |
- | [babel-jest@20.0.3](https://github.com/facebook/jest#readme) | Jest plugin to use babel for transformation. | 20.0.3 | dev |
- | [babel-preset-env@1.6.0](https://babeljs.io/) | A Babel preset for each environment. | 1.6.0 | dev |
- | [babelify@7.3.0](https://github.com/babel/babelify) | Babel browserify transform | 7.3.0 | dev |
- | [commitplease@2.7.10](https://github.com/jzaefferer/commitplease#readme) | Validates strings as commit messages | 2.7.10 | dev |
- | [coveralls@^2.13.1](https://github.com/nickmerwin/node-coveralls#readme) | takes json-cov output into stdin and POSTs to coveralls.io | 2.13.1 | dev |
- | [eslint@4.5.0](http://eslint.org) | An AST-based pattern checker for JavaScript. | 4.5.0 | dev |
- | [eslint-config-xo-space@0.16.0](https://github.com/sindresorhus/eslint-config-xo-space#readme) | ESLint shareable config for XO with 2-space indent | 0.16.0 | dev |
- | [eslint-plugin-import@2.7.0](https://github.com/benmosher/eslint-plugin-import) | Import with sanity. | 2.7.0 | dev |
- | [eslint-plugin-jest@20.0.3](https://github.com/facebook/jest#readme) | Eslint rules for Jest | 20.0.3 | dev |
- | [eslint-plugin-jsdoc@3.1.2](https://github.com/gajus/eslint-plugin-jsdoc#readme) | JSDoc linting rules for ESLint. | 3.1.2 | dev |
- | [eslint-plugin-no-unsafe-innerhtml@1.0.16](https://github.com/mozfreddyb/eslint-plugin-no-unsafe-innerhtml/) | custom ESLint rule to disallows unsafe innerHTML, outerHTML and insertAdjacentHTML | 1.0.16 | dev |
- | [eslint-plugin-no-unsanitized@2.0.1](https://github.com/mozilla/eslint-plugin-no-unsanitized/) | ESLint rule to disallow unsanitized code | 2.0.1 | dev |
- | [eslint-plugin-node@5.1.1](https://github.com/mysticatea/eslint-plugin-node#readme) | Additional ESLint's rules for Node.js | 5.1.1 | dev |
- | [eslint-plugin-promise@3.5.0](https://github.com/xjamundx/eslint-plugin-promise#readme) | Enforce best practices for JavaScript promises | 3.5.0 | dev |
- | [eslint-plugin-scanjs-rules@0.2.1](https://github.com/mozfreddyb/eslint-plugin-scanjs-rules/) | ESLint plugin that contains ScanJS rules | 0.2.1 | dev |
- | [eslint-plugin-security@1.4.0](https://github.com/nodesecurity/eslint-plugin-security#readme) | Security rules for eslint | 1.4.0 | dev |
- | [eslint-plugin-standard@3.0.1](https://github.com/xjamundx/eslint-plugin-standard#readme) | ESlint Plugin for the Standard Linter | 3.0.1 | dev |
- | [eslint-plugin-xss@0.1.8](https://npmjs.org/package/eslint-plugin-xss) | Validates XSS related issues of mixing HTML and non-HTML content in variables. | 0.1.8 | dev |
- | [jest@20.0.4](http://facebook.github.io/jest/) | Delightful JavaScript Testing. | 20.0.4 | dev |
- | [jest-cli@20.0.4](http://facebook.github.io/jest/) | Delightful JavaScript Testing. | 20.0.4 | dev |
- | [markdown-magic@0.1.18](https://npmjs.org/package/markdown-magic) | Automatically update markdown files with content from external sources | 0.1.18 | dev |
- | [markdown-magic-dependency-table@1.2.2](https://github.com/camacho/markdown-magic-dependency-table#readme) | Generate table of information about dependencies automatically in markdown | 1.2.2 | dev |
- | [markdown-magic-package-scripts@1.2.0](https://github.com/camacho/markdown-magic-package-scripts#readme) | Print list of scripts in package.json with descriptions | 1.2.0 | dev |
- | [markdown-magic-subpackage-list@1.1.1](https://github.com/camacho/markdown-magic-subpackage-list#readme) | Print a list of subpackages for markdown file | 1.1.1 | dev |
- | [nsp@2.7.0](https://github.com/nodesecurity/nsp#readme) | The Node Security (nodesecurity.io) command line interface | 2.7.0 | dev |
- | [snyk@1.40.2](https://github.com/snyk/snyk#readme) | snyk library and cli utility | 1.40.2 | dev |
- | [sonar-scanner@3.0.3](https://github.com/bcaudan/node-sonar-scanner) | Wrap sonar-scanner as a node module | 3.0.3 | dev |
- | [standard-version@4.2.0](https://github.com/conventional-changelog/standard-version#readme) | replacement for `npm version` with automatic CHANGELOG generation | 4.2.0 | dev |
- | [swagger-cli@1.0.0-beta.2](https://github.com/BigstickCarpet/swagger-cli) | Swagger 2.0 command-line tool | 1.0.0-beta.2 | dev |
+| **Dependency**                                                                                               | **Description**                                                                    | **Version**  | **Type**   |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------ | ---------- |
+| [lodash@^4.17.4](https://lodash.com/)                                                                        | Lodash modular utilities.                                                          | 4.17.4       | production |
+| [standard-readme-spec@1.1.3](https://github.com/RichardLitt/standard-readme)                                 | Readme Standard Style                                                              | 1.1.3        | production |
+| [babel-jest@20.0.3](https://github.com/facebook/jest#readme)                                                 | Jest plugin to use babel for transformation.                                       | 20.0.3       | dev        |
+| [babel-preset-env@1.6.0](https://babeljs.io/)                                                                | A Babel preset for each environment.                                               | 1.6.0        | dev        |
+| [babelify@7.3.0](https://github.com/babel/babelify)                                                          | Babel browserify transform                                                         | 7.3.0        | dev        |
+| [commitplease@2.7.10](https://github.com/jzaefferer/commitplease#readme)                                     | Validates strings as commit messages                                               | 2.7.10       | dev        |
+| [coveralls@^2.13.1](https://github.com/nickmerwin/node-coveralls#readme)                                     | takes json-cov output into stdin and POSTs to coveralls.io                         | 2.13.1       | dev        |
+| [eslint@4.5.0](http://eslint.org)                                                                            | An AST-based pattern checker for JavaScript.                                       | 4.5.0        | dev        |
+| [eslint-config-xo-space@0.16.0](https://github.com/sindresorhus/eslint-config-xo-space#readme)               | ESLint shareable config for XO with 2-space indent                                 | 0.16.0       | dev        |
+| [eslint-plugin-import@2.7.0](https://github.com/benmosher/eslint-plugin-import)                              | Import with sanity.                                                                | 2.7.0        | dev        |
+| [eslint-plugin-jest@20.0.3](https://github.com/facebook/jest#readme)                                         | Eslint rules for Jest                                                              | 20.0.3       | dev        |
+| [eslint-plugin-jsdoc@3.1.2](https://github.com/gajus/eslint-plugin-jsdoc#readme)                             | JSDoc linting rules for ESLint.                                                    | 3.1.2        | dev        |
+| [eslint-plugin-no-unsafe-innerhtml@1.0.16](https://github.com/mozfreddyb/eslint-plugin-no-unsafe-innerhtml/) | custom ESLint rule to disallows unsafe innerHTML, outerHTML and insertAdjacentHTML | 1.0.16       | dev        |
+| [eslint-plugin-no-unsanitized@2.0.1](https://github.com/mozilla/eslint-plugin-no-unsanitized/)               | ESLint rule to disallow unsanitized code                                           | 2.0.1        | dev        |
+| [eslint-plugin-node@5.1.1](https://github.com/mysticatea/eslint-plugin-node#readme)                          | Additional ESLint's rules for Node.js                                              | 5.1.1        | dev        |
+| [eslint-plugin-promise@3.5.0](https://github.com/xjamundx/eslint-plugin-promise#readme)                      | Enforce best practices for JavaScript promises                                     | 3.5.0        | dev        |
+| [eslint-plugin-scanjs-rules@0.2.1](https://github.com/mozfreddyb/eslint-plugin-scanjs-rules/)                | ESLint plugin that contains ScanJS rules                                           | 0.2.1        | dev        |
+| [eslint-plugin-security@1.4.0](https://github.com/nodesecurity/eslint-plugin-security#readme)                | Security rules for eslint                                                          | 1.4.0        | dev        |
+| [eslint-plugin-standard@3.0.1](https://github.com/xjamundx/eslint-plugin-standard#readme)                    | ESlint Plugin for the Standard Linter                                              | 3.0.1        | dev        |
+| [eslint-plugin-xss@0.1.8](https://npmjs.org/package/eslint-plugin-xss)                                       | Validates XSS related issues of mixing HTML and non-HTML content in variables.     | 0.1.8        | dev        |
+| [jest@20.0.4](http://facebook.github.io/jest/)                                                               | Delightful JavaScript Testing.                                                     | 20.0.4       | dev        |
+| [jest-cli@20.0.4](http://facebook.github.io/jest/)                                                           | Delightful JavaScript Testing.                                                     | 20.0.4       | dev        |
+| [markdown-magic@0.1.18](https://npmjs.org/package/markdown-magic)                                            | Automatically update markdown files with content from external sources             | 0.1.18       | dev        |
+| [markdown-magic-dependency-table@1.2.2](https://github.com/camacho/markdown-magic-dependency-table#readme)   | Generate table of information about dependencies automatically in markdown         | 1.2.2        | dev        |
+| [markdown-magic-package-scripts@1.2.0](https://github.com/camacho/markdown-magic-package-scripts#readme)     | Print list of scripts in package.json with descriptions                            | 1.2.0        | dev        |
+| [markdown-magic-subpackage-list@1.1.1](https://github.com/camacho/markdown-magic-subpackage-list#readme)     | Print a list of subpackages for markdown file                                      | 1.1.1        | dev        |
+| [nsp@2.7.0](https://github.com/nodesecurity/nsp#readme)                                                      | The Node Security (nodesecurity.io) command line interface                         | 2.7.0        | dev        |
+| [snyk@1.40.2](https://github.com/snyk/snyk#readme)                                                           | snyk library and cli utility                                                       | 1.40.2       | dev        |
+| [sonar-scanner@3.0.3](https://github.com/bcaudan/node-sonar-scanner)                                         | Wrap sonar-scanner as a node module                                                | 3.0.3        | dev        |
+| [standard-version@4.2.0](https://github.com/conventional-changelog/standard-version#readme)                  | replacement for `npm version` with automatic CHANGELOG generation                  | 4.2.0        | dev        |
+| [swagger-cli@1.0.0-beta.2](https://github.com/BigstickCarpet/swagger-cli)                                    | Swagger 2.0 command-line tool                                                      | 1.0.0-beta.2 | dev        |
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 __*Keep track of `archetypes'` tech-stack with these news and RSS feeds.*__
@@ -590,7 +591,7 @@ __*Keep track of `archetypes'` tech-stack with these news and RSS feeds.*__
 
 ### 12.2. Prerequisite
 
-[__`Node.js`__][nodejs-url]: `commonality/archetypes` product development and delivery requires `Node.js` (version 6.x or greater) and its package manager, `npm`.
+[__`Node.js`__][nodejs-url]: `commonality/archetypes` product development and delivery require `Node.js` (version 6.x or greater) and its package manager, `npm`. for build, test, and release tasks.
 
 ### 12.3. Set up a development environment
 
@@ -604,34 +605,43 @@ $ npm install
 
 ### 12.4. `npm-scripts`
 
+Software modules often have funky, irrelative names, which is why we __prefix *custom* tasks__ by their responsibility and purpose.
+
+| Prefix      | Definition                                                                                     |
+| ----------- | ---------------------------------------------------------------------------------------------- |
+| `docs*`     | API documentation and automation tasks. (Custom)                                               |
+| `lint*`     | Code style, standards, and vulnerabilty assessments (as well as fixes, if available). (Custom) |
+| `release`   | Bump the product's semver, update docs, commit, and publish to the `npm` registry. (Custom)    |
+| `security*` | Security vulnerabilty checks. (Custom)                                                         |
+
 The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (assuming you're human, gentle reader) and CI-services.
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-| Script | Description |
-|--------|-------------|
-| `docs` | `node generate-docs.js && npm run docs:toc` |
-| `docs:toc` | `./node_modules/.bin/markdown-toc -i README.md` |
-| `lint` | `npm run lint:js && npm run lint:swagger:all` |
-| `lint:js` | `eslint . --fix ` |
-| `lint:sonar` | `node_modules/sonar-scanner/bin/sonar-scanner` |
-| `lint:swagger:all` | `npm run lint:swagger:parties` |
-| `lint:swagger:money` | `swagger validate schemas/v1/money/money.spec.yaml --debug` |
-| `lint:swagger:parties` | `swagger validate schemas/v1/parties/parties.yaml --debug` |
-| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug` |
-| `prepublishOnly` | `npm run docs` |
-| `preversion` | `npm run docs` |
-| `release` | `standard-version` |
-| `security` | `npm run security:nsp:scan && npm run security:snyk:all` |
-| `security:nsp` | `nsp` |
-| `security:nsp:scan` | `nsp check` |
-| `security:snyk` | `snyk` |
-| `security:snyk:all` | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan` |
-| `security:snyk:auth` | `snyk auth $SNYK_TOKEN` |
-| `security:snyk:monitor` | `snyk monitor --org=commonality` |
-| `security:snyk:scan` | `snyk test` |
-| `pretest` | `npm run lint` |
-| `test` | `jest --config=jest.config.json` |
-| `posttest` | `npm run security && npm run docs` |
+| Script                    | Description                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------- |
+| `docs`                    | `node generate-docs.js && npm run docs:toc`                                                 |
+| `docs:toc`                | `./node_modules/.bin/markdown-toc -i README.md`                                             |
+| `lint`                    | `npm run lint:js && npm run lint:swagger:all`                                               |
+| `lint:js`                 | `eslint . --fix `                                                                           |
+| `lint:sonar`              | `node_modules/sonar-scanner/bin/sonar-scanner`                                              |
+| `lint:swagger:all`        | `npm run lint:swagger:parties`                                                              |
+| `lint:swagger:money`      | `swagger validate schemas/v1/money/money.spec.yaml --debug`                                 |
+| `lint:swagger:parties`    | `swagger validate schemas/v1/parties/parties.yaml --debug`                                  |
+| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug`                            |
+| `prepublishOnly`          | `npm run docs`                                                                              |
+| `preversion`              | `npm run docs`                                                                              |
+| `release`                 | `standard-version`                                                                          |
+| `security`                | `npm run security:nsp:scan && npm run security:snyk:all`                                    |
+| `security:nsp`            | `nsp`                                                                                       |
+| `security:nsp:scan`       | `nsp check`                                                                                 |
+| `security:snyk`           | `snyk`                                                                                      |
+| `security:snyk:all`       | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan` |
+| `security:snyk:auth`      | `snyk auth $SNYK_TOKEN`                                                                     |
+| `security:snyk:monitor`   | `snyk monitor --org=commonality`                                                            |
+| `security:snyk:scan`      | `snyk test`                                                                                 |
+| `pretest`                 | `npm run lint`                                                                              |
+| `test`                    | `jest --config=jest.config.json`                                                            |
+| `posttest`                | `npm run security && npm run docs`                                                          |
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -836,6 +846,7 @@ Graphic art by [icons8][icons8-license-url].
 
 ---
 
+<!-- ⛔️ 📝 NOTE: PLEASE ALPHABETIZE LINK REFERENCES. 📝 ⛔️ -->
 [angularjs-commit-message-guidelines-url]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
 [api-sdk-doc-party-organizations-url]: https://github.com/commonality/archetypes/wiki/Party-SDK#organizations-api
 [api-sdk-doc-party-parties-url]: https://github.com/commonality/archetypes/wiki/Party-SDK#parties-api
