@@ -39,9 +39,10 @@ These __business `archetypes`__ are expressed as __models__ in open, vendor-neut
   * [4.3. API and SDK documentation](#43-api-and-sdk-documentation)
   * [4.4. Usage example](#44-usage-example)
 - [5. `Money`](#5-money)
-  * [5.1. OpenAPI 2.0 Specs](#51-openapi-20-specs)
-  * [5.2. API documentation](#52-api-documentation)
-  * [5.3. Usage example](#53-usage-example)
+  * [5.1. Standards compliance](#51-standards-compliance)
+  * [5.2. OpenAPI 2.0 Specs](#52-openapi-20-specs)
+  * [5.3. API documentation](#53-api-documentation)
+  * [5.4. Usage example](#54-usage-example)
 - [6. `PartyRelationship`](#6-partyrelationship)
   * [Roadmap](#roadmap)
 - [7. `Rule`](#7-rule)
@@ -156,7 +157,7 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 3.3. OpenAPI 2.0 Specs
 
-[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml)
+[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) -->
 ```shell
@@ -218,7 +219,7 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 ### 4.2. OpenAPI 2.0 Specs
 
-[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml)
+[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) -->
 ```
@@ -298,9 +299,24 @@ api.getBaseUnitByName(name, callback)
 </table>
 
 
+
 ### 5.2. OpenAPI 2.0 Specs
 
-[![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml)
+[![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml) (Content-Type: `application/x-yaml`)
+
+
+<!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/money&depth=1) -->
+```
+money/
+├── README.md
+├── currency.yaml
+├── money.spec.yaml
+├── money.yaml
+├── payment-card.yaml
+├── payment-method.yaml
+└── payment.yaml
+```
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ### 5.3. API documentation
 
@@ -333,7 +349,7 @@ api.getBaseUnitByName(name, callback)
       [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.yaml)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.yaml) (Content-Type: `application/x-yaml`)
 
       ### 6.2. API documentation
 
@@ -368,7 +384,7 @@ api.getBaseUnitByName(name, callback)
       [![Rule's Swagger validity][swagger-validity-rules-badge-image]][swagger-validity-rules-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.yaml)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.yaml) (Content-Type: `application/x-yaml`)
 
       ### 7.2. API documentation
 
@@ -403,7 +419,7 @@ api.getBaseUnitByName(name, callback)
       [![Customer relationship management (CRM) Swagger validity][swagger-validity-crm-badge-image]][swagger-validity-crm-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.yaml)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.yaml) (Content-Type: `application/x-yaml`)
 
       ### 8.2. API documentation
 
@@ -438,7 +454,7 @@ api.getBaseUnitByName(name, callback)
       [![Product's Swagger validity][swagger-validity-product-badge-image]][swagger-validity-product-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.yaml)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.yaml) (Content-Type: `application/x-yaml`)
 
       ### 9.2. API documentation
 
@@ -473,7 +489,7 @@ api.getBaseUnitByName(name, callback)
       [![Inventory's Swagger validity][swagger-validity-inventory-badge-image]][swagger-validity-inventory-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.yaml)
+      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.yaml) (Content-Type: `application/x-yaml`)
 
       ### 10.2. API documentation
 
