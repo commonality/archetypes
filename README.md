@@ -8,6 +8,10 @@
 >
 > (Arlow & Neustadt, [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url], 2006, p. 5)
 
+`commonality/archetypes` provides universal, rule-based business collaboration APIs for e-commerce and customer relationship management (CRM). `commonality/archetypes` specifies semantically-rich models of universally recurring business entities, events, and relationships with OpenAPI 2.0.
+
+## What are `archetypes`?
+
 __`archetypes` model how `Parties`&mdash;`People` and `Companies`&mdash;exchange `Products` and `Services` with `Payments` (normally `Money` or other `Locale`-based `Currencies` like gift-cards). The exchanges are recorded from beginning to end as `Orders` and managed as Customer Relationships (CRM) between buyers and sellers (with `PartyRelationships`). When necessary, `Rules` constrain and determine the types of relationships allowed; how products can be packaged; and whether discounts can be applied.__
 
 These __business `archetypes`__ are expressed as __models__ in open, vendor-neutral __OpenAPI/Swagger__ specifications, which provide:
@@ -20,67 +24,74 @@ These __business `archetypes`__ are expressed as __models__ in open, vendor-neut
 
 <!-- toc -->
 
-- [1. Installation](#1-installation)
-  * [1.2. Generating servers and clients](#12-generating-servers-and-clients)
-    + [1.2.1. `swagger-api` and `swagger-codegen`](#121-swagger-api-and-swagger-codegen)
-    + [1.2.2. Swagger Editor](#122-swagger-editor)
-- [2. Usage and API reference](#2-usage-and-api-reference)
-  * [2.1. `curl`](#21-curl)
-  * [2.2. Swagger-UI](#22-swagger-ui)
-- [3. `Party` :package:](#3-party-package)
-  * [3.1. Standards compliance](#31-standards-compliance)
-  * [3.2. Resources](#32-resources)
-  * [3.3. OpenAPI 2.0 Specs](#33-openapi-20-specs)
-  * [3.4. API and SDK documentation](#34-api-and-sdk-documentation)
-  * [3.5. Usage example](#35-usage-example)
-- [4. `Quantity` :package:](#4-quantity-package)
+- [1. Security](#1-security)
+- [2. Installation](#2-installation)
+  * [2.2. Generating servers and clients](#22-generating-servers-and-clients)
+    + [2.2.1. `swagger-api` and `swagger-codegen`](#221-swagger-api-and-swagger-codegen)
+    + [2.2.2. Swagger Editor](#222-swagger-editor)
+- [3. Usage](#3-usage)
+  * [3.1. `curl`](#31-curl)
+  * [3.2. Swagger-UI](#32-swagger-ui)
+- [4. `Party` API :package:](#4-party-api-package)
   * [4.1. Standards compliance](#41-standards-compliance)
-  * [4.2. OpenAPI 2.0 Specs](#42-openapi-20-specs)
-  * [4.3. API and SDK documentation](#43-api-and-sdk-documentation)
-  * [4.4. Usage example](#44-usage-example)
-- [5. `Money`](#5-money)
+  * [4.2. Resources](#42-resources)
+  * [4.3. OpenAPI 2.0 Specs](#43-openapi-20-specs)
+  * [4.4. API and SDK documentation](#44-api-and-sdk-documentation)
+  * [4.5. Usage example](#45-usage-example)
+- [5. `Quantity` API :package:](#5-quantity-api-package)
   * [5.1. Standards compliance](#51-standards-compliance)
   * [5.2. OpenAPI 2.0 Specs](#52-openapi-20-specs)
-  * [5.3. API documentation](#53-api-documentation)
+  * [5.3. API and SDK documentation](#53-api-and-sdk-documentation)
   * [5.4. Usage example](#54-usage-example)
-- [6. `PartyRelationship`](#6-partyrelationship)
+- [6. `Money` API :package:](#6-money-api-package)
+  * [6.1. Standards compliance](#61-standards-compliance)
+  * [6.2. OpenAPI 2.0 Specs](#62-openapi-20-specs)
+  * [6.3. API documentation](#63-api-documentation)
+  * [6.4. Usage example](#64-usage-example)
+- [7. `PartyRelationship` API](#7-partyrelationship-api)
   * [Roadmap](#roadmap)
-- [7. `Rule`](#7-rule)
+- [8. `Rule` API](#8-rule-api)
   * [Roadmap](#roadmap-1)
-- [8. Customer relationship management (CRM)](#8-customer-relationship-management-crm)
+- [9. Customer relationship management (CRM) API](#9-customer-relationship-management-crm-api)
   * [Roadmap](#roadmap-2)
-- [9. `Product`](#9-product)
+- [10. `Product` API](#10-product-api)
   * [Roadmap](#roadmap-3)
-- [10. `Inventory`](#10-inventory)
+- [11. `Inventory` API](#11-inventory-api)
   * [Roadmap](#roadmap-4)
-- [11. `Order`](#11-order)
+- [12. `Order` API](#12-order-api)
   * [Roadmap](#roadmap-5)
-- [12. Product development and delivery](#12-product-development-and-delivery)
-  * [12.1. Built With](#121-built-with)
-  * [12.2. Prerequisite](#122-prerequisite)
-  * [12.3. Set up a development environment](#123-set-up-a-development-environment)
-  * [12.4. `npm-scripts`](#124-npm-scripts)
-- [13. DevSecOps](#13-devsecops)
-  * [13.1. Builds](#131-builds)
-  * [13.2. Tests and quality gates](#132-tests-and-quality-gates)
-    + [13.2.1. Swagger validation](#1321-swagger-validation)
-    + [13.2.2. Linting](#1322-linting)
-    + [13.3.3. Spec (unit test) execution and code coverage](#1333-spec-unit-test-execution-and-code-coverage)
-  * [13.3.4. Deploy/Publish](#1334-deploypublish)
-    + [13.3.4.1. Prerequisites](#13341-prerequisites)
-    + [13.3.4.2. Publish on `npm`](#13342-publish-on-npm)
-- [14. Style guides](#14-style-guides)
-  * [14.1. JavaScript source code](#141-javascript-source-code)
-  * [14.2. Color palette](#142-color-palette)
-- [15. Semantic version and `CHANGELOG`](#15-semantic-version-and-changelog)
-- [16. Contributing to `commonality/archetypes`](#16-contributing-to-commonalityarchetypes)
-  * [16.1. Contribution workflows summarized](#161-contribution-workflows-summarized)
-  * [16.2. Contributors](#162-contributors)
-- [17. Licenses](#17-licenses)
+- [13. Product development and delivery](#13-product-development-and-delivery)
+  * [13.1. Built With](#131-built-with)
+  * [13.2. Prerequisite](#132-prerequisite)
+  * [13.3. Set up a development environment](#133-set-up-a-development-environment)
+  * [13.4. `npm-scripts`](#134-npm-scripts)
+- [14. DevSecOps](#14-devsecops)
+  * [14.1. Builds](#141-builds)
+  * [14.2. Tests and quality gates](#142-tests-and-quality-gates)
+    + [14.2.1. Swagger validation](#1421-swagger-validation)
+    + [14.2.2. Linting](#1422-linting)
+    + [14.3.3. Spec (unit test) execution and code coverage](#1433-spec-unit-test-execution-and-code-coverage)
+  * [14.3.4. Deploy/Publish](#1434-deploypublish)
+    + [14.3.4.1. Prerequisites](#14341-prerequisites)
+    + [14.3.4.2. Publish on `npm`](#14342-publish-on-npm)
+- [15. Style guides](#15-style-guides)
+  * [15.1. JavaScript source code](#151-javascript-source-code)
+  * [15.2. Color palette](#152-color-palette)
+- [16. Semantic version and `CHANGELOG`](#16-semantic-version-and-changelog)
+- [17. Contributing to `commonality/archetypes`](#17-contributing-to-commonalityarchetypes)
+  * [17.1. Contribution workflows summarized](#171-contribution-workflows-summarized)
+  * [17.2. Contributors](#172-contributors)
+- [18. Licenses](#18-licenses)
 
 <!-- tocstop -->
 
-## 1. Installation
+## 1. Security
+
+`commonality/archetypes` provide model-driven OpenAPI specifications for pervasive business patterns. Some of these models contain sensitive personal or company data that require access control and privacy safeguards.
+
+None of `commonality/archetypes'` specifications come with OpenAPI `securityDefinitions`. Before exposing any data, please apply the [principle of least privilege][least-privilege-url] with your own `securityDefinitions` as appropriate. _You must secure_ how sensitive data are stored and shared.
+
+## 2. Installation
 
 Open a Terminal and run this command:
 
@@ -94,11 +105,11 @@ If your team prefers Yarn:
 $ yarn add archetypes
 ```
 
-### 1.2. Generating servers and clients
+### 2.2. Generating servers and clients
 
 [Swagger Codegen][swagger-codegen-url] will generate servers and clients in many different languages and frameworks.
 
-#### 1.2.1. `swagger-api` and `swagger-codegen`
+#### 2.2.1. `swagger-api` and `swagger-codegen`
 
 > ![Quote][quote-left-img] [`swagger-api/swagger-codegen`][swagger-codegen-url] contains a template-driven engine to generate documentation, API clients and server stubs in different languages by parsing your OpenAPI / Swagger definition.
 >
@@ -106,7 +117,7 @@ $ yarn add archetypes
 
 Follow the [Installation][swagger-codegen-installation-url] and [Getting Starting][swagger-codegen-getting-started-url] instructions to generate and build servers and clients from workstations, CI-services, or Docker containers.
 
-#### 1.2.2. Swagger Editor
+#### 2.2.2. Swagger Editor
 
 1. Go to https://editor.swagger.io/.
 1. Copy the `/archetypes/v1/{archetype}/{archetype}.yaml` specification of interest.
@@ -114,24 +125,25 @@ Follow the [Installation][swagger-codegen-installation-url] and [Getting Startin
 1. Select "Generate Server" or "Generate Client" and choose an option.
 1. If successful, you will prompted to download the ZIPped source code.
 
-## 2. Usage and API reference
+## 3. Usage
 
-### 2.1. `curl`
+### 3.1. `curl`
 
 The simplest way to test against mock objects at `http://api.swindle.net/archetypes/v1/parties` with `curl` in a Terminal.
 
 ```bash
-$ curl -X GET "http://api.swindle.net/archetypes/v1/parties/2e908e75-69a9-47e2-83ae-0c3cc52da84c" \
+$ curl \
+  -X GET "http://api.swindle.net/archetypes/v1/parties/2e908e75-69a9-47e2-83ae-0c3cc52da84c" \
   -H "accept: application/json"
 ```
 
-### 2.2. Swagger-UI
+### 3.2. Swagger-UI
 
 Go to the [api.swindle.net Swagger-UI](http://api.swindle.net/swagger-ui/#/)'s "__About__" section and "__Explore__" the available Swagger Specs.
 
 The following sections summarize all twelve business archetype patterns as they are released.
 
-## 3. `Party` :package:
+## 4. `Party` API :package:
 
 ![REST API][rest-api-image]
 
@@ -139,7 +151,7 @@ The following sections summarize all twelve business archetype patterns as they 
 >
 > Arlow, J., & Neustadt, I. (2006). Party archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 122). Boston: Addison-Wesley.
 
-### 3.1. Standards compliance
+### 4.1. Standards compliance
 
 | Standard                                                                             | Contents                                               |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------ |
@@ -148,13 +160,13 @@ The following sections summarize all twelve business archetype patterns as they 
 | [ISO/IEC 5218:2004](https://www.iso.org/standard/36266.html)                         | Codes for the representation of human sexes.           |
 | [ITU-T Recommendations](http://www.itu.int/rec/T-REC-E.164/en)                       | Telecommunication numbering plan.                      |
 
-### 3.2. Resources
+### 4.2. Resources
 
 | Proposal                                    | Contents                                                                                            |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | [63 Genders](https://apath.org/63-genders/) | A proposal for describing Gender as a combination of Physical, Personality and Preferential groups. |
 
-### 3.3. OpenAPI 2.0 Specs
+### 4.3. OpenAPI 2.0 Specs
 
 [![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml) (Content-Type: `application/x-yaml`)
 
@@ -169,7 +181,7 @@ schemas/v1/parties/
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
 
-### 3.4. API and SDK documentation
+### 4.4. API and SDK documentation
 
 | Business archetype                                     | Definition                                                                                                                                  |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -178,7 +190,7 @@ schemas/v1/parties/
 | [`People`][api-sdk-doc-party-people-url]               | Human beings.                                                                                                                               |
 | [`Preferences`][api-sdk-doc-party-preferences-url]     | Choices of (or liking for) something, often from a set of possible or offered options.                                                      |
 
-### 3.5. Usage example
+### 4.5. Usage example
 
 **Retrieve a `Party` by identifier** with JavaScript:
 
@@ -204,7 +216,7 @@ const callback = (error, data, response) => {
 api.getByPartyIdentifier(partyIdentifier, callback)
 ```
 
-## 4. `Quantity` :package:
+## 5. `Quantity` API :package:
 
 ![REST API][rest-api-image]
 
@@ -212,11 +224,11 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 >
 > Arlow, J., & Neustadt, I. (2006). Quantity archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 400). Boston: Addison-Wesley.
 
-### 4.1. Standards compliance
+### 5.1. Standards compliance
 
 <table>   <thead>     <tr><th>Standard</th><th>Contents</th></tr>   </thead>   <tfoot>   </tfoot>   <tbody>     <tr>       <td><a href=\"http://www.bipm.org/en/measurement-units/\">SI</a>       <td>International System of Units&mdash;Bureau International des Poids et Mesures (BIPM).     </tr>   </tbody> </table>
 
-### 4.2. OpenAPI 2.0 Specs
+### 5.2. OpenAPI 2.0 Specs
 
 [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml) (Content-Type: `application/x-yaml`)
 
@@ -232,12 +244,12 @@ quantities/
 ```
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
-### 4.3. API and SDK documentation
+### 5.3. API and SDK documentation
 
 [`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/quantity/js/README.md) client SDK.
 
 
-### 4.4. Usage example
+### 5.4. Usage example
 
 **Retrieve an `SiBaseUnit` by identifier** with JavaScript:
 
@@ -264,7 +276,7 @@ const callback = (error, data, response) => {
 api.getBaseUnitByName(name, callback)
 ```
 
-## 5. `Money`
+## 6. `Money` API :package:
 
 ![REST API][rest-api-image]
 
@@ -273,7 +285,7 @@ api.getBaseUnitByName(name, callback)
 > Arlow, J., & Neustadt, I. (2006). Money archetype pattern. In [_Enterprise patterns and MDA: building better software with archetype patterns and UML_][mda-book-url] (p. 413). Boston: Addison-Wesley.
 
 
-### 5.1. Standards compliance
+### 6.1. Standards compliance
 
 <table>
   <thead>
@@ -299,7 +311,7 @@ api.getBaseUnitByName(name, callback)
 
 
 
-### 5.2. OpenAPI 2.0 Specs
+### 6.2. OpenAPI 2.0 Specs
 
 [![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml) (Content-Type: `application/x-yaml`)
 
@@ -317,11 +329,11 @@ money/
 ```
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-### 5.3. API documentation
+### 6.3. API documentation
 
 [`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/money/js/README.md)
 
-### 5.4. Usage example
+### 6.4. Usage example
 
 **Retrieve a `Currency` by its ISO 4217 alphabetic code** with JavaScript:
 
@@ -348,7 +360,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 ```
 
 
-## 6. `PartyRelationship`
+## 7. `PartyRelationship` API
 
 ![REST API][rest-api-image]
 
@@ -361,20 +373,20 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 [![icon-road-milestone-image] MVP3: PartyRelationships and Rules](https://github.com/commonality/archetypes/milestone/3)
 
 <!--
-      ### 6.1. OpenAPI 2.0 Specs
+      ### 7.1. OpenAPI 2.0 Specs
 
       [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.json)
       * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.yaml) (Content-Type: `application/x-yaml`)
 
-      ### 6.2. API documentation
+      ### 7.2. API documentation
 
       * [`JavaScript`](./docs/api/archetypes/v1/party-relationship/js/README.md)
       * [`Ruby`](./docs/api/archetypes/v1/party/party-relationship/README.md)
 
 
-      ### 6.3. Usage example
+      ### 7.3. Usage example
 
       **Retrieve an `` by identifier** with JavaScript:
 
@@ -383,7 +395,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
       ```
 -->
 
-## 7. `Rule`
+## 8. `Rule` API
 
 ![REST API][rest-api-image]
 
@@ -396,20 +408,20 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 [![icon-road-milestone-image] MVP3: PartyRelationships and Rules](https://github.com/commonality/archetypes/milestone/3)
 
 <!--
-      ### 7.1. OpenAPI 2.0 Specs
+      ### 8.1. OpenAPI 2.0 Specs
 
       [![Rule's Swagger validity][swagger-validity-rules-badge-image]][swagger-validity-rules-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.json)
       * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.yaml) (Content-Type: `application/x-yaml`)
 
-      ### 7.2. API documentation
+      ### 8.2. API documentation
 
       * [`JavaScript`](./docs/api/archetypes/v1/rules/js/README.md)
       * [`Ruby`](./docs/api/archetypes/v1/rules/README.md)
 
 
-      ### 7.3. Usage example
+      ### 8.3. Usage example
 
       **Retrieve an `` by identifier** with JavaScript:
 
@@ -418,7 +430,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
       ```
 -->
 
-## 8. Customer relationship management (CRM)
+## 9. Customer relationship management (CRM) API
 
 ![REST API][rest-api-image]
 
@@ -431,20 +443,20 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 [![icon-road-milestone-image] MVP4: Customer relationship management (CRM)](https://github.com/commonality/archetypes/milestone/4)
 
 <!--
-      ### 8.1. OpenAPI 2.0 Specs
+      ### 9.1. OpenAPI 2.0 Specs
 
       [![Customer relationship management (CRM) Swagger validity][swagger-validity-crm-badge-image]][swagger-validity-crm-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.json)
       * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.yaml) (Content-Type: `application/x-yaml`)
 
-      ### 8.2. API documentation
+      ### 9.2. API documentation
 
       * [`JavaScript`](./docs/api/archetypes/v1/crm/js/README.md)
       * [`Ruby`](./docs/api/archetypes/v1/crm/README.md)
 
 
-      ### 8.3. Usage example
+      ### 9.3. Usage example
 
       **Retrieve an `` by identifier** with JavaScript:
 
@@ -453,7 +465,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
       ```
 -->
 
-## 9. `Product`
+## 10. `Product` API
 
 ![REST API][rest-api-image]
 
@@ -466,20 +478,20 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 [![icon-road-milestone-image] MVP5: Product](https://github.com/commonality/archetypes/milestone/5)
 
 <!--
-      ### 9.1. OpenAPI 2.0 Specs
+      ### 10.1. OpenAPI 2.0 Specs
 
       [![Product's Swagger validity][swagger-validity-product-badge-image]][swagger-validity-product-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.json)
       * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.yaml) (Content-Type: `application/x-yaml`)
 
-      ### 9.2. API documentation
+      ### 10.2. API documentation
 
       * [`JavaScript`](./docs/api/archetypes/v1/product/js/README.md)
       * [`Ruby`](./docs/api/archetypes/v1/product/README.md)
 
 
-      ### 9.3. Usage example
+      ### 10.3. Usage example
 
       **Retrieve an `` by identifier** with JavaScript:
 
@@ -488,7 +500,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
       ```
 -->
 
-## 10. `Inventory`
+## 11. `Inventory` API
 
 ![REST API][rest-api-image]
 
@@ -501,20 +513,20 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 [![icon-road-milestone-image] MVP6: Inventory](https://github.com/commonality/archetypes/milestone/6)
 
 <!--
-      ### 10.1. OpenAPI 2.0 Specs
+      ### 11.1. OpenAPI 2.0 Specs
 
       [![Inventory's Swagger validity][swagger-validity-inventory-badge-image]][swagger-validity-inventory-url]
 
       * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.json)
       * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.yaml) (Content-Type: `application/x-yaml`)
 
-      ### 10.2. API documentation
+      ### 11.2. API documentation
 
       * [`JavaScript`](./docs/api/archetypes/v1/inventory/js/README.md)
       * [`Ruby`](./docs/api/archetypes/v1/inventory/README.md)
 
 
-      ### 10.3. Usage example
+      ### 11.3. Usage example
 
       **Retrieve an `` by identifier** with JavaScript:
 
@@ -523,7 +535,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
       ```
 -->
 
-## 11. `Order`
+## 12. `Order` API
 
 ![REST API][rest-api-image]
 
@@ -535,7 +547,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 
 [![icon-road-milestone-image] MVP7: Inventory](https://github.com/commonality/archetypes/milestone/7)
 
-## 12. Product development and delivery
+## 13. Product development and delivery
 ![Packaging][icon-package-image]
 
 
@@ -543,7 +555,7 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 >
 > Interested in development contributions? Great! Check out our guidelines for [Contributing to `archetypes`][contributing-url] for details.
 
-### 12.1. Built With
+### 13.1. Built With
 
 [![StackShare][stack-share-badge-image]][stack-share-news-feed-url]
 
@@ -589,11 +601,11 @@ __*Keep track of `archetypes'` tech-stack with these news and RSS feeds.*__
 > * [![StackShare news feed][stack-share-news-feed-image] __StackShare News Feed:__ Read the latest news about the tools and dependencies `commonality/archetypes`][stack-share-news-feed-url].
 > * [![StackShare RSS feed][stack-share-rss-feed-image] __StackShare RSS Feed:__ Subscribe to news about `archetypes's` tools and dependencies][stack-share-rss-feed-url].
 
-### 12.2. Prerequisite
+### 13.2. Prerequisite
 
 [__`Node.js`__][nodejs-url]: `commonality/archetypes` product development and delivery require `Node.js` (version 6.x or greater) and its package manager, `npm`. for build, test, and release tasks.
 
-### 12.3. Set up a development environment
+### 13.3. Set up a development environment
 
 Here's a brief intro about what a developer must do in order to start developing the project further:
 
@@ -603,7 +615,7 @@ $ cd archetypes/
 $ npm install
 ```
 
-### 12.4. `npm-scripts`
+### 13.4. `npm-scripts`
 
 Software modules often have funky, irrelative names, which is why we __prefix *custom* tasks__ by their responsibility and purpose.
 
@@ -617,39 +629,39 @@ Software modules often have funky, irrelative names, which is why we __prefix *c
 The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (assuming you're human, gentle reader) and CI-services.
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-| Script                    | Description                                                                                 |
-| ------------------------- | ------------------------------------------------------------------------------------------- |
-| `docs`                    | `node generate-docs.js && npm run docs:toc`                                                 |
-| `docs:toc`                | `./node_modules/.bin/markdown-toc -i README.md`                                             |
-| `lint`                    | `npm run lint:js && npm run lint:swagger:all`                                               |
-| `lint:js`                 | `eslint . --fix `                                                                           |
-| `lint:sonar`              | `node_modules/sonar-scanner/bin/sonar-scanner`                                              |
-| `lint:swagger:all`        | `npm run lint:swagger:parties`                                                              |
-| `lint:swagger:money`      | `swagger validate schemas/v1/money/money.spec.yaml --debug`                                 |
-| `lint:swagger:parties`    | `swagger validate schemas/v1/parties/parties.yaml --debug`                                  |
-| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug`                            |
-| `prepublishOnly`          | `npm run docs`                                                                              |
-| `preversion`              | `npm run docs`                                                                              |
-| `release`                 | `standard-version`                                                                          |
-| `security`                | `npm run security:nsp:scan && npm run security:snyk:all`                                    |
-| `security:nsp`            | `nsp`                                                                                       |
-| `security:nsp:scan`       | `nsp check`                                                                                 |
-| `security:snyk`           | `snyk`                                                                                      |
-| `security:snyk:all`       | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan` |
-| `security:snyk:auth`      | `snyk auth $SNYK_TOKEN`                                                                     |
-| `security:snyk:monitor`   | `snyk monitor --org=commonality`                                                            |
-| `security:snyk:scan`      | `snyk test`                                                                                 |
-| `pretest`                 | `npm run lint`                                                                              |
-| `test`                    | `jest --config=jest.config.json`                                                            |
-| `posttest`                | `npm run security && npm run docs`                                                          |
+| Script | Description |
+|--------|-------------|
+| `docs` | `node generate-docs.js && npm run docs:toc` |
+| `docs:toc` | `./node_modules/.bin/markdown-toc -i README.md` |
+| `lint` | `npm run lint:js && npm run lint:swagger:all` |
+| `lint:js` | `eslint . --fix ` |
+| `lint:sonar` | `node_modules/sonar-scanner/bin/sonar-scanner` |
+| `lint:swagger:all` | `npm run lint:swagger:parties` |
+| `lint:swagger:money` | `swagger validate schemas/v1/money/money.spec.yaml --debug` |
+| `lint:swagger:parties` | `swagger validate schemas/v1/parties/parties.yaml --debug` |
+| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug` |
+| `prepublishOnly` | `npm run docs` |
+| `preversion` | `npm run docs` |
+| `release` | `standard-version` |
+| `security` | `npm run security:nsp:scan && npm run security:snyk:all` |
+| `security:nsp` | `nsp` |
+| `security:nsp:scan` | `nsp check` |
+| `security:snyk` | `snyk` |
+| `security:snyk:all` | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan` |
+| `security:snyk:auth` | `snyk auth $SNYK_TOKEN` |
+| `security:snyk:monitor` | `snyk monitor --org=commonality` |
+| `security:snyk:scan` | `snyk test` |
+| `pretest` | `npm run lint` |
+| `test` | `jest --config=jest.config.json` |
+| `posttest` | `npm run security && npm run docs` |
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## 13. DevSecOps
+## 14. DevSecOps
 
 `commonality/archetypes` triggers Travis CI builds to execute the `ESLint`, the `Jest` test runner, and `Node Security Platform (NSP)` analysis. Code coverage reports are then sent to Coveralls and SonarCloud.
 
-### 13.1. Builds
+### 14.1. Builds
 
 > ![Travis CI][icon-travis-image]
 >
@@ -657,11 +669,11 @@ The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (as
 
 For details, please review the [`.travis.yml` build file](./.travis.yml).
 
-### 13.2. Tests and quality gates
+### 14.2. Tests and quality gates
 
 This repository enforces Swagger quality; Javascript quality; and Javascript unit tests and code coverage.
 
-#### 13.2.1. Swagger validation
+#### 14.2.1. Swagger validation
 > ![Swagger][icon-swagger-image]
 >
 > `commonality/archetypes` validates Swagger docs with [`swagger-cli`][swagger-cli-url].
@@ -684,7 +696,7 @@ $ npm run lint:swagger:all
 
 [`swagger-api/validator-badge`](https://github.com/swagger-api/validator-badge)s display whether there are syntactic issues with you Swagger/OpenAPI 2.0 document.
 
-#### 13.2.2. Linting
+#### 14.2.2. Linting
 > ![ESLint][icon-eslint-image]
 >
 >  `commonality/archetypes` lints with `ESLint` and displays real-time results with README badges.
@@ -700,7 +712,7 @@ $ npm run lint
 $ npm run lint:js
 ```
 
-#### 13.3.3. Spec (unit test) execution and code coverage
+#### 14.3.3. Spec (unit test) execution and code coverage
 > ![Jest][icon-jest-image]
 >
 > `commonality/archetypes` uses `jest` for BDD spec execution and code coverage analysis. The results are displayed real-time with README badges.
@@ -712,19 +724,19 @@ $ npm test
 ```
 
 
-### 13.3.4. Deploy/Publish
+### 14.3.4. Deploy/Publish
 > __[![Conventional Commits][conventional-commits-badge-image]][conventional-commits-url] with [Angular commit conventions][angularjs-commit-message-guidelines-url]__
 >
 > Contributors must follow the [Angular commit conventions][angularjs-commit-message-guidelines-url] in order to support automated `CHANGELOG`, `package.json`, Git release `tags`, and semantic version updates.
 
-#### 13.3.4.1. Prerequisites
+#### 14.3.4.1. Prerequisites
 
 Once a PR has been approved (and passes all checks), topic branches are are merged into `master` on GitHub.
 
 1. On the GitHub PR page, select _Squash and Merge_.
 2. Add a `<title>`, `<body>`, and `<footer>` that comply with the [Conventional Commits Specfication][conventional-commits-url].
 
-#### 13.3.4.2. Publish on `npm`
+#### 14.3.4.2. Publish on `npm`
 
 When you're ready to release (i.e., publish to `npm` or a local Node package registry), open a Terminal and follow these steps:
 
@@ -749,9 +761,9 @@ $ git push --follow-tags origin master; npm publish
 ```
 > ![Read more...][icon-user-manual-image] For `standard-version` configuration details, [read "Cut a Release" on the `conventional-changelog/standard-version's README` page][standard-version-cut-a-release-url].
 
-## 14. Style guides
+## 15. Style guides
 
-### 14.1. JavaScript source code
+### 15.1. JavaScript source code
 > [![JavaScript Style Guide][standardjs-badge-image]][standardjs-url]
 >
 > Whenever you run `npm test`, `ESLint` will automatically reformat your JavaScript to ensure that all souce code conforms to the [JavaScript Standard Style][standardjs-url].
@@ -774,7 +786,7 @@ $ npm run pretest
 $ npm test
 ```
 
-### 14.2. Color palette
+### 15.2. Color palette
 
 The `archetypes` documentation uses this color palette:
 
@@ -790,11 +802,11 @@ The colors are (from left to right):
 
 View the palette as [PDF][archetypes-color-palette-pdf-url], [PNG][archetypes-color-palette-png-url], [SCSS][archetypes-color-palette-scss-url], or on [coolors.com][coolor-palette-url].
 
-## 15. Semantic version and `CHANGELOG`
+## 16. Semantic version and `CHANGELOG`
 
 The latest version of `commonality/archetypes` is `0.0.0`. View the [`CHANGELOG`][changelog-url] for details.
 
-## 16. Contributing to `commonality/archetypes`
+## 17. Contributing to `commonality/archetypes`
 __[![PRs Welcome][prs-welcome-badge-image]][prs-welcome-url] We welcome contributors and pull requests!__
 
 Contributions are community-driven stories with a beginning, a middle, and an end, all told through issues, comments, and pull requests. If you're interested in collaborating, please review the:
@@ -803,7 +815,7 @@ Contributions are community-driven stories with a beginning, a middle, and an en
 * [Contributing][contributing-url] to `commonality/archetypes`
 
 
-### 16.1. Contribution workflows summarized
+### 17.1. Contribution workflows summarized
 
 We use the [Git feature-branch-workflow][git-workflow-feature-branch-tutorial-url] to accept modifications, where contributors:
 
@@ -819,20 +831,24 @@ We use the [Git feature-branch-workflow][git-workflow-feature-branch-tutorial-ur
 
 We'll take care of tagging your issue with the appropriated labels and answer within a week (hopefully less!) to the problem you encounter.
 
-### 16.2. Contributors
+### 17.2. Contributors
 
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |
-| --- | --- |
-| 11 | [gregswindle](https://github.com/gregswindle) |
+| **Commits** | **Contributor** |  
+| --- | --- |  
+| 11 | [gregswindle](https://github.com/gregswindle) |  
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
-## 17. Licenses
+## 18. Licenses
 
 [Apache-2.0][license-url] © [Greg Swindle](https://githbub.com/commonality).
+
+__Third-party licenses:__ Please see the [NOTICE](./NOTICE.md) document for 3rd-Party Software information, or select the FOSSA badge below.
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_large)
 
 ---
 
@@ -874,8 +890,8 @@ Graphic art by [icons8][icons8-license-url].
 [david-dm-dev-badge-image]: https://img.shields.io/david/commonality/archetypes.svg?style=flat-square
 [daviddm-dev-url]: https://david-dm.org/commonality/archetypes?type=dev
 [daviddm-url]: https://david-dm.org/commonality/archetypes
-[fossa-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=shield&style=flat-square
-[fossa-url]: (https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_shield
+[fossa-badge-image]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes.svg?type=shield
+[fossa-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fcommonality%2Farchetypes?ref=badge_shield
 [gh-standardjs-url]: https://github.com/feross/standard
 [git-workflow-feature-branch-tutorial-url]: https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow
 [go-api-url]: ./docs/api/archetypes/v1/party/golang/README.md
@@ -897,6 +913,7 @@ Graphic art by [icons8][icons8-license-url].
 [issues-new-url]: https://github.com/commonality/archetypes/issues/new
 [issues-url]: https://github.com/commonality/archetypes/issues
 [js-api-url]: ./docs/api/archetypes/v1/party/js/README.md
+[least-privilege-url]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 [license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square
 [license-url]: LICENSE
 [markdown-toc-url]: https://github.com/jonschlinkert/markdown-toc

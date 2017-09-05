@@ -1,6 +1,6 @@
 {
   "name": "archetypes",
-  "description": "Self-evident and semantically-rich OpenAPI specifications of universally recurring business entities, events, and relationships, based on the book _Enterprise patterns and MDA: building better software with archetype patterns and UML_ by Arlow, J., & Neustadt, I. (2006).",
+  "description": "Universal, rule-based business collaboration APIs for e-commerce and customer relationship management (CRM). `commonality/archetypes` specifies semantically-rich models of universally recurring business entities, events, and relationships with OpenAPI 2.0, based on the book _Enterprise patterns and MDA: building better software with archetype patterns and UML_ by Arlow, J., & Neustadt, I. (2006).",
   "version": "0.0.0",
   "author": {
     "name": "Greg Swindle",
