@@ -83,6 +83,10 @@
   "license": "Apache-2.0",
   "repository": "commonality/archetypes",
   "scripts": {
+    "build:bundle:all": "npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities",
+    "build:bundle:money": "swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml",
+    "build:bundle:parties": "swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml",
+    "build:bundle:quantities": "swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml",
     "docs": "node generate-docs.js && npm run docs:toc",
     "docs:toc": "./node_modules/.bin/markdown-toc -i README.md",
     "lint": "npm run lint:js && npm run lint:swagger:all",
