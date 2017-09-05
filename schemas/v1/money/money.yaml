@@ -1,12 +1,399 @@
----
-title: Money
-description: Represents the amount of a specific Currency.
-type: object
-allOf:
-  - $ref: >-
-        http://api.swindle.net/archetypes/v1/schemas/quantities/quantity.yaml
-  - properties:
-      amount:
-        description: The sum of Money.
-  - required:
-    - amount
+swagger: '2.0'
+info:
+  description: >-
+    ## `Money`
+
+    The `Money` archetype represents an amount of a specific `Currency`.
+
+    ## `Currency`
+
+
+    This `Currency` implements `Metric` and is `acceptedIn` one or more
+    `Locales`. `Currency's` unique identifier is its `alphabeticCode`.
+
+
+    At present, there are two fundamentally different types of currency -- those
+    that are specified by ISO and those that are not.
+
+    1. **`IsoCurrency`** represents a type of `Currency` with [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) definitions for
+
+        - `name`,
+        - `alphabeticCode`, and
+        - `numericCode`.
+
+    2. **`NonIsoCurrency`** represents a type of `Currency` that is _not_
+    defined in any ISO specification. These types of currency might unrecognized
+    or arbitrary "rewards," like American Airlines AAdvantage Miles.
+
+    ## `Payment` and `PaymentMethod`
+
+    The `Payment` archetype represents `Money` paid by one `Party` to another in return for goods or services. A `PaymentMethod` is a medium by which `Money` is transferred.
+
+
+    ### `PaymentCard`
+
+
+
+
+    ### `CreditCard`
+
+
+    ### `DebitCard`
+
+
+    ### `GiftCard`
+
+
+    ### `Donation`
+
+
+    ### `Cash` and `DigitalCurrency`
+
+
+
+    ### `Check`
+
+
+
+    ## Compliance with existing standards
+
+    <table>
+      <thead>
+        <tr><th>Standard</th><th>Contents</th></tr>
+      </thead>
+      <tfoot>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td><a href="http://www.omg.org/spec/CURR/1.0/PDF">OMG Currency Specification v1.0</a></td>
+          <td>A standard to support international currency.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217</a></td>
+          <td>Three- and two-letter currency codes, currency numbers, and currency names.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a></td>
+          <td>Two-letter country codes and country names.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+     ---
+
+     ## Business archetypes defined
+
+     "A business archetype is a primordial thing that occurs consistently and universally in business domains and business software systems." (Arlow & Neustadt, [_Enterprise patterns and MDA: building better software with archetype patterns and UML_](https://www.amazon.com/Enterprise-Patterns-MDA-Building-Archetype/dp/032111230X), 2006, p. 5)
+
+
+     ## Explore other business archetype patterns
+
+     [Open a Swagger-UI](http://api.swindle.net/swagger-ui/#/) instance, then copy and paste the following Swagger specification URLs into the "Explore" text field and select the "Explore" button for additional APIs.
+
+     1. `Locale`:
+     http://api.swindle.net/archetypes/v1/schemas/locales/locales.yaml
+
+     2. `Money`: http://api.swindle.net/archetypes/v1/schemas/money/money.yaml
+
+     3. `Party`:
+     http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+
+     4. `Quantity`:
+     http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
+
+
+     ---
+
+     ## About
+  version: 1.0.0
+  title: Money
+  contact:
+    email: greg@swindle.net
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: api.swindle.net
+basePath: /archetypes/v1/money
+tags:
+  - name: Currency
+    description: >-
+      A Metric or standard of value for measuring Money, accepted in or or more
+      Locales.
+  - name: Payment
+    description: >-
+      Represents Money paid by one Party to another in return for goods and
+      services.
+  - name: Payment Method
+    description: The medium by which a Payment may be made.
+schemes:
+  - http
+  - https
+externalDocs:
+  description: OMG Currency Specification v1.0
+  url: 'http://www.omg.org/spec/CURR/1.0/PDF'
+paths:
+  /currencies:
+    get:
+      tags:
+        - Currency
+      summary: Retrieve all currencies.
+      description: Retrieve all currencies.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getCurrencies
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Currency'
+            example:
+              - alphabeticCode: USD
+                definition: The monetary unit of the United States of America
+                majorUnitSymbol: $
+                minorUnitSymbol: ¢
+                name: Dollar
+                numericCode: '840'
+                ratioOfMinorUnitToMajorUnit: 100
+                symbol: $
+                validFrom: null
+                validTo: null
+  '/currencies/{alphabetic-code}':
+    get:
+      tags:
+        - Currency
+      summary: Retrieve a Currency by alphabetic code.
+      description: Retrieve a specific Currency by its alphabetic code.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getCurrencyByAlphabeticCode
+      parameters:
+        - in: path
+          name: alphabetic-code
+          description: An alphabetic code that represents the currency.
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Currency'
+  /payments:
+    get:
+      tags:
+        - Payment
+      summary: Retrieve all payments.
+      description: Retrieve all payments.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getPayments
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Payment'
+            example:
+              - alphabeticCode: USD
+                definition: The monetary unit of the United States of America
+                majorUnitSymbol: $
+                minorUnitSymbol: ¢
+                name: Dollar
+                numericCode: '840'
+                ratioOfMinorUnitToMajorUnit: 100
+                symbol: $
+                validFrom: null
+                validTo: null
+  /payment-methods:
+    get:
+      tags:
+        - Payment Method
+      summary: Retrieve all payment method types.
+      description: Retrieve all payment method types.
+      produces:
+        - application/json
+        - application/xml
+      operationId: getPaymentMethods
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PaymentMethod'
+            example: []
+definitions:
+  Metric:
+    $ref: >-
+      http://api.swindle.net/archetypes/v1/schemas/quantities/metric.yaml
+  EffectiveDates:
+    $ref: >-
+      http://api.swindle.net/archetypes/v1/schemas/date-times/effective-dates.yaml
+  Quantity:
+    $ref: >-
+      http://api.swindle.net/archetypes/v1/schemas/quantities/quantity.yaml
+  Currency:
+    allOf:
+      - $ref: '#/definitions/EffectiveDates'
+      - $ref: '#/definitions/Metric'
+      - properties:
+          name:
+            description: 'The name of the `Currency`, e.g., "Pound Sterling".'
+          symbol:
+            description: Synonymous with `majorUnitSymbol`.
+          alphabeticCode:
+            default: ''
+            description: >-
+              An alphabetic code that represents the currency, e.g., "EUR" for the Euro.
+            title: Currency.alphabeticCode Schema
+            type: string
+          definition:
+            default: ''
+            description: >-
+              A description of the Currency, e.g., "The monetary unit of the United Kingdom".
+            title: Currency.definition property
+            type: string
+          numericCode:
+            default: ''
+            description: >-
+              A numeric code optionally assigned to the Currency, e.g., the ISO 4217 standard assigns the numeric code "826" to the pound sterling (U.K.),  and "840" to the U.S. dollar.
+            title: Currency.numericCode
+            type: string
+          majorUnitSymbol:
+            default: ''
+            description: >-
+              The symbol used to denote the major unit of the currency, e.g., in the U.K., the major unit is the pound "£".
+            title: Currency.majorUnitSymbol Schema
+            type: string
+          minorUnitSymbol:
+            default: ''
+            description: >-
+              The symbol used to denote the minor unit of the currency, e.g.,  in the U.K., the minor unit is "pence," with the symbol "p". If the currency does not have a minor unit (e.g., the Turkish Lira), this attribute should have the value null.
+            title: Currency.minorUnitSymbol property
+            type: string
+          ratioOfMinorUnitToMajorUnit:
+            default: 1
+            description: >-
+              The ratio of the value of the minor unit to the major unit. For example, there are 100 cents to 1 dollar in the US; therefore, the ratio of the minor unit to the major unit is 100/1 = 100. If the currency does not have a minor unit, the attribute should have the value 1.
+            title: Currency.ratioOfMinorUnitToMajorUnit property
+            type: integer
+      - required:
+          - definition
+          - majorUnitSymbol
+          - alphabeticCode
+      - type: object
+      - title: Currency
+      - description: Represents a Metric or standard of value for measuring Money.
+  Money:
+    allOf:
+      - $ref:  '#/definitions/Quantity'
+      - properties:
+          amount:
+            description: The sum of Money.
+          currency:
+            $ref: '#/definitions/Currency'
+      - required:
+        - amount
+      - type: object
+      - title: Money
+      - description: Represents an amount of a specific Currency.
+  PaymentMethod:
+    description: >-
+      Represents the medium by which a Payment may be made.
+    type: object
+    properties: {}
+  PaymentCard:
+    allOf:
+      - properties:
+          billingAddress:
+            default: ''
+            description: >-
+              The address to which account statements are sent.
+            title: PaymentCard.billingAddress property
+            type: string
+          cardAssociationName:
+            default: ''
+            description: >-
+              The name of the card association that manages the card networks to which the PaymentCard belongs, e.g., "MasterCard", "Visa".
+            title: PaymentCard.cardAssociationName property
+            type: string
+          cardNumber:
+            default: ''
+            description: >-
+              The number on the PaymentCard.
+            title: PaymentCard.cardNumber property
+            type: string
+          cardVerificationCode:
+            default: ''
+            description: >-
+              A verification code printed on the back of the PaymentCard. At present, this is a three-digit number.
+            minLength: 3
+            title: PaymentMethod.cardVerificationCode property
+            type: string
+          issueNumber:
+            default: ''
+            description: >-
+              A number used by the issuing authority to uniquely identify the issue of the PaymentCard.
+            title: PaymentCard.issueNumber property
+            type: string
+          nameOnCard:
+            default: ''
+            description: >-
+              The name of the Party authorized to use the PaymentCard.
+            title: PaymentCard.nameOnCard property
+            type: string
+      - $ref: '#/definitions/EffectiveDates'
+      - $ref: '#/definitions/PaymentMethod'
+      - required:
+        - billingAddress
+        - cardAssociationName
+        - cardNumber
+        - nameOnCard
+        - validTo
+      - type: object
+      - title: PaymentCard
+      - description: >-
+          Represents a physical token such as a plastic card that authorizes the
+          Party identified on it to charge the cost of goods and services to an
+          account.
+  Payment:
+    allOf:
+      - $ref:  '#/definitions/Money'
+      - properties:
+          paymentMethod:
+            $ref: '#/definitions/PaymentMethod'
+          dateCleared:
+            default: 'null'
+            description: >-
+              The date on which the Payment is cleared by a banking system or other payment processing mechanism.
+            title: Payment.dateCleared property
+            type: number
+          dateDue:
+            default: 'null'
+            description: >-
+              The date on which the payee expects to receive the Payment.
+            title: Payment.dateDue property
+            type: number
+          dateMade:
+            default: 'null'
+            description: >-
+              The date on which the Payment was made by the payer. (This attribute is most likely to be required by the payer's electronic systems.)
+            title: Payment.dateMade property
+            type: number
+          dateReceived:
+            default: 'null'
+            description: >-
+              The date on which the Payment was received by the payee. (This attribute is most likely to be required by the payer's electronic systems.)
+            title: Payment.dateReceived property
+            type: number
+      - type: object
+      - description: >-
+          Represents Money paid by one Party to another in return for goods and services.
+      - title: Payment

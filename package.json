@@ -84,7 +84,7 @@
   "repository": "commonality/archetypes",
   "scripts": {
     "build:bundle:all": "npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities",
-    "build:bundle:money": "swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml",
+    "build:bundle:money": "swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.yaml",
     "build:bundle:parties": "swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml",
     "build:bundle:quantities": "swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml",
     "docs": "node generate-docs.js && npm run docs:toc",
@@ -93,7 +93,7 @@
     "lint:js": "eslint . --fix ",
     "lint:sonar": "node_modules/sonar-scanner/bin/sonar-scanner",
     "lint:swagger:all": "npm run lint:swagger:parties && npm run lint:swagger:quantities && npm run lint:swagger:money",
-    "lint:swagger:money": "swagger validate schemas/v1/money/money.spec.yaml --debug",
+    "lint:swagger:money": "swagger validate schemas/v1/money/money.yaml --debug",
     "lint:swagger:parties": "swagger validate schemas/v1/parties/parties.yaml --debug",
     "lint:swagger:quantities": "swagger validate schemas/v1/quantities/quantities.yaml --debug",
     "posttest": "npm run security && npm run docs",

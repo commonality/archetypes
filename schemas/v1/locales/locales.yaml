@@ -68,7 +68,7 @@ info:
     1. `Locale`:
     http://api.swindle.net/archetypes/v1/schemas/locales/locales.yaml
 
-    2. `Money`: http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml
+    2. `Money`: http://api.swindle.net/archetypes/v1/schemas/money/money.yaml
 
     3. `Party`:
     http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml

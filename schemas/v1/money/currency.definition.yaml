@@ -1,4 +1,5 @@
 ---
+# http://api.swindle.net/archetypes/v1/schemas/money/currency.yaml
 title: Currency
 description: Represents a Metric or standard of value for measuring Money.
 type: object
@@ -8,6 +9,10 @@ allOf:
     - $ref: >-
         http://api.swindle.net/archetypes/v1/schemas/date-times/effective-dates.yaml
     - properties:
+        name:
+          description: 'The name of the `Currency`, e.g., "Pound Sterling".'
+        symbol:
+          description: Synonymous with `majorUnitSymbol`.
         alphabeticCode:
           default: ''
           description: >-
