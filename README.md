@@ -26,10 +26,9 @@ These __business `archetypes`__ are expressed as __models__ in open, vendor-neut
 
 - [1. Security](#1-security)
 - [2. Installation](#2-installation)
-  * [2.2. Generating servers and clients](#22-generating-servers-and-clients)
-    + [2.2.1. `swagger-api` and `swagger-codegen`](#221-swagger-api-and-swagger-codegen)
-    + [2.2.2. Swagger Editor](#222-swagger-editor)
-- [3. Usage](#3-usage)
+  * [2.1. Generating servers and clients](#21-generating-servers-and-clients)
+  * [2.2. Editing OpenAPI specs](#22-editing-openapi-specs)
+- [3. Usage: API HTTP responses](#3-usage-api-http-responses)
   * [3.1. `curl`](#31-curl)
   * [3.2. Swagger-UI](#32-swagger-ui)
 - [4. `Party` API :package:](#4-party-api-package)
@@ -47,7 +46,7 @@ These __business `archetypes`__ are expressed as __models__ in open, vendor-neut
   * [6.1. Standards compliance](#61-standards-compliance)
   * [6.2. OpenAPI 2.0 Specs](#62-openapi-20-specs)
   * [6.3. API documentation](#63-api-documentation)
-  * [6.4. Usage example](#64-usage-example)
+  * [6.4. Usage examples](#64-usage-examples)
 - [7. `PartyRelationship` API](#7-partyrelationship-api)
   * [Roadmap](#roadmap)
 - [8. `Rule` API](#8-rule-api)
@@ -105,19 +104,16 @@ If your team prefers Yarn:
 $ yarn add archetypes
 ```
 
-### 2.2. Generating servers and clients
-
-[Swagger Codegen][swagger-codegen-url] will generate servers and clients in many different languages and frameworks.
-
-#### 2.2.1. `swagger-api` and `swagger-codegen`
-
+### 2.1. Generating servers and clients
 > ![Quote][quote-left-img] [`swagger-api/swagger-codegen`][swagger-codegen-url] contains a template-driven engine to generate documentation, API clients and server stubs in different languages by parsing your OpenAPI / Swagger definition.
 >
 > Cheng, W., & Tam, T. (2011, August 15). swagger-api/swagger-codegen. Retrieved August 27, 2017, from https://github.com/swagger-api/swagger-codegen
 
+[Swagger Codegen][swagger-codegen-url] will generate servers and clients in many different languages and frameworks.
+
 Follow the [Installation][swagger-codegen-installation-url] and [Getting Starting][swagger-codegen-getting-started-url] instructions to generate and build servers and clients from workstations, CI-services, or Docker containers.
 
-#### 2.2.2. Swagger Editor
+### 2.2. Editing OpenAPI specs
 
 1. Go to https://editor.swagger.io/.
 1. Copy the `/archetypes/v1/{archetype}/{archetype}.yaml` specification of interest.
@@ -125,7 +121,7 @@ Follow the [Installation][swagger-codegen-installation-url] and [Getting Startin
 1. Select "Generate Server" or "Generate Client" and choose an option.
 1. If successful, you will prompted to download the ZIPped source code.
 
-## 3. Usage
+## 3. Usage: API HTTP responses
 
 ### 3.1. `curl`
 
@@ -320,12 +316,12 @@ api.getBaseUnitByName(name, callback)
 ```
 money/
 ├── README.md
-├── currency.yaml
-├── money.spec.yaml
+├── currency.definition.yaml
+├── money.definition.yaml
 ├── money.yaml
-├── payment-card.yaml
-├── payment-method.yaml
-└── payment.yaml
+├── payment-card.definition.yaml
+├── payment-method.definition.yaml
+└── payment.definition.yaml
 ```
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -333,16 +329,14 @@ money/
 
 [`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/money/js/README.md)
 
-### 6.4. Usage example
+### 6.4. Usage examples
 
-**Retrieve a `Currency` by its ISO 4217 alphabetic code** with JavaScript:
+__Get all ISO 4217 `Currencies`__ with JavaScript (Node.js):
 
 ```js
 const Money = require('money')
 
-const api = new Money.CurrencyApi()
-
-const iso4217Code = 'USD'
+const moneyApi = new Money.CurrencyApi()
 
 const callback = (error, data, response) => {
   if (error) {
@@ -356,7 +350,32 @@ const callback = (error, data, response) => {
   console.log(response)
 }
 
-api.getCurrencyByAlphabeticCode(iso4217Code, callback)
+moneyApi.getCurrencies(callback)
+```
+
+**Retrieve a `Currency` by its ISO 4217 alphabetic code** with JavaScript:
+
+```js
+const Money = require('money')
+
+const moneyApi = new Money.CurrencyApi()
+
+// String | An alphabetic code that represents the currency.
+const alphabeticCode = 'USD'
+
+const callback = (error, data, response) => {
+  if (error) {
+    console.error(error)
+  } else {
+    console.log(
+      'API called successfully. Returned data: ' +
+      JSON.stringify(data, null, 2)
+    )
+  }
+  console.log(response)
+}
+
+moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback)
 ```
 
 
@@ -841,9 +860,9 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |
-| --- | --- |
-| 11 | [gregswindle](https://github.com/gregswindle) |
+| **Commits** | **Contributor** |  
+| --- | --- |  
+| 11 | [gregswindle](https://github.com/gregswindle) |  
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
