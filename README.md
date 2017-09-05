@@ -566,15 +566,15 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------ | ---------- |
 | [lodash@^4.17.4](https://lodash.com/)                                                                        | Lodash modular utilities.                                                          | 4.17.4       | production |
 | [standard-readme-spec@1.1.3](https://github.com/RichardLitt/standard-readme)                                 | Readme Standard Style                                                              | 1.1.3        | production |
-| [babel-jest@20.0.3](https://github.com/facebook/jest#readme)                                                 | Jest plugin to use babel for transformation.                                       | 20.0.3       | dev        |
+| [babel-jest@21.0.0](https://github.com/facebook/jest#readme)                                                 | Jest plugin to use babel for transformation.                                       | 21.0.0       | dev        |
 | [babel-preset-env@1.6.0](https://babeljs.io/)                                                                | A Babel preset for each environment.                                               | 1.6.0        | dev        |
 | [babelify@7.3.0](https://github.com/babel/babelify)                                                          | Babel browserify transform                                                         | 7.3.0        | dev        |
 | [commitplease@2.7.10](https://github.com/jzaefferer/commitplease#readme)                                     | Validates strings as commit messages                                               | 2.7.10       | dev        |
 | [coveralls@^2.13.1](https://github.com/nickmerwin/node-coveralls#readme)                                     | takes json-cov output into stdin and POSTs to coveralls.io                         | 2.13.1       | dev        |
-| [eslint@4.5.0](http://eslint.org)                                                                            | An AST-based pattern checker for JavaScript.                                       | 4.5.0        | dev        |
+| [eslint@4.6.1](http://eslint.org)                                                                            | An AST-based pattern checker for JavaScript.                                       | 4.6.1        | dev        |
 | [eslint-config-xo-space@0.16.0](https://github.com/sindresorhus/eslint-config-xo-space#readme)               | ESLint shareable config for XO with 2-space indent                                 | 0.16.0       | dev        |
 | [eslint-plugin-import@2.7.0](https://github.com/benmosher/eslint-plugin-import)                              | Import with sanity.                                                                | 2.7.0        | dev        |
-| [eslint-plugin-jest@20.0.3](https://github.com/facebook/jest#readme)                                         | Eslint rules for Jest                                                              | 20.0.3       | dev        |
+| [eslint-plugin-jest@21.0.0](https://github.com/facebook/jest#readme)                                         | Eslint rules for Jest                                                              | 21.0.0       | dev        |
 | [eslint-plugin-jsdoc@3.1.2](https://github.com/gajus/eslint-plugin-jsdoc#readme)                             | JSDoc linting rules for ESLint.                                                    | 3.1.2        | dev        |
 | [eslint-plugin-no-unsafe-innerhtml@1.0.16](https://github.com/mozfreddyb/eslint-plugin-no-unsafe-innerhtml/) | custom ESLint rule to disallows unsafe innerHTML, outerHTML and insertAdjacentHTML | 1.0.16       | dev        |
 | [eslint-plugin-no-unsanitized@2.0.1](https://github.com/mozilla/eslint-plugin-no-unsanitized/)               | ESLint rule to disallow unsanitized code                                           | 2.0.1        | dev        |
@@ -584,8 +584,8 @@ api.getCurrencyByAlphabeticCode(iso4217Code, callback)
 | [eslint-plugin-security@1.4.0](https://github.com/nodesecurity/eslint-plugin-security#readme)                | Security rules for eslint                                                          | 1.4.0        | dev        |
 | [eslint-plugin-standard@3.0.1](https://github.com/xjamundx/eslint-plugin-standard#readme)                    | ESlint Plugin for the Standard Linter                                              | 3.0.1        | dev        |
 | [eslint-plugin-xss@0.1.8](https://npmjs.org/package/eslint-plugin-xss)                                       | Validates XSS related issues of mixing HTML and non-HTML content in variables.     | 0.1.8        | dev        |
-| [jest@20.0.4](http://facebook.github.io/jest/)                                                               | Delightful JavaScript Testing.                                                     | 20.0.4       | dev        |
-| [jest-cli@20.0.4](http://facebook.github.io/jest/)                                                           | Delightful JavaScript Testing.                                                     | 20.0.4       | dev        |
+| [jest@21.0.1](http://facebook.github.io/jest/)                                                               | Delightful JavaScript Testing.                                                     | 21.0.1       | dev        |
+| [jest-cli@21.0.1](http://facebook.github.io/jest/)                                                           | Delightful JavaScript Testing.                                                     | 21.0.1       | dev        |
 | [markdown-magic@0.1.18](https://npmjs.org/package/markdown-magic)                                            | Automatically update markdown files with content from external sources             | 0.1.18       | dev        |
 | [markdown-magic-dependency-table@1.2.2](https://github.com/camacho/markdown-magic-dependency-table#readme)   | Generate table of information about dependencies automatically in markdown         | 1.2.2        | dev        |
 | [markdown-magic-package-scripts@1.2.0](https://github.com/camacho/markdown-magic-package-scripts#readme)     | Print list of scripts in package.json with descriptions                            | 1.2.0        | dev        |
@@ -619,18 +619,23 @@ $ npm install
 
 Software modules often have funky, irrelative names, which is why we __prefix *custom* tasks__ by their responsibility and purpose.
 
-| Prefix      | Definition                                                                                     |
-| ----------- | ---------------------------------------------------------------------------------------------- |
-| `docs*`     | API documentation and automation tasks. (Custom)                                               |
-| `lint*`     | Code style, standards, and vulnerabilty assessments (as well as fixes, if available). (Custom) |
-| `release`   | Bump the product's semver, update docs, commit, and publish to the `npm` registry. (Custom)    |
-| `security*` | Security vulnerabilty checks. (Custom)                                                         |
+| Prefix      | Definition                                                                            |
+| ----------- | ------------------------------------------------------------------------------------- |
+| `build*`    | Source code distribution tasks.                                                       |
+| `docs*`     | API documentation and automation tasks.                                               |
+| `lint*`     | Code style, standards, and vulnerabilty assessments (as well as fixes, if available). |
+| `release`   | Bump the product's semver, update docs, commit, and publish to the `npm` registry.    |
+| `security*` | Security vulnerabilty checks.                                                         |
 
 The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (assuming you're human, gentle reader) and CI-services.
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 | Script | Description |
 |--------|-------------|
+| `build:bundle:all` | `npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities` |
+| `build:bundle:money` | `swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml` |
+| `build:bundle:parties` | `swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml` |
+| `build:bundle:quantities` | `swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml` |
 | `docs` | `node generate-docs.js && npm run docs:toc` |
 | `docs:toc` | `./node_modules/.bin/markdown-toc -i README.md` |
 | `lint` | `npm run lint:js && npm run lint:swagger:all` |
@@ -836,9 +841,9 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |  
-| --- | --- |  
-| 11 | [gregswindle](https://github.com/gregswindle) |  
+| **Commits** | **Contributor** |
+| --- | --- |
+| 11 | [gregswindle](https://github.com/gregswindle) |
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
