@@ -1,0 +1,49 @@
+---
+title: Payment
+description: >-
+  Represents Money paid by one Party to another in return for goods and
+  services.
+type: object
+allOf:
+  - $ref: >-
+      http://api.swindle.net/archetypes/v1/schemas/money/money.definition.yaml
+  - properties:
+      paymentMethod:
+        $ref: >-
+          http://api.swindle.net/archetypes/v1/schemas/money/payment-method.yaml
+      dateCleared:
+        default: 'null'
+        description: >-
+          The date on which the Payment is cleared by a banking system or other payment processing mechanism.
+        title: Payment.dateCleared property
+        type:
+        - string
+        - integer
+        - 'null'
+      dateDue:
+        default: 'null'
+        description: >-
+          The date on which the payee expects to receive the Payment.
+        title: Payment.dateDue property
+        type:
+        - string
+        - integer
+        - 'null'
+      dateMade:
+        default: 'null'
+        description: >-
+          The date on which the Payment was made by the payer. (This attribute is most likely to be required by the payer's electronic systems.)
+        title: Payment.dateMade property
+        type:
+        - string
+        - integer
+        - 'null'
+      dateReceived:
+        default: 'null'
+        description: >-
+          The date on which the Payment was received by the payee. (This attribute is most likely to be required by the payer's electronic systems.)
+        title: Payment.dateReceived property
+        type:
+        - string
+        - integer
+        - 'null'

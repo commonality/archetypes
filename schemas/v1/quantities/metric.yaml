@@ -14,8 +14,8 @@ properties:
     type: string
   symbol:
     default: 'null'
-    description: The standard symbol of the Metric, e.g., "m" for meters. If no symbol
-      exists, set symbol's value to null.
+    description: >-
+        The standard symbol of the Metric, e.g., "m" for meters. If no symbol exists, set symbol's value to null.
     title: Metric.symbol schema
     type: string
 required:
