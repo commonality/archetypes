@@ -1,0 +1,16 @@
+---
+# http://api.swindle.net/archetypes/v1/schemas/money/money.definition.yaml
+title: Money
+description: Represents the amount of a specific Currency.
+type: object
+allOf:
+  - $ref: >-
+        http://api.swindle.net/archetypes/v1/schemas/quantities/quantity.yaml
+  - properties:
+      amount:
+        description: The sum of Money.
+      currency:
+        $ref: >-
+          http://api.swindle.net/archetypes/v1/schemas/money/currency.yaml
+  - required:
+    - amount

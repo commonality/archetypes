@@ -7,7 +7,11 @@ _Please describe your changes here._
 _Reference issues pertinent to this PR here If there are no issues referenced,
 replace this line and the following task completion line._
 
-- [ ] The acceptance criteria for all associated issues have been completed, tested, and validated.
+- [ ] 1. The acceptance criteria for all associated issues have been completed, tested, and validated.
+- [ ] 2. All specifications pass `swagger validate`.
+- [ ] 3. `swagger-codegen` successfully generates a `javascript-client`.
+- [ ] 4. An `npm-script` for validation exists and runs with `npm run lint`.
+- [ ] 5. `README.md` provides overview sections with links.
 
 ### PR check-list
 
@@ -42,24 +46,24 @@ replace this line and the following task completion line._
 [coveralls-img]: https://coveralls.io/repos/github/commonality/archetypes/badge.svg?branch=master&style=flat-square
 [coveralls-url]: https://coveralls.io/github/commonality/archetypes?branch=master
 [sonar-code-smells-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=code_smells
-[sonar-code-smells-url]: https://sonarcloud.io/component_measures/metric/code_smells/list?id=commonality:archetypes
+[sonar-code-smells-url]: https://sonarcloud.io/component_measures/metric/code_smells/list?id=-commonality
 [sonar-cognitive-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=cognitive_complexity
-[sonar-cognitive-url]: https://sonarcloud.io/component_measures/metric/cognitive_complexity/list?id=commonality:archetypes
+[sonar-cognitive-url]: https://sonarcloud.io/component_measures/metric/cognitive_complexity/list?id=-commonality
 [sonar-complexity-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=function_complexity
-[sonar-complexity-url]: https://sonarcloud.io/component_measures/domain/Complexity?id=commonality:archetypes
+[sonar-complexity-url]: https://sonarcloud.io/component_measures/domain/Complexity?id=-commonality
 [sonar-coverage-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=coverage
-[sonar-coverage-url]: https://sonarcloud.io/component_measures/domain/Coverage?id=commonality:archetypes
+[sonar-coverage-url]: https://sonarcloud.io/component_measures/domain/Coverage?id=-commonality
 [sonar-duplications-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=duplicated_line_density
-[sonar-duplications-url]: https://sonarcloud.io/component_measures/domain/Duplications?id=commonality:archetypes
+[sonar-duplications-url]: https://sonarcloud.io/component_measures/domain/Duplications?id=-commonality
 [sonar-gate-img]: http://sonarcloud.io/api/badges/gate?key=-commonality:archetypes
-[sonar-gate-url]: http://sonarcloud.io/dashboard/index/commonality:archetypes
+[sonar-gate-url]: https://sonarcloud.io/dashboard?id=-commonality
 [sonar-issues-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=blocker_violations
-[sonar-issues-url]: https://sonarcloud.io/component_measures/domain/Issues?id=commonality:archetypes
+[sonar-issues-url]: https://sonarcloud.io/component_measures/domain/Issues?id=-commonality
 [sonar-maintainability-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=new_maintainability_rating
-[sonar-maintainability-url]: https://sonarcloud.io/component_measures/domain/Maintainability?id=commonality:archetypes
+[sonar-maintainability-url]: https://sonarcloud.io/component_measures/domain/Maintainability?id=-commonality
 [sonar-reliability-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=new_reliability_rating
-[sonar-reliability-url]: https://sonarcloud.io/component_measures/domain/Reliability?id=commonality:archetypes
+[sonar-reliability-url]: https://sonarcloud.io/component_measures/domain/Reliability?id=-commonality
 [sonar-security-img]: http://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=vulnerabilities
-[sonar-security-url]: https://sonarcloud.io/component_measures/domain/Security?id=commonality:archetypes
+[sonar-security-url]: https://sonarcloud.io/component_measures/domain/Security?id=-commonality
 [sonar-tech-debt-img]:  https://sonarcloud.io/api/badges/measure?key=-commonality:archetypes&metric=sqale_debt_ratio
-[sonar-tech-debt-url]: https://sonarcloud.io/component_measures/metric/sqale_index/list?id=commonality:archetypes
+[sonar-tech-debt-url]: https://sonarcloud.io/component_measures/metric/sqale_index/list?id=-commonality

@@ -1,6 +1,0 @@
-{
-  "title": "PaymentMethod",
-  "description": "Represents the medium by which a Payment may be made.",
-  "type": "object",
-  "properties": {}
-}
