@@ -90,18 +90,15 @@ info:
 
      ## Explore other business archetype patterns
 
-     [Open a Swagger-UI](http://api.swindle.net/swagger-ui/#/) instance, then copy and paste the following Swagger specification URLs into the "Explore" text field and select the "Explore" button for additional APIs.
+     Select any of the following to open an interactive Swagger-UI page:
 
-     1. `Locale`:
-     http://api.swindle.net/archetypes/v1/schemas/locales/locales.yaml
+     1. [`Locale`](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/locales/locales.yaml)
 
-     2. `Money`: http://api.swindle.net/archetypes/v1/schemas/money/money.yaml
+     2. [`Money`](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/money/money.yaml)
 
-     3. `Party`:
-     http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+     3.[ `Party`](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml)
 
-     4. `Quantity`:
-     http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
+     4. [`Quantity`](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/quantities/quantities.yaml)
 
 
      ---

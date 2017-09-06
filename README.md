@@ -164,7 +164,7 @@ The following sections summarize all twelve business archetype patterns as they 
 
 ### 4.3. OpenAPI 2.0 Specs
 
-[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml) (Content-Type: `application/x-yaml`)
+[![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) -->
 ```shell
@@ -178,6 +178,10 @@ schemas/v1/parties/
 
 
 ### 4.4. API and SDK documentation
+> Select an API link for interactive Swagger-UI docs, or an SDK link for client SDK docs.
+
+* [`Party` __server APIs__](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml)
+* [`Party` __client SDKs__](./docs/api/archetypes/v1/party/README.md)
 
 | Business archetype                                     | Definition                                                                                                                                  |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -226,7 +230,7 @@ api.getByPartyIdentifier(partyIdentifier, callback)
 
 ### 5.2. OpenAPI 2.0 Specs
 
-[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml) (Content-Type: `application/x-yaml`)
+[![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/quantities/quantities.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) -->
 ```
@@ -240,9 +244,16 @@ quantities/
 ```
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
-### 5.3. API and SDK documentation
 
-[`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/quantity/js/README.md) client SDK.
+### 5.3. API and SDK documentation
+> Select an API link for interactive Swagger-UI docs, or an SDK link for client SDK docs.
+
+* [`Quantity` __server APIs__](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/quantities/quantities.yaml)
+* [`Quantity` __client SDKs__](./docs/api/archetypes/v1/quantity/README.md)
+
+
+#### 5.3.2. SDKs
+
 
 
 ### 5.4. Usage example
@@ -309,7 +320,7 @@ api.getBaseUnitByName(name, callback)
 
 ### 6.2. OpenAPI 2.0 Specs
 
-[![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml) (Content-Type: `application/x-yaml`)
+[![Money's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/money/money.spec.yaml) (Content-Type: `application/x-yaml`)
 
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/money&depth=1) -->
@@ -325,9 +336,11 @@ money/
 ```
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-### 6.3. API documentation
+### 6.3. API and SDK documentation
+> Select an API link for interactive Swagger-UI docs, or an SDK link for client SDK docs.
 
-[`JavaScript` client SDK  (Node.js)](./docs/api/archetypes/v1/money/js/README.md)
+* [`Money` __server APIs__](http://api.swindle.net/swagger-ui/?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/money/money.yaml)
+* [`Money` __client SDKs__](./docs/api/archetypes/v1/money/README.md)
 
 ### 6.4. Usage examples
 
@@ -396,8 +409,8 @@ moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback)
 
       [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url]
 
-      * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/party-relationship/party-relationship.yaml) (Content-Type: `application/x-yaml`)
+      * [`JSON`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/party-relationship/party-relationship.swagger.json)
+      * [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/party-relationship/party-relationship.yaml) (Content-Type: `application/x-yaml`)
 
       ### 7.2. API documentation
 
@@ -431,8 +444,8 @@ moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback)
 
       [![Rule's Swagger validity][swagger-validity-rules-badge-image]][swagger-validity-rules-url]
 
-      * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/rules/rules.yaml) (Content-Type: `application/x-yaml`)
+      * [`JSON`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/rules/rules.swagger.json)
+      * [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/rules/rules.yaml) (Content-Type: `application/x-yaml`)
 
       ### 8.2. API documentation
 
@@ -466,8 +479,8 @@ moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback)
 
       [![Customer relationship management (CRM) Swagger validity][swagger-validity-crm-badge-image]][swagger-validity-crm-url]
 
-      * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/crm/crm.yaml) (Content-Type: `application/x-yaml`)
+      * [`JSON`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/crm/crm.swagger.json)
+      * [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/crm/crm.yaml) (Content-Type: `application/x-yaml`)
 
       ### 9.2. API documentation
 
@@ -501,8 +514,8 @@ moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback)
 
       [![Product's Swagger validity][swagger-validity-product-badge-image]][swagger-validity-product-url]
 
-      * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/product/product.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/product/product.yaml) (Content-Type: `application/x-yaml`)
+      * [`JSON`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/product/product.swagger.json)
+      * [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/product/product.yaml) (Content-Type: `application/x-yaml`)
 
       ### 10.2. API documentation
 
@@ -536,8 +549,8 @@ moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback)
 
       [![Inventory's Swagger validity][swagger-validity-inventory-badge-image]][swagger-validity-inventory-url]
 
-      * [`JSON`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.swagger.json)
-      * [`YAML`](http://api.swindle.net/archetypes/v1/schemas/inventory/inventory.yaml) (Content-Type: `application/x-yaml`)
+      * [`JSON`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/inventory/inventory.swagger.json)
+      * [`YAML`](https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/inventory/inventory.yaml) (Content-Type: `application/x-yaml`)
 
       ### 11.2. API documentation
 
@@ -649,35 +662,35 @@ Software modules often have funky, irrelative names, which is why we __prefix *c
 The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (assuming you're human, gentle reader) and CI-services.
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-| Script | Description |
-|--------|-------------|
-| `build:bundle:all` | `npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities` |
-| `build:bundle:money` | `swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml` |
-| `build:bundle:parties` | `swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml` |
+| Script                    | Description                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `build:bundle:all`        | `npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities`                                 |
+| `build:bundle:money`      | `swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml`                |
+| `build:bundle:parties`    | `swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml`             |
 | `build:bundle:quantities` | `swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml` |
-| `docs` | `node generate-docs.js && npm run docs:toc` |
-| `docs:toc` | `./node_modules/.bin/markdown-toc -i README.md` |
-| `lint` | `npm run lint:js && npm run lint:swagger:all` |
-| `lint:js` | `eslint . --fix ` |
-| `lint:sonar` | `node_modules/sonar-scanner/bin/sonar-scanner` |
-| `lint:swagger:all` | `npm run lint:swagger:parties` |
-| `lint:swagger:money` | `swagger validate schemas/v1/money/money.spec.yaml --debug` |
-| `lint:swagger:parties` | `swagger validate schemas/v1/parties/parties.yaml --debug` |
-| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug` |
-| `prepublishOnly` | `npm run docs` |
-| `preversion` | `npm run docs` |
-| `release` | `standard-version` |
-| `security` | `npm run security:nsp:scan && npm run security:snyk:all` |
-| `security:nsp` | `nsp` |
-| `security:nsp:scan` | `nsp check` |
-| `security:snyk` | `snyk` |
-| `security:snyk:all` | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan` |
-| `security:snyk:auth` | `snyk auth $SNYK_TOKEN` |
-| `security:snyk:monitor` | `snyk monitor --org=commonality` |
-| `security:snyk:scan` | `snyk test` |
-| `pretest` | `npm run lint` |
-| `test` | `jest --config=jest.config.json` |
-| `posttest` | `npm run security && npm run docs` |
+| `docs`                    | `node generate-docs.js && npm run docs:toc`                                                                                     |
+| `docs:toc`                | `./node_modules/.bin/markdown-toc -i README.md`                                                                                 |
+| `lint`                    | `npm run lint:js && npm run lint:swagger:all`                                                                                   |
+| `lint:js`                 | `eslint . --fix `                                                                                                               |
+| `lint:sonar`              | `node_modules/sonar-scanner/bin/sonar-scanner`                                                                                  |
+| `lint:swagger:all`        | `npm run lint:swagger:parties`                                                                                                  |
+| `lint:swagger:money`      | `swagger validate schemas/v1/money/money.spec.yaml --debug`                                                                     |
+| `lint:swagger:parties`    | `swagger validate schemas/v1/parties/parties.yaml --debug`                                                                      |
+| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug`                                                                |
+| `prepublishOnly`          | `npm run docs`                                                                                                                  |
+| `preversion`              | `npm run docs`                                                                                                                  |
+| `release`                 | `standard-version`                                                                                                              |
+| `security`                | `npm run security:nsp:scan && npm run security:snyk:all`                                                                        |
+| `security:nsp`            | `nsp`                                                                                                                           |
+| `security:nsp:scan`       | `nsp check`                                                                                                                     |
+| `security:snyk`           | `snyk`                                                                                                                          |
+| `security:snyk:all`       | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan`                                     |
+| `security:snyk:auth`      | `snyk auth $SNYK_TOKEN`                                                                                                         |
+| `security:snyk:monitor`   | `snyk monitor --org=commonality`                                                                                                |
+| `security:snyk:scan`      | `snyk test`                                                                                                                     |
+| `pretest`                 | `npm run lint`                                                                                                                  |
+| `test`                    | `jest --config=jest.config.json`                                                                                                |
+| `posttest`                | `npm run security && npm run docs`                                                                                              |
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -860,9 +873,9 @@ We'll take care of tagging your issue with the appropriated labels and answer wi
 Thanks goes to these wonderful people:
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (CONTRIBUTORS) -->
-| **Commits** | **Contributor** |  
-| --- | --- |  
-| 11 | [gregswindle](https://github.com/gregswindle) |  
+| **Commits** | **Contributor** |
+| --- | --- |
+| 11 | [gregswindle](https://github.com/gregswindle) |
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
@@ -949,8 +962,8 @@ Graphic art by [icons8][icons8-license-url].
 [nsp-badge-image]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff/badge?style=flat-square
 [nsp-sign-up-url]: https://nodesecurity.io/signup
 [nsp-url]: https://nodesecurity.io/orgs/commonality/projects/3706b82c-bf9a-44f0-9d77-c489b6c11dff
-[party-swagger-json-url]: http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
-[party-swagger-yaml-url]: http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
+[party-swagger-json-url]: https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml
+[party-swagger-yaml-url]: https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml
 [pr-url]: /commonality/archetypes/pulls
 [product-development-guidelines-url]: ./.github/PRODUCT_DEVELOPEMENT_GUIDELINES.md
 [prs-welcome-badge-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
@@ -979,11 +992,11 @@ Graphic art by [icons8][icons8-license-url].
 [swagger-codegen-url]: https://github.com/swagger-api/swagger-codegen
 [swagger-io-url]: http://swagger.io
 [swagger-markdown-url]: https://github.com/syroegkin/swagger-markdown
-[swagger-validity-money-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml.svg?style=flat-square
-[swagger-validity-money-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml
-[swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/parties/parties.yaml.svg?style=flat-square
-[swagger-validity-party-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml
-[swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/http/api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml.svg?style=flat-square
-[swagger-validity-quantity-url]: https://online.swagger.io/validator/debug?url=http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml
+[swagger-validity-money-badge-image]: https://img.shields.io/swagger/valid/2.0/https/raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/money/money.yaml.svg?style=flat-square
+[swagger-validity-money-url]: https://online.swagger.io/validator/debug?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/money/money.yaml
+[swagger-validity-party-badge-image]: https://img.shields.io/swagger/valid/2.0/https/raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml.svg?style=flat-square
+[swagger-validity-party-url]: https://online.swagger.io/validator/debug?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/parties/parties.yaml
+[swagger-validity-quantity-badge-image]: https://img.shields.io/swagger/valid/2.0/https/raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/quantities/quantities.yaml.svg?style=flat-square
+[swagger-validity-quantity-url]: https://online.swagger.io/validator/debug?url=https://raw.githubusercontent.com/commonality/archetypes/master/schemas/v1/quantities/quantities.yaml
 [travis-badge-image]: https://img.shields.io/travis/commonality/archetypes.svg?branch=master&style=flat-square
 [travis-url]: https://travis-ci.org/commonality/archetypes
