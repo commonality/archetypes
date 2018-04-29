@@ -59,7 +59,7 @@
     "markdown-magic-subpackage-list": "1.1.1",
     "markdown-toc": "1.1.0",
     "nsp": "2.8.0",
-    "snyk": "1.40.2",
+    "snyk": "1.75.0",
     "sonar-scanner": "3.0.3",
     "standard-version": "4.2.0",
     "swagger-cli": "1.0.0-beta.2"
