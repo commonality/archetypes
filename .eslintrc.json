@@ -12,5 +12,8 @@
       "jest": true,
       "node": true
   },
-  "extends": "standard"
+  "extends": [
+      "plugin:jest/recommended",
+      "standard"
+    ]
 }

@@ -38,6 +38,7 @@
     "commitplease": "^3.2.0",
     "coveralls": "^3.0.2",
     "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-config-xo-space": "^0.20.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^22.1.0",
@@ -60,6 +61,7 @@
     "markdown-magic-package-scripts": "^1.2.1",
     "markdown-magic-subpackage-list": "^1.1.1",
     "markdown-toc": "^1.2.0",
+    "prettier": "^1.15.2",
     "semantic-release": "^15.12.2",
     "snyk": "^1.110.2",
     "sonar-scanner": "^3.1.0",
@@ -84,11 +86,13 @@
   },
   "keywords": [],
   "license": "Apache-2.0",
-  "maintainers": [{
-    "name": "Greg Swindle",
-    "email": "greg@swindle.net",
-    "url": "https://github.com/gregswindle"
-  }],
+  "maintainers": [
+    {
+      "name": "Greg Swindle",
+      "email": "greg@swindle.net",
+      "url": "https://github.com/gregswindle"
+    }
+  ],
   "release": {
     "branch": "master"
   },
@@ -103,8 +107,9 @@
     "docs:contributors:add": "all-contributors add",
     "docs:contributors:generate": "all-contributors generate",
     "docs:toc": "./node_modules/.bin/markdown-toc -i README.md",
-    "lint": "npm run lint:js",
+    "lint": "npm run lint:js && npm run lint:md",
     "lint:js": "eslint --ignore-path .gitignore ./**/*.js --fix",
+    "lint:md": "prettier --write README.md",
     "lint:sonar": "node_modules/sonar-scanner/bin/sonar-scanner",
     "lint:swagger:all": "npm run lint:swagger:parties && npm run lint:swagger:quantities && npm run lint:swagger:money",
     "lint:swagger:money": "swagger validate schemas/v1/money/money.yaml --debug",

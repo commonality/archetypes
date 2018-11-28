@@ -4,7 +4,7 @@ const markdownMagicDirectoryTree = require('markdown-magic-directory-tree')
 const markdownMagicPackageScripts = require('markdown-magic-package-scripts')
 
 const markdownConfig = {
-  callback(err, output) {
+  callback(err) {
     if (err) {
       console.error(err)
     } else {
@@ -13,7 +13,7 @@ const markdownConfig = {
   },
   'transforms': {
     'CONTRIBUTORS': markdownMagicGithubContributors({
-      secret: process.env.GH_SAAS_TOKEN,
+      secret: process.env.GH_TOKEN,
       format: 'table',
       repo: 'commonality/archetypes'
     }),

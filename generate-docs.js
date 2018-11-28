@@ -1,4 +1,4 @@
-const fs = require('fs')
+// const fs = require('fs')
 const path = require('path')
 const markdownMagic = require('markdown-magic')
 const markdownConfig = require('./markdown.config')
