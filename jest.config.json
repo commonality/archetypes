@@ -1,7 +1,7 @@
 {
   "name": "archetypes",
   "automock": false,
-  "collectCoverage": true,
+  "collectCoverage": false,
   "collectCoverageFrom": [
     "**/schemas/**"
   ],

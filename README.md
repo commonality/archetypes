@@ -35,60 +35,60 @@ These **business `archetypes`** are expressed as **models** in open, vendor-neut
 
 - [1. Security](#1-security)
 - [2. Installation](#2-installation)
-  - [2.1. Generating servers and clients](#21-generating-servers-and-clients)
-  - [2.2. Editing OpenAPI specs](#22-editing-openapi-specs)
+  * [2.1. Generating servers and clients](#21-generating-servers-and-clients)
+  * [2.2. Editing OpenAPI specs](#22-editing-openapi-specs)
 - [3. Usage: API HTTP responses](#3-usage-api-http-responses)
-  - [3.1. `curl`](#31-curl)
-  - [3.2. Swagger-UI](#32-swagger-ui)
+  * [3.1. `curl`](#31-curl)
+  * [3.2. Swagger-UI](#32-swagger-ui)
 - [4. `Party` API :package:](#4-party-api-package)
-  - [4.1. Standards compliance](#41-standards-compliance)
-  - [4.2. Resources](#42-resources)
-  - [4.3. OpenAPI 2.0 Specs](#43-openapi-20-specs)
-  - [4.4. API and SDK documentation](#44-api-and-sdk-documentation)
-  - [4.5. Usage example](#45-usage-example)
+  * [4.1. Standards compliance](#41-standards-compliance)
+  * [4.2. Resources](#42-resources)
+  * [4.3. OpenAPI 2.0 Specs](#43-openapi-20-specs)
+  * [4.4. API and SDK documentation](#44-api-and-sdk-documentation)
+  * [4.5. Usage example](#45-usage-example)
 - [5. `Quantity` API :package:](#5-quantity-api-package)
-  - [5.1. Standards compliance](#51-standards-compliance)
-  - [5.2. OpenAPI 2.0 Specs](#52-openapi-20-specs)
-  - [5.3. API and SDK documentation](#53-api-and-sdk-documentation)
-  - [5.4. Usage example](#54-usage-example)
+  * [5.1. Standards compliance](#51-standards-compliance)
+  * [5.2. OpenAPI 2.0 Specs](#52-openapi-20-specs)
+  * [5.3. API and SDK documentation](#53-api-and-sdk-documentation)
+  * [5.4. Usage example](#54-usage-example)
 - [6. `Money` API :package:](#6-money-api-package)
-  - [6.1. Standards compliance](#61-standards-compliance)
-  - [6.2. OpenAPI 2.0 Specs](#62-openapi-20-specs)
-  - [6.3. API documentation](#63-api-documentation)
-  - [6.4. Usage examples](#64-usage-examples)
+  * [6.1. Standards compliance](#61-standards-compliance)
+  * [6.2. OpenAPI 2.0 Specs](#62-openapi-20-specs)
+  * [6.3. API documentation](#63-api-documentation)
+  * [6.4. Usage examples](#64-usage-examples)
 - [7. `PartyRelationship` API](#7-partyrelationship-api)
-  - [Roadmap](#roadmap)
+  * [Roadmap](#roadmap)
 - [8. `Rule` API](#8-rule-api)
-  - [Roadmap](#roadmap-1)
+  * [Roadmap](#roadmap-1)
 - [9. Customer relationship management (CRM) API](#9-customer-relationship-management-crm-api)
-  - [Roadmap](#roadmap-2)
+  * [Roadmap](#roadmap-2)
 - [10. `Product` API](#10-product-api)
-  - [Roadmap](#roadmap-3)
+  * [Roadmap](#roadmap-3)
 - [11. `Inventory` API](#11-inventory-api)
-  - [Roadmap](#roadmap-4)
+  * [Roadmap](#roadmap-4)
 - [12. `Order` API](#12-order-api)
-  - [Roadmap](#roadmap-5)
+  * [Roadmap](#roadmap-5)
 - [13. Product development and delivery](#13-product-development-and-delivery)
-  - [13.1. Built With](#131-built-with)
-  - [13.2. Prerequisite](#132-prerequisite)
-  - [13.3. Set up a development environment](#133-set-up-a-development-environment)
-  - [13.4. `npm-scripts`](#134-npm-scripts)
+  * [13.1. Built With](#131-built-with)
+  * [13.2. Prerequisite](#132-prerequisite)
+  * [13.3. Set up a development environment](#133-set-up-a-development-environment)
+  * [13.4. `npm-scripts`](#134-npm-scripts)
 - [14. DevSecOps](#14-devsecops)
-  - [14.1. Builds](#141-builds)
-  - [14.2. Tests and quality gates](#142-tests-and-quality-gates)
-    - [14.2.1. Swagger validation](#1421-swagger-validation)
-    - [14.2.2. Linting](#1422-linting)
-    - [14.3.3. Spec (unit test) execution and code coverage](#1433-spec-unit-test-execution-and-code-coverage)
-  - [14.3.4. Deploy/Publish](#1434-deploypublish)
-    - [14.3.4.1. Prerequisites](#14341-prerequisites)
-    - [14.3.4.2. Publish on `npm`](#14342-publish-on-npm)
+  * [14.1. Builds](#141-builds)
+  * [14.2. Tests and quality gates](#142-tests-and-quality-gates)
+    + [14.2.1. Swagger validation](#1421-swagger-validation)
+    + [14.2.2. Linting](#1422-linting)
+    + [14.3.3. Spec (unit test) execution and code coverage](#1433-spec-unit-test-execution-and-code-coverage)
+  * [14.3.4. Deploy/Publish](#1434-deploypublish)
+    + [14.3.4.1. Prerequisites](#14341-prerequisites)
+    + [14.3.4.2. Publish on `npm`](#14342-publish-on-npm)
 - [15. Style guides](#15-style-guides)
-  - [15.1. JavaScript source code](#151-javascript-source-code)
-  - [15.2. Color palette](#152-color-palette)
+  * [15.1. JavaScript source code](#151-javascript-source-code)
+  * [15.2. Color palette](#152-color-palette)
 - [16. Semantic version and `CHANGELOG`](#16-semantic-version-and-changelog)
 - [17. Contributing to `commonality/archetypes`](#17-contributing-to-commonalityarchetypes)
-  - [17.1. Contribution workflows summarized](#171-contribution-workflows-summarized)
-  - [17.2. Contributors](#172-contributors)
+  * [17.1. Contribution workflows summarized](#171-contribution-workflows-summarized)
+  * [17.2. Contributors](#172-contributors)
 - [18. Licenses](#18-licenses)
 
 <!-- tocstop -->
@@ -177,14 +177,12 @@ The following sections summarize all twelve business archetype patterns as they 
 [![Party's Swagger validity][swagger-validity-party-badge-image]][swagger-validity-party-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/parties/parties.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) -->
-
 ```
 parties/
 ├── nominative.yaml
 ├── parties.yaml
 └── unique-identifier.yaml
 ```
-
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/parties&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
 ### 4.4. API and SDK documentation
@@ -238,7 +236,6 @@ api.getByPartyIdentifier(partyIdentifier, callback);
 [![Quantity's Swagger validity][swagger-validity-quantity-badge-image]][swagger-validity-quantity-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/quantities/quantities.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) -->
-
 ```
 quantities/
 ├── metric.yaml
@@ -248,7 +245,6 @@ quantities/
 ├── si-system-of-units.yaml
 └── system-of-units.yaml
 ```
-
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/quantities&depth=1) --><!-- AUTO-GENERATED-CONTENT:END -->
 
 ### 5.3. API and SDK documentation
@@ -318,7 +314,6 @@ api.getBaseUnitByName(name, callback);
 [![Quantity's Swagger validity][swagger-validity-money-badge-image]][swagger-validity-money-url] [`YAML`](http://api.swindle.net/archetypes/v1/schemas/money/money.spec.yaml) (Content-Type: `application/x-yaml`)
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=./schemas/v1/money&depth=1) -->
-
 ```
 money/
 ├── currency.definition.yaml
@@ -329,7 +324,6 @@ money/
 ├── payment.definition.yaml
 └── README.md
 ```
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ### 6.3. API documentation
@@ -585,47 +579,48 @@ moneyApi.getCurrencyByAlphabeticCode(alphabeticCode, callback);
 `archetypes` requires the following [tech-stack][stack-share-news-feed-url] to either run, build, test, or deploy:
 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
-
-| **Dependency**                                                                                                | **Description**                                                                    | **Version** | **License**  | **Type** |
-| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------- | ------------ | -------- |
-| [@babel/core@^7.1.6](https://babeljs.io/)                                                                     | Babel compiler core.                                                               | 7.1.6       | MIT          | dev      |
-| [all-contributors-cli@^5.4.1](https://github.com/jfmengels/all-contributors-cli#readme)                       | Tool to easily add recognition for new contributors                                | 5.4.1       | MIT          | dev      |
-| [audit@0.0.6](https://github.com/Weltschmerz/Audit)                                                           | Generate performance statistics for async or sync functions                        | 0.0.6       | UNLICENSED   | dev      |
-| [babel-jest@^23.6.0](https://github.com/facebook/jest)                                                        | Jest plugin to use babel for transformation.                                       | 23.6.0      | MIT          | dev      |
-| [babel-preset-env@^1.7.0](https://babeljs.io/)                                                                | A Babel preset for each environment.                                               | 1.7.0       | MIT          | dev      |
-| [babelify@^10.0.0](https://github.com/babel/babelify)                                                         | Babel browserify transform                                                         | 10.0.0      | MIT          | dev      |
-| [commitplease@^3.2.0](https://github.com/jzaefferer/commitplease)                                             | Validates strings as commit messages                                               | 3.2.0       | MIT          | dev      |
-| [coveralls@^3.0.2](https://github.com/nickmerwin/node-coveralls)                                              | takes json-cov output into stdin and POSTs to coveralls.io                         | 3.0.2       | BSD-2-Clause | dev      |
-| [eslint@^5.9.0](https://eslint.org)                                                                           | An AST-based pattern checker for JavaScript.                                       | 5.9.0       | MIT          | dev      |
-| [eslint-config-xo-space@^0.20.0](https://github.com/xojs/eslint-config-xo-space)                              | ESLint shareable config for XO with 2-space indent                                 | 0.20.0      | MIT          | dev      |
-| [eslint-plugin-import@^2.14.0](https://github.com/benmosher/eslint-plugin-import)                             | Import with sanity.                                                                | 2.14.0      | MIT          | dev      |
-| [eslint-plugin-jest@^22.1.0](https://github.com/jest-community/eslint-plugin-jest)                            | Eslint rules for Jest                                                              | 22.1.0      | MIT          | dev      |
-| [eslint-plugin-jsdoc@^3.9.1](https://github.com/gajus/eslint-plugin-jsdoc)                                    | JSDoc linting rules for ESLint.                                                    | 3.9.1       | BSD-3-Clause | dev      |
-| [eslint-plugin-no-unsafe-innerhtml@^1.0.16](https://github.com/mozfreddyb/eslint-plugin-no-unsafe-innerhtml/) | custom ESLint rule to disallows unsafe innerHTML, outerHTML and insertAdjacentHTML | 1.0.16      | MPL-2.0      | dev      |
-| [eslint-plugin-no-unsanitized@^3.0.2](https://github.com/mozilla/eslint-plugin-no-unsanitized/)               | ESLint rule to disallow unsanitized code                                           | 3.0.2       | MPL-2.0      | dev      |
-| [eslint-plugin-node@^8.0.0](https://github.com/mysticatea/eslint-plugin-node#readme)                          | Additional ESLint's rules for Node.js                                              | 8.0.0       | MIT          | dev      |
-| [eslint-plugin-promise@^4.0.1](https///github.com:xjamundx/eslint-plugin-promise)                             | Enforce best practices for JavaScript promises                                     | 4.0.1       | ISC          | dev      |
-| [eslint-plugin-scanjs-rules@^0.2.1](https://github.com/mozfreddyb/eslint-plugin-scanjs-rules/)                | ESLint plugin that contains ScanJS rules                                           | 0.2.1       | MPL-2.0      | dev      |
-| [eslint-plugin-security@^1.4.0](https://github.com/nodesecurity/eslint-plugin-security#readme)                | Security rules for eslint                                                          | 1.4.0       | Apache-2.0   | dev      |
-| [eslint-plugin-standard@^4.0.0](https://github.com/standard/eslint-plugin-standard#readme)                    | ESlint Plugin for the Standard Linter                                              | 4.0.0       | MIT          | dev      |
-| [eslint-plugin-xss@^0.1.9](https://github.com/Rantanen/eslint-plugin-xss)                                     | Validates XSS related issues of mixing HTML and non-HTML content in variables.     | 0.1.9       | ISC          | dev      |
-| [jest@^23.6.0](https://jestjs.io/)                                                                            | Delightful JavaScript Testing.                                                     | 23.6.0      | MIT          | dev      |
-| [jest-cli@^23.6.0](https://jestjs.io/)                                                                        | Delightful JavaScript Testing.                                                     | 23.6.0      | MIT          | dev      |
-| [jest-config@^23.6.0](https://github.com/facebook/jest)                                                       |                                                                                    | 23.6.0      | MIT          | dev      |
-| [markdown-magic@^0.1.25](https://github.com/DavidWells/markdown-magic#readme)                                 | Automatically update markdown files with content from external sources             | 0.1.25      | MIT          | dev      |
-| [markdown-magic-dependency-table@^1.3.2](https://github.com/camacho/markdown-magic-dependency-table#readme)   | Generate table of information about dependencies automatically in markdown         | 1.3.2       | MIT          | dev      |
-| [markdown-magic-directory-tree@^1.2.3](https://github.com/camacho/markdown-magic-directory-tree#readme)       | Print an archy tree for markdown file                                              | 1.2.3       | MIT          | dev      |
-| [markdown-magic-github-contributors@0.0.3](https://npmjs.org/package/markdown-magic-github-contributors)      | Add github contributors to markdown file                                           | 0.0.3       | MIT          | dev      |
-| [markdown-magic-package-scripts@^1.2.1](https///github.com:camacho/markdown-magic-package-scripts)            | Print list of scripts in package.json with descriptions                            | 1.2.1       | MIT          | dev      |
-| [markdown-magic-subpackage-list@^1.1.1](https://github.com/camacho/markdown-magic-subpackage-list#readme)     | Print a list of subpackages for markdown file                                      | 1.1.1       | MIT          | dev      |
-| [markdown-toc@^1.2.0](https://github.com/jonschlinkert/markdown-toc)                                          | Generate a markdown TOC (table of contents) with Remarkable.                       | 1.2.0       | MIT          | dev      |
-| [semantic-release@^15.12....](https://github.com/semantic-release/semantic-release#readme)                    | Automated semver compliant package publishing                                      | 15.12.2     | MIT          | dev      |
-| [snyk@^1.110....](https://github.com/snyk/snyk)                                                               | snyk library and cli utility                                                       | 1.110.2     | Apache-2.0   | dev      |
-| [sonar-scanner@^3.1.0](https://github.com/bcaudan/node-sonar-scanner)                                         | Wrap sonar-scanner as a node module                                                | 3.1.0       | MIT          | dev      |
-| [standard-version@^4.4.0](https://github.com/conventional-changelog/standard-version#readme)                  | replacement for `npm version` with automatic CHANGELOG generation                  | 4.4.0       | ISC          | dev      |
-| [swagger-parser@^6.0.2](https://apidevtools.org/swagger-parser/)                                              | Swagger 2.0 and OpenAPI 3.0 parser and validator for Node and browsers             | 6.0.2       | MIT          | dev      |
-| [travis-deploy-once@^5.0.9](https://github.com/semantic-release/travis-deploy-once#readme)                    | Run a deployment script only once in the Travis test matrix                        | 5.0.9       | MIT          | dev      |
-
+| **Dependency** | **Description** | **Version** | **License** | **Type** |
+| -------------- | --------------- | ----------- | ----------- | -------- |
+ | [@babel/core@^7.1.6](https://babeljs.io/) | Babel compiler core. | 7.1.6 | MIT | dev | 
+ | [all-contributors-cli@^5.4.1](https://github.com/jfmengels/all-contributors-cli#readme) | Tool to easily add recognition for new contributors | 5.4.1 | MIT | dev | 
+ | [audit@0.0.6](https://github.com/Weltschmerz/Audit#readme) | Generate performance statistics for async or sync functions | 0.0.6 | UNLICENSED | dev | 
+ | [babel-jest@^23.6.0](https://github.com/facebook/jest#readme) | Jest plugin to use babel for transformation. | 23.6.0 | MIT | dev | 
+ | [babel-preset-env@^1.7.0](https://babeljs.io/) | A Babel preset for each environment. | 1.7.0 | MIT | dev | 
+ | [babelify@^10.0.0](https://github.com/babel/babelify) | Babel browserify transform | 10.0.0 | MIT | dev | 
+ | [commitplease@^3.2.0](https://github.com/jzaefferer/commitplease#readme) | Validates strings as commit messages | 3.2.0 | MIT | dev | 
+ | [coveralls@^3.0.2](https://github.com/nickmerwin/node-coveralls#readme) | takes json-cov output into stdin and POSTs to coveralls.io | 3.0.2 | BSD-2-Clause | dev | 
+ | [eslint@^5.9.0](https://eslint.org) | An AST-based pattern checker for JavaScript. | 5.9.0 | MIT | dev | 
+ | [eslint-config-standard@^12.0.0](https://github.com/standard/eslint-config-standard) | JavaScript Standard Style - ESLint Shareable Config | 12.0.0 | MIT | dev | 
+ | [eslint-config-xo-space@^0.20.0](https://github.com/xojs/eslint-config-xo-space#readme) | ESLint shareable config for XO with 2-space indent | 0.20.0 | MIT | dev | 
+ | [eslint-plugin-import@^2.14.0](https://github.com/benmosher/eslint-plugin-import) | Import with sanity. | 2.14.0 | MIT | dev | 
+ | [eslint-plugin-jest@^22.1.0](https://github.com/jest-community/eslint-plugin-jest#readme) | Eslint rules for Jest | 22.1.0 | MIT | dev | 
+ | [eslint-plugin-jsdoc@^3.9.1](https://github.com/gajus/eslint-plugin-jsdoc#readme) | JSDoc linting rules for ESLint. | 3.9.1 | BSD-3-Clause | dev | 
+ | [eslint-plugin-no-unsafe-innerhtml@^1.0.16](https://github.com/mozfreddyb/eslint-plugin-no-unsafe-innerhtml/) | custom ESLint rule to disallows unsafe innerHTML, outerHTML and insertAdjacentHTML | 1.0.16 | MPL-2.0 | dev | 
+ | [eslint-plugin-no-unsanitized@^3.0.2](https://github.com/mozilla/eslint-plugin-no-unsanitized/) | ESLint rule to disallow unsanitized code | 3.0.2 | MPL-2.0 | dev | 
+ | [eslint-plugin-node@^8.0.0](https://github.com/mysticatea/eslint-plugin-node#readme) | Additional ESLint's rules for Node.js | 8.0.0 | MIT | dev | 
+ | [eslint-plugin-promise@^4.0.1](https://github.com/xjamundx/eslint-plugin-promise#readme) | Enforce best practices for JavaScript promises | 4.0.1 | ISC | dev | 
+ | [eslint-plugin-scanjs-rules@^0.2.1](https://github.com/mozfreddyb/eslint-plugin-scanjs-rules/) | ESLint plugin that contains ScanJS rules | 0.2.1 | MPL-2.0 | dev | 
+ | [eslint-plugin-security@^1.4.0](https://github.com/nodesecurity/eslint-plugin-security#readme) | Security rules for eslint | 1.4.0 | Apache-2.0 | dev | 
+ | [eslint-plugin-standard@^4.0.0](https://github.com/standard/eslint-plugin-standard#readme) | ESlint Plugin for the Standard Linter | 4.0.0 | MIT | dev | 
+ | [eslint-plugin-xss@^0.1.9](https://github.com/Rantanen/eslint-plugin-xss#readme) | Validates XSS related issues of mixing HTML and non-HTML content in variables. | 0.1.9 | ISC | dev | 
+ | [jest@^23.6.0](https://jestjs.io/) | Delightful JavaScript Testing. | 23.6.0 | MIT | dev | 
+ | [jest-cli@^23.6.0](https://jestjs.io/) | Delightful JavaScript Testing. | 23.6.0 | MIT | dev | 
+ | [jest-config@^23.6.0](https://github.com/facebook/jest#readme) |  | 23.6.0 | MIT | dev | 
+ | [markdown-magic@^0.1.25](https://github.com/DavidWells/markdown-magic#readme) | Automatically update markdown files with content from external sources | 0.1.25 | MIT | dev | 
+ | [markdown-magic-dependency-table@^1.3.2](https://github.com/camacho/markdown-magic-dependency-table#readme) | Generate table of information about dependencies automatically in markdown | 1.3.2 | MIT | dev | 
+ | [markdown-magic-directory-tree@^1.2.3](https://github.com/camacho/markdown-magic-directory-tree#readme) | Print an archy tree for markdown file | 1.2.3 | MIT | dev | 
+ | [markdown-magic-github-contributors@0.0.3](https://npmjs.org/package/markdown-magic-github-contributors) | Add github contributors to markdown file | 0.0.3 | MIT | dev | 
+ | [markdown-magic-package-scripts@^1.2.1](https://github.com/camacho/markdown-magic-package-scripts#readme) | Print list of scripts in package.json with descriptions | 1.2.1 | MIT | dev | 
+ | [markdown-magic-subpackage-list@^1.1.1](https://github.com/camacho/markdown-magic-subpackage-list#readme) | Print a list of subpackages for markdown file | 1.1.1 | MIT | dev | 
+ | [markdown-toc@^1.2.0](https://github.com/jonschlinkert/markdown-toc) | Generate a markdown TOC (table of contents) with Remarkable. | 1.2.0 | MIT | dev | 
+ | [prettier@^1.15.2](https://prettier.io) | Prettier is an opinionated code formatter | 1.15.2 | MIT | dev | 
+ | [semantic-release@^15.12....](https://github.com/semantic-release/semantic-release#readme) | Automated semver compliant package publishing | 15.12.2 | MIT | dev | 
+ | [snyk@^1.110....](https://github.com/snyk/snyk#readme) | snyk library and cli utility | 1.110.2 | Apache-2.0 | dev | 
+ | [sonar-scanner@^3.1.0](https://github.com/bcaudan/node-sonar-scanner) | Wrap sonar-scanner as a node module | 3.1.0 | MIT | dev | 
+ | [standard-version@^4.4.0](https://github.com/conventional-changelog/standard-version#readme) | replacement for `npm version` with automatic CHANGELOG generation | 4.4.0 | ISC | dev | 
+ | [swagger-parser@^6.0.2](https://apidevtools.org/swagger-parser/) | Swagger 2.0 and OpenAPI 3.0 parser and validator for Node and browsers | 6.0.2 | MIT | dev | 
+ | [synk@0.0.2](https://github.com/nicksweet/synk#readme) | schronize a remote directory with a local one, then run a series of preset commands on the server | 0.0.2 | UNLICENSED | dev | 
+ | [travis-deploy-once@^5.0.9](https://github.com/semantic-release/travis-deploy-once#readme) | Run a deployment script only once in the Travis test matrix | 5.0.9 | MIT | dev | 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 **_Keep track of `archetypes'` tech-stack with these news and RSS feeds._**
@@ -662,40 +657,39 @@ Software modules often have funky, irrelative names, which is why we **prefix _c
 The following CLI [`npm-scripts`][npm-scripts-docs-url] are available to you (assuming you're human, gentle reader) and CI-services.
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-
-| Script                       | Description                                                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `build:bundle:all`           | `npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities`                                 |
-| `build:bundle:money`         | `swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml`                |
-| `build:bundle:parties`       | `swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml`             |
-| `build:bundle:quantities`    | `swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml` |
-| `docs`                       | `node generate-docs.js && npm run docs:toc`                                                                                     |
-| `docs:contributors`          | `all-contributors`                                                                                                              |
-| `docs:contributors:add`      | `all-contributors add`                                                                                                          |
-| `docs:contributors:generate` | `all-contributors generate`                                                                                                     |
-| `docs:toc`                   | `./node_modules/.bin/markdown-toc -i README.md`                                                                                 |
-| `lint`                       | `npm run lint:js && npm run lint:swagger:all`                                                                                   |
-| `lint:js`                    | `eslint . --fix`                                                                                                                |
-| `lint:sonar`                 | `node_modules/sonar-scanner/bin/sonar-scanner`                                                                                  |
-| `lint:swagger:all`           | `npm run lint:swagger:parties`                                                                                                  |
-| `lint:swagger:money`         | `swagger validate schemas/v1/money/money.spec.yaml --debug`                                                                     |
-| `lint:swagger:parties`       | `swagger validate schemas/v1/parties/parties.yaml --debug`                                                                      |
-| `lint:swagger:quantities`    | `swagger validate schemas/v1/quantities/quantities.yaml --debug`                                                                |
-| `postbump`                   | `echo $npm_package_version`                                                                                                     |
-| `prepublishOnly`             | `npm run docs`                                                                                                                  |
-| `preversion`                 | `npm run docs`                                                                                                                  |
-| `security`                   | `npm run security:nsp:scan && npm run security:snyk:all`                                                                        |
-| `security:audit`             | `npm run security:audit:scan`                                                                                                   |
-| `security:audit:scan`        | `npm audit`                                                                                                                     |
-| `security:snyk`              | `snyk`                                                                                                                          |
-| `security:snyk:all`          | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan`                                     |
-| `security:snyk:auth`         | `snyk auth $SNYK_TOKEN`                                                                                                         |
-| `security:snyk:monitor`      | `snyk monitor --org=commonality`                                                                                                |
-| `security:snyk:scan`         | `snyk test`                                                                                                                     |
-| `standard-version`           | `standard-version`                                                                                                              |
-| `test`                       | `jest --config=jest.config.json`                                                                                                |
-| `posttest`                   | `npm run security && npm run docs`                                                                                              |
-
+| Script | Description |
+|--------|-------------|
+| `build:bundle:all` | `npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities` |
+| `build:bundle:money` | `swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.spec.yaml` |
+| `build:bundle:parties` | `swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml` |
+| `build:bundle:quantities` | `swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml` |
+| `docs` | `node generate-docs.js && npm run docs:toc` |
+| `docs:contributors` | `all-contributors` |
+| `docs:contributors:add` | `all-contributors add` |
+| `docs:contributors:generate` | `all-contributors generate` |
+| `docs:toc` | `./node_modules/.bin/markdown-toc -i README.md` |
+| `lint` | `npm run lint:js && npm run lint:swagger:all` |
+| `lint:js` | `eslint . --fix` |
+| `lint:md` | `prettier --write README.md` |
+| `lint:sonar` | `node_modules/sonar-scanner/bin/sonar-scanner` |
+| `lint:swagger:all` | `npm run lint:swagger:parties` |
+| `lint:swagger:money` | `swagger validate schemas/v1/money/money.spec.yaml --debug` |
+| `lint:swagger:parties` | `swagger validate schemas/v1/parties/parties.yaml --debug` |
+| `lint:swagger:quantities` | `swagger validate schemas/v1/quantities/quantities.yaml --debug` |
+| `postbump` | `echo $npm_package_version` |
+| `prepublishOnly` | `npm run docs` |
+| `preversion` | `npm run docs` |
+| `security` | `npm run security:nsp:scan && npm run security:snyk:all` |
+| `security:audit` | `npm run security:audit:scan` |
+| `security:audit:scan` | `npm audit` |
+| `security:snyk` | `snyk` |
+| `security:snyk:all` | `npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan` |
+| `security:snyk:auth` | `snyk auth $SNYK_TOKEN` |
+| `security:snyk:monitor` | `snyk monitor --org=commonality` |
+| `security:snyk:scan` | `snyk test` |
+| `standard-version` | `standard-version` |
+| `test` | `jest --config=jest.config.json` |
+| `posttest` | `npm run security && npm run docs` |
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -896,8 +890,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/2849690?v=4" width="100px;"/><br /><sub><b>Greg Swindle</b></sub>](http://swindle.net/)<br />[💻](https://github.com/commonality/archetypes/commits?author=gregswindle "Code") [🎨](#design-gregswindle "Design") [📖](https://github.com/commonality/archetypes/commits?author=gregswindle "Documentation") [💡](#example-gregswindle "Examples") [⚠️](https://github.com/commonality/archetypes/commits?author=gregswindle "Tests") | [<img src="https://avatars3.githubusercontent.com/in/505?v=4" width="100px;"/><br /><sub><b>greenkeeper[bot]</b></sub>](https://github.com/apps/greenkeeper)<br />[⚠️](https://github.com/commonality/archetypes/commits?author=greenkeeper[bot] "Tests") |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
