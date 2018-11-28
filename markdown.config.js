@@ -21,7 +21,7 @@ const markdownConfig = {
     'DIRTREE': markdownMagicDirectoryTree,
     'SCRIPTS': markdownMagicPackageScripts
   },
-  'DEBUG': true
+  'DEBUG': false
 }
 
 module.exports = markdownConfig

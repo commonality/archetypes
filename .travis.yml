@@ -18,3 +18,8 @@ after_success:
   - npm run security:snyk:all
 after_script:
    - sonar-scanner -Dsonar.projectKey=commonality_archetypes -Dsonar.organization=commonality -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$COMMONALITY_SONAR_TOKEN
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npx travis-deploy-once "npx semantic-release"

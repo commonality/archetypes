@@ -60,21 +60,33 @@
     "markdown-magic-package-scripts": "^1.2.1",
     "markdown-magic-subpackage-list": "^1.1.1",
     "markdown-toc": "^1.2.0",
+    "semantic-release": "^15.12.2",
     "snyk": "^1.110.2",
     "sonar-scanner": "^3.1.0",
     "standard-version": "^4.4.0",
-    "swagger-parser": "^6.0.2"
+    "swagger-parser": "^6.0.2",
+    "travis-deploy-once": "^5.0.9"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "schemas",
+    "test": "__tests__"
   },
   "engines": {
     "node": ">= 10.x"
   },
-  "files": [],
+  "files": [
+    "/schemas"
+  ],
   "homepage": "https://github.com/commonality/archetypes",
   "jest": {
     "testEnvironment": "node"
   },
   "keywords": [],
   "license": "Apache-2.0",
+  "release": {
+    "branch": "master"
+  },
   "repository": "commonality/archetypes",
   "scripts": {
     "build:bundle:all": "npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities",
