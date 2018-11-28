@@ -415,5 +415,9 @@ yarn.lock
 ###      insert at comment hash (#) in front of it.
 
 .assets/scripts/eslint*.*
-docs/img/palette.*
+docs/
 lib/
+scripts/
+**/templates
+coverage/
+generate-docs.js

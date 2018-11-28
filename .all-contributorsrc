@@ -1,0 +1,36 @@
+{
+  "projectName": "archetypes",
+  "projectOwner": "commonality",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "gregswindle",
+      "name": "Greg Swindle",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2849690?v=4",
+      "profile": "http://swindle.net/",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "example",
+        "test"
+      ]
+    },
+    {
+      "login": "greenkeeper[bot]",
+      "name": "greenkeeper[bot]",
+      "avatar_url": "https://avatars3.githubusercontent.com/in/505?v=4",
+      "profile": "https://github.com/apps/greenkeeper",
+      "contributions": [
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 5
+}
