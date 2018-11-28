@@ -10,9 +10,6 @@ cache:
 language: node_js
 node_js:
   - 10
-before_script:
-  - npm prune
-  - npm dedupe
 script: npm test
 after_success:
   - npm run security:snyk:all
