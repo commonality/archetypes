@@ -1,0 +1,19 @@
+{
+  "parserOptions": {
+      "ecmaVersion": 10,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "impliedStrict": true
+      }
+  },
+  "env": {
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+  },
+  "extends": [
+      "plugin:jest/recommended",
+      "standard"
+    ]
+}

@@ -26,89 +26,109 @@
     "scope": "\\S+.*"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "standard-readme-spec": "1.1.3"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "babel-jest": "21.0.2",
-    "babel-preset-env": "1.6.0",
-    "babelify": "7.3.0",
-    "commitplease": "2.7.10",
-    "coveralls": "^2.13.1",
-    "eslint": "4.6.1",
-    "eslint-config-xo-space": "0.16.0",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-jest": "21.0.2",
-    "eslint-plugin-jsdoc": "3.1.2",
-    "eslint-plugin-no-unsafe-innerhtml": "1.0.16",
-    "eslint-plugin-no-unsanitized": "2.0.1",
-    "eslint-plugin-node": "5.1.1",
-    "eslint-plugin-promise": "3.5.0",
-    "eslint-plugin-scanjs-rules": "0.2.1",
-    "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-standard": "3.0.1",
-    "eslint-plugin-xss": "0.1.8",
-    "jest": "21.0.2",
-    "jest-cli": "21.0.2",
-    "jest-config": "21.0.2",
-    "markdown-magic": "0.1.18",
-    "markdown-magic-dependency-table": "1.2.2",
-    "markdown-magic-directory-tree": "1.2.1",
+    "@babel/core": "^7.1.6",
+    "all-contributors-cli": "^5.4.1",
+    "audit": "0.0.6",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^10.0.0",
+    "commitplease": "^3.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-xo-space": "^0.20.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.0",
+    "eslint-plugin-jsdoc": "^3.9.1",
+    "eslint-plugin-no-unsafe-innerhtml": "^1.0.16",
+    "eslint-plugin-no-unsanitized": "^3.0.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-scanjs-rules": "^0.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-xss": "^0.1.9",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-config": "^23.6.0",
+    "markdown-magic": "^0.1.25",
+    "markdown-magic-dependency-table": "^1.3.2",
+    "markdown-magic-directory-tree": "^1.2.3",
     "markdown-magic-github-contributors": "0.0.3",
-    "markdown-magic-package-scripts": "1.2.0",
-    "markdown-magic-subpackage-list": "1.1.1",
-    "markdown-toc": "1.1.0",
-    "nsp": "2.8.0",
-    "snyk": "1.40.2",
-    "sonar-scanner": "3.0.3",
-    "standard-version": "4.2.0",
-    "swagger-cli": "1.0.0-beta.2"
+    "markdown-magic-package-scripts": "^1.2.1",
+    "markdown-magic-subpackage-list": "^1.1.1",
+    "markdown-toc": "^1.2.0",
+    "prettier": "^1.15.2",
+    "semantic-release": "^15.12.2",
+    "snyk": "^1.110.2",
+    "sonar-scanner": "^3.1.0",
+    "standard-version": "^4.4.0",
+    "swagger-parser": "^6.0.2",
+    "synk": "0.0.2",
+    "travis-deploy-once": "^5.0.9"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "schemas",
+    "test": "__tests__"
   },
   "engines": {
-    "node": ">= 6.x"
+    "node": ">= 10.x"
   },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "jest": true,
-      "node": true
-    }
-  },
-  "files": [],
+  "files": [
+    "/schemas"
+  ],
   "homepage": "https://github.com/commonality/archetypes",
   "jest": {
     "testEnvironment": "node"
   },
   "keywords": [],
   "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "Greg Swindle",
+      "email": "greg@swindle.net",
+      "url": "https://github.com/gregswindle"
+    }
+  ],
+  "release": {
+    "branch": "master"
+  },
   "repository": "commonality/archetypes",
   "scripts": {
     "build:bundle:all": "npm run build:bundle:money && npm run build:bundle:parties && npm run build:bundle:quantities",
     "build:bundle:money": "swagger bundle --dereference --outfile ./schemas/v1/money/money.bundle.json ./schemas/v1/money/money.yaml",
     "build:bundle:parties": "swagger bundle --dereference --outfile ./schemas/v1/parties/parties.bundle.json ./schemas/v1/parties/parties.yaml",
     "build:bundle:quantities": "swagger bundle --dereference --outfile ./schemas/v1/quantities/quantities.bundle.json ./schemas/v1/quantities/quantities.yaml",
-    "docs": "node generate-docs.js && npm run docs:toc",
+    "docs": "node generate-docs.js && npm run docs:toc && npm run docs:contributors:generate",
+    "docs:contributors": "all-contributors",
+    "docs:contributors:add": "all-contributors add",
+    "docs:contributors:generate": "all-contributors generate",
     "docs:toc": "./node_modules/.bin/markdown-toc -i README.md",
-    "lint": "npm run lint:js && npm run lint:swagger:all",
-    "lint:js": "eslint . --fix ",
+    "lint": "npm run lint:js && npm run lint:md",
+    "lint:js": "eslint --ignore-path .gitignore ./**/*.js --fix",
+    "lint:md": "prettier --write README.md",
     "lint:sonar": "node_modules/sonar-scanner/bin/sonar-scanner",
     "lint:swagger:all": "npm run lint:swagger:parties && npm run lint:swagger:quantities && npm run lint:swagger:money",
     "lint:swagger:money": "swagger validate schemas/v1/money/money.yaml --debug",
     "lint:swagger:parties": "swagger validate schemas/v1/parties/parties.yaml --debug",
     "lint:swagger:quantities": "swagger validate schemas/v1/quantities/quantities.yaml --debug",
     "posttest": "npm run security && npm run docs",
+    "postbump": "echo $npm_package_version",
     "prepublishOnly": "npm run docs",
-    "pretest": "npm run lint",
     "preversion": "npm run docs",
-    "release": "standard-version",
-    "security": "npm run security:nsp:scan && npm run security:snyk:all",
-    "security:nsp": "nsp",
-    "security:nsp:scan": "nsp check",
+    "security": "npm run security:audit:scan",
+    "security:audit": "npm run security:audit:scan",
+    "security:audit:scan": "npm audit",
     "security:snyk": "snyk",
     "security:snyk:all": "npm run security:snyk:auth && npm run security:snyk:monitor && npm run security:snyk:scan",
     "security:snyk:auth": "snyk auth $SNYK_TOKEN",
     "security:snyk:monitor": "snyk monitor --org=commonality",
     "security:snyk:scan": "snyk test",
-    "test": "jest --config=jest.config.json"
+    "standard-version": "standard-version",
+    "test": "jest --config=jest.config.json --forceExit"
   }
 }

@@ -1,16 +1,11 @@
-const fs = require('fs')
+// const fs = require('fs')
 const path = require('path')
 const markdownMagic = require('markdown-magic')
+const markdownConfig = require('./markdown.config')
 
-const config = {
-  transforms: {
-    CONTRIBUTORS: require('markdown-magic-github-contributors'),
-    DEPENDENCYTABLE: require('markdown-magic-dependency-table'),
-    DIRTREE: require('markdown-magic-directory-tree'),
-    SCRIPTS: require('markdown-magic-package-scripts')
-  },
-  DEBUG: false
+const updateMarkdownFiles = async () => {
+  const markdownPath = path.join(__dirname, 'README.md')
+  await markdownMagic(markdownPath, markdownConfig)
 }
 
-const markdownPath = path.join(__dirname, 'README.md')
-markdownMagic(markdownPath, config)
+updateMarkdownFiles()
