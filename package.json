@@ -84,6 +84,11 @@
   },
   "keywords": [],
   "license": "Apache-2.0",
+  "maintainers": [{
+    "name": "Greg Swindle",
+    "email": "greg@swindle.net",
+    "url": "https://github.com/gregswindle"
+  }],
   "release": {
     "branch": "master"
   },
@@ -106,9 +111,9 @@
     "lint:swagger:parties": "swagger validate schemas/v1/parties/parties.yaml --debug",
     "lint:swagger:quantities": "swagger validate schemas/v1/quantities/quantities.yaml --debug",
     "posttest": "npm run security && npm run docs",
+    "postbump": "echo $npm_package_version",
     "prepublishOnly": "npm run docs",
     "preversion": "npm run docs",
-    "release": "standard-version",
     "security": "npm run security:audit:scan",
     "security:audit": "npm run security:audit:scan",
     "security:audit:scan": "npm audit",
@@ -117,6 +122,7 @@
     "security:snyk:auth": "snyk auth $SNYK_TOKEN",
     "security:snyk:monitor": "snyk monitor --org=commonality",
     "security:snyk:scan": "snyk test",
+    "standard-version": "standard-version",
     "test": "jest --config=jest.config.json --forceExit"
   }
 }

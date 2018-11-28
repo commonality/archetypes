@@ -11,6 +11,7 @@ language: node_js
 node_js:
   - 10
 before_script:
+  - "curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash"
   - npm prune
   - npm dedupe
 script: npm test
@@ -22,4 +23,5 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
+    # - npm run standard-version -- --message="build(release): v%s" --commit-all
     - npx travis-deploy-once "npx semantic-release"
