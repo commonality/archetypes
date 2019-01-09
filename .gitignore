@@ -422,3 +422,4 @@ scripts/
 coverage/
 generate-docs.js
 .github/CONTRIBUTING.original.md
+.github/PRODUCT_DEVELOPMENT_GUIDELINES.md
