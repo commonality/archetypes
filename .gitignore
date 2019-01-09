@@ -421,3 +421,4 @@ scripts/
 **/templates
 coverage/
 generate-docs.js
+.github/CONTRIBUTING.original.md
