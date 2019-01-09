@@ -1,7 +1,10 @@
 {
   "name": "archetypes",
   "automock": false,
-  "collectCoverage": true,
+  "collectCoverage": false,
+  "collectCoverageFrom": [
+    "**/schemas/**"
+  ],
   "coverageDirectory": "./coverage",
   "coveragePathIgnorePatterns": [
     "/generate-docs.js",
@@ -22,8 +25,7 @@
   "testPathIgnorePatterns": [
     "/lib/",
     "/__tests__/__fixtures__/",
-    "/__tests__/__mocks__/",
-    "/__tests__/"
+    "/__tests__/__mocks__/"
   ],
   "verbose": true
 }

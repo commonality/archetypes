@@ -197,12 +197,12 @@ api.getCurrencies(callback);
 
 All URIs are relative to *http://api.swindle.net/archetypes/v1/money*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*Money.CurrencyApi* | [**getCurrencies**](docs/CurrencyApi.md#getCurrencies) | **GET** /currencies | Retrieve all currencies.
-*Money.CurrencyApi* | [**getCurrencyByAlphabeticCode**](docs/CurrencyApi.md#getCurrencyByAlphabeticCode) | **GET** /currencies/{alphabetic-code} | Retrieve a Currency by alphabetic code.
-*Money.PaymentApi* | [**getPayments**](docs/PaymentApi.md#getPayments) | **GET** /payments | Retrieve all payments.
-*Money.PaymentMethodApi* | [**getPaymentMethods**](docs/PaymentMethodApi.md#getPaymentMethods) | **GET** /payment-methods | Retrieve all payment method types.
+| Class                    | Method                                                                             | HTTP request                          | Description                             |
+| ------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------- |
+| *Money.CurrencyApi*      | [**getCurrencies**](docs/CurrencyApi.md#getCurrencies)                             | **GET** /currencies                   | Retrieve all currencies.                |
+| *Money.CurrencyApi*      | [**getCurrencyByAlphabeticCode**](docs/CurrencyApi.md#getCurrencyByAlphabeticCode) | **GET** /currencies/{alphabetic-code} | Retrieve a Currency by alphabetic code. |
+| *Money.PaymentApi*       | [**getPayments**](docs/PaymentApi.md#getPayments)                                  | **GET** /payments                     | Retrieve all payments.                  |
+| *Money.PaymentMethodApi* | [**getPaymentMethods**](docs/PaymentMethodApi.md#getPaymentMethods)                | **GET** /payment-methods              | Retrieve all payment method types.      |
 
 
 ## Documentation for Models

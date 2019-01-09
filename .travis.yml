@@ -1,25 +1,23 @@
+dist: trusty
 addons:
   sonarcloud:
     organization: "$SONAR_ORGANIZATION"
     token:
       secure: "$SONAR_TOKEN"
-    github_token:
-      secure: "$GH_TOKEN"
-    branches:
-      - /.*/
-jdk:
-  - oraclejdk8
 cache:
   directories:
     - '$HOME/.sonar/cache'
 language: node_js
 node_js:
-  - 8
-  - 7
-  - 6
-before_script:
-  - npm prune
+  - 10
 script: npm test
+after_success:
+  - npm run security:snyk:all
 after_script:
-   - sonar-scanner -Dproject.settings=sonar-project.properties -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.login=$SONAR_TOKEN -X
-  #  - 'cat ./coverage/lcov.info | coveralls'
+   - sonar-scanner -Dsonar.projectKey=commonality_archetypes -Dsonar.organization=commonality -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$COMMONALITY_SONAR_TOKEN
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    # - npm run standard-version -- --message="build(release): v%s" --commit-all
+    - npx travis-deploy-once "npx semantic-release"
