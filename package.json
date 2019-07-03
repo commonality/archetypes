@@ -26,7 +26,8 @@
     "scope": "\\S+.*"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -63,7 +64,6 @@
     "markdown-toc": "^1.2.0",
     "prettier": "^1.15.2",
     "semantic-release": "^15.12.2",
-    "snyk": "^1.110.2",
     "sonar-scanner": "^3.1.0",
     "standard-version": "^4.4.0",
     "swagger-parser": "^6.0.2",
@@ -129,6 +129,9 @@
     "security:snyk:monitor": "snyk monitor --org=commonality",
     "security:snyk:scan": "snyk test",
     "standard-version": "standard-version",
-    "test": "jest --config=jest.config.json --forceExit"
-  }
+    "test": "jest --config=jest.config.json --forceExit",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
